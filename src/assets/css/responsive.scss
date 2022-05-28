@@ -4523,3 +4523,36 @@ $value_eleven: 1399px;
 
     }
 }
+
+@media(max-width: 575px) {
+
+    .tab button {
+        background-color: inherit;
+        float: right;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 14px;
+
+
+    }
+
+    .tab button.active {
+        border-radius: 18px;
+        background-color: #039ca4;
+        color: white;
+        margin-top: 6px;
+        padding: 7px 5px 7px 5px;
+
+    }
+
+    .tab button.active-profile {
+        border-radius: 18px;
+        background-color: #039ca4;
+        color: white;
+        margin-top: 6px;
+        padding: 7px 5px 7px 5px;
+
+    }
+   
+}

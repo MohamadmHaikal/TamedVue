@@ -21,7 +21,7 @@
 
                     </div>
                     <div class="col-md-6   " style="    width: 50%;">
-                        <a href="/DealsAuctions" class="button"> عرض الجميع </a>
+                        <router-link to="/DealsAuctions" class="button"> عرض الجميع </router-link>
 
                     </div>
                 </div>

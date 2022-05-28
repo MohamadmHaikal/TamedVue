@@ -8,7 +8,7 @@
 
                     </div>
                     <div class="col-md-6   " style="    width: 50%;">
-                        <a href="/projects" class="button"> عرض الجميع  </a>
+                        <router-link to="/projects" class="button"> عرض الجميع  </router-link>
 
                     </div>
                 </div>
