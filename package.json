@@ -14,6 +14,7 @@
     "vue": "^3.2.31",
     "vue-router": "^4.0.13",
     "vue3-carousel": "^0.1.38",
+    "vue3-circle-progress": "^1.0.7",
     "vue3-flip-countdown": "^0.1.6"
   },
   "devDependencies": {

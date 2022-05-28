@@ -179,7 +179,7 @@
                                                 <div class="row"
                                                     style=" border-bottom: 1px solid rgb(238, 239, 241);padding-bottom: 3%;">
 
-                                                    <div class="col-md-4 col-sm-4 conditional"
+                                                    <div class="col-md-4 col-6 conditional"
                                                         style="padding-right:0px ; padding-left:0px ;"><svg
                                                             xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                                             width="30" height="64" viewBox="0 0 64 64"
@@ -196,7 +196,7 @@
                                                             style="font-size: 24px;margin-right: 65px;color: #35b348;"></i>
                                                     </div>
 
-                                                    <div class="col-md-4 conditional"
+                                                    <div class="col-md-4 col-6 conditional"
                                                         style="padding-right:0px ; padding-left:0px ;"><i
                                                             class="fa fa-house-damage"
                                                             style="    font-size: 25px;  color: #039ca4; margin-top: 15px;"></i>
@@ -207,7 +207,7 @@
                                                             style="font-size: 24px;margin-right: 65px;color: #35b348;     margin-top: 20px;"></i>
                                                     </div>
 
-                                                    <div class="col-md-4 conditional"
+                                                    <div class="col-md-4 col-6 conditional"
                                                         style="padding-right:0px ;margin-right:0px;">
                                                         <i class="fa fa-bus"
                                                             style="    font-size: 25px;  color: #039ca4; margin-top: 15px;"></i>
@@ -283,7 +283,7 @@
                                             <div class="mt-5"
                                                 style="    border: 1px solid #ccc;border-radius: 25px;padding: 20px;">
                                                 <div class="row mt-4">
-                                                    <div class="col-md-4 col-sm-3  text-center">
+                                                    <div class="col-md-4 col-6  text-center">
                                                         <img src="../../assets/images/amala.png" alt=""
                                                             style="width:45px;">
                                                         <br>
@@ -292,7 +292,7 @@
                                                         <small style="color:#019aa2 ;">على الكفالة او عقد اجير</small>
                                                     </div>
 
-                                                    <div class="col-md-4 text-center">
+                                                    <div class="col-md-4  col-6 text-center">
                                                         <img src="../../assets/images/tasnef.png" alt=""
                                                             style="width:40px;">
                                                         <br>
@@ -300,7 +300,7 @@
                                                         <br>
                                                         <small style="color:#019aa2 ;">لايهم</small>
                                                     </div>
-                                                    <div class="col-md-4 text-center">
+                                                    <div class="col-md-4 col-6 text-center">
                                                         <img src="../../assets/images/daman.png" alt=""
                                                             style="width:50px;">
                                                         <br>
@@ -316,20 +316,20 @@
                                             <div class="mt-3"
                                                 style="border: 1px solid #ccc;border-radius: 25px;padding: 20px;">
                                                 <div class="row">
-                                                    <div class="col-md-4 text-center">
+                                                    <div class="col-md-4 col-6 text-center">
                                                         <a href="javascript:void(0);" class="btn paper"> صورة السجل
                                                             التجاري</a>
                                                     </div>
 
-                                                    <div class="col-md-4 text-center">
+                                                    <div class="col-md-4 col-6 text-center">
                                                         <a href="javascript:void(0);" class="btn paper">الدخل
                                                             والزكاة</a>
                                                     </div>
-                                                    <div class="col-md-4 text-center">
+                                                    <div class="col-md-4 col-6 text-center">
                                                         <a href="javascript:void(0);" class="btn paper"> ضريبة القيمة
                                                             المضافة </a>
                                                     </div>
-                                                    <div class="col-md-4 text-center">
+                                                    <div class="col-md-4 col-6 text-center">
                                                         <a href="javascript:void(0);" class="btn paper"> شهادة تصنيف
                                                         </a>
                                                     </div>
