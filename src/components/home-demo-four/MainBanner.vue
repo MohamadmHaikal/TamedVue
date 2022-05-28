@@ -1,0 +1,29 @@
+<template>
+    <div class="banner-wrapper">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <div class="banner-wrapper-content">
+                        <h1>أهلا وسهلا بك في منصة تعميد</h1>
+                        <p>أول منصة متكاملة في عالم التشييد والبناء في المملكة العربية السعودية تقدم حلول لجميع المنشآة و الحصول على المشاريع الخاصة بشكل سريع وسهل</p>
+                        <router-link to="/contact" class="btn btn-warning reg-now">
+                          سجل الآن
+                        </router-link>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="banner-wrapper-image">
+                        <img src="../../assets/images/bannerimg.png" alt="image" class="main-bar-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: 'MainBanner'
+    }
+</script>

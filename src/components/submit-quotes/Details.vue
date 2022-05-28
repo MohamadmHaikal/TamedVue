@@ -1,0 +1,374 @@
+<template>
+    <div>
+        <div class="about-area pb-70">
+            <div class="containp container">
+
+                <div class="mt-2" style="text-align: -webkit-center;">
+                    <div class="col-md-10 col-sm-12 mt-5 text-center">
+                        <div class="row" id="main-content">
+                            <div class="col-md-8">
+                                <h5 style="color:#049ba6 ;">تقديم طلب شراء ل</h5>
+                                <h4 style="color:#424242 ;">صفقة لبيع مواد بناء</h4>
+                                <h6 class="mt-4" style="color:#000000 ; ">هل انت موافق على السعر</h6>
+                                <a href="javascript:void(0);" id="accept" class="btn  mt-2"
+                                    @click="openCity($event, 'accept')"
+                                    style="border-radius: 10px;background-color: #ffffff;border: 1px solid #019ea7;color: #019aa2; padding: 7px 20px 7px 20px;">نعم
+                                    موافق</a>
+                                <br>
+                                <a href="javascript:void(0);" id="negotiation" class="btn mt-3"
+                                    @click="openCity($event, 'negotiation')"
+                                    style="border-radius: 10px;background-color: #ffffff;border: 1px solid #019ea7;color: #019aa2;padding: 5px 15px 5px 15px;">اريد
+                                    التفاوض على السعر </a>
+                                <br>
+                                <div class="accept-content mt-5 " style="display:none ;">
+                                    <span> يجب عليك دفع تأمين لحجز الصفقة إن لم ترغب بدفع المبلغ كامل </span>
+                                    <br>
+                                    <span>قبل التأكد من مواصفات الصفقة</span>
+
+                                    <h6 style="padding-top:15px ;color:#049ba6 ;">نسبة التأمين 10 % من قيمة الصفقة</h6>
+                                    <dir class="text-center">
+                                        <div class="mt-2"
+                                            style="     margin-right: 9%;background-color:#b6e2e5;  border-radius: 20px;  width: 76%;     padding: 22px;   text-align: right; ">
+                                            <h6 style="color:#4e8a8b ; font-weight: 800;">ملاحظة</h6>
+                                            <p style="     font-weight: 300;color: #000;font-size: 12px;"> بعد دفع
+                                                التأمين سيتم اصدار فاتورة بالمبلغ المدفوع وحجز الصفقة لك حسب المدة
+                                                المتفق عليها ريثما يتم التشيك والتأكد من حقيقية مواصفات الصفقة بشكل كامل
+                                                وبعدها يمكنكم استكمال المبلغ المتبقي وسيتم اصدار فاتورة نهائية لك وتكون
+                                                الصفقة من نصيبك</p>
+
+                                        </div>
+                                        <div class="mt-2"
+                                            style="margin-right: 9%;background-color:#f6dec2;  border-radius: 20px;  width: 76%;     padding: 22px;   text-align: right; ">
+
+                                            <p style="font-weight: 300;font-size: 12px; color: #000;"> وان لم تكن بفس
+                                                المواصفات المعروضة سيتم استردادالمبلغ المدفوع بعد خصم رسوم تعميد وسيتم
+                                                استرداد المبلغ خلال 5 ايام عمل</p>
+
+                                        </div>
+                                    </dir>
+
+                                    <div class="accept-price-check mt-5">
+                                        <label class="container1 mt-5">
+                                            <input type="checkbox">
+                                            تم الإطلاع على جميع المواصفات المرفقة
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <br>
+                                        <label class="container1">
+                                            <input type="checkbox">
+                                            موافق على <router-link to="/privacy-policy" style="color:#039ba0 ;">الشروط
+                                                والاحكام
+                                            </router-link> لمنصة تعميد
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="quotes-btn mt-5 ">
+                                        <a href="#" class="btn btn-logo"
+                                            style="border-radius:10px;background-color:#039ca4;color:white;    padding: 5px 15px 5px 15px;">دفع
+                                            تأمين الصفقة</a>
+                                        <br>
+                                        <a href="#" class="btn btn-logo"
+                                            style="border-radius: 10px;background-color: #ecb072; margin-top: 15px;color: white; padding: 5px 20px 5px 20px;">دفع
+                                            المبلغ كامل</a>
+                                        <br>
+                                        <a href="javascript:void(0);">
+                                            <p style="padding-top: 15px;font-weight: 500; padding-bottom: 15px;">العودة
+                                                للصفحة السابقة</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="negotiation-content mt-5" style="display: none;">
+                                    <span>ماهو السعر المناسب لك </span>
+                                    <input type="text" value="20,000.00"
+                                        style="     margin-right: 5px; color: #049fa8;   text-align: center; width: 20%;border: 1px solid #049fa8;border-radius: 5px;">
+                                    <br>
+                                    <small
+                                        style="position:relative;top: 58px; left: 180px;background-color:#ffffff; color:#b6e6e8;padding:0px 10px 0px 10px;     font-size: 12px;">هل
+                                        لديك ملاحظات</small>
+                                    <div style="text-align:-webkit-center ; ">
+                                        <textarea class="mt-5" name="" id="" cols="38" rows="6"
+                                            style=" border: 1px solid #ccc; border-radius: 25px;    padding: 15px;"></textarea>
+                                        <div class="mt-2"
+                                            style="background-color:#b6e2e5;  border-radius: 20px;  width: 65%;     padding: 22px;   text-align: right; ">
+                                            <h6 style="color:#4e8a8b ;">أوراق المنشآة</h6>
+                                            <small style="color:white ;">يجب عليك تحميل اوراق المنشآة الرسمية من خلال
+                                                <small style="color: #31a1ad;"> الملف الشخصي الخاص بك</small></small>
+
+                                            <small style="color:white ;"> وستظهر لمقدم الطلب الأوراق مع عرض السعر
+                                                المقدم</small>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="accept-price-check mt-5">
+                                        <label class="container1 mt-5">
+                                            <input type="checkbox">
+                                            تم الإطلاع على جميع المواصفات المرفقة
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <br>
+                                        <label class="container1">
+                                            <input type="checkbox">
+                                            موافق على <router-link to="/privacy-policy" style="color:#039ba0 ;">الشروط
+                                                والاحكام
+                                            </router-link> لمنصة تعميد
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="quotes-btn mt-5 ">
+                                        <a href="javascript:void(0);" class="btn btn-logo" @click="send('send')"
+                                            style="border-radius:10px;background-color:#039ca4;color:white;    padding: 5px 15px 5px 15px;">ارسال
+                                            إلى مقدم الصفقة</a>
+                                        <br>
+                                        <a href="javascript:void(0);">
+                                            <p style="padding-top: 15px;font-weight: 500; padding-bottom: 15px;">العودة
+                                                للصفحة السابقة</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div
+                                    style="width: 85%; padding-bottom: 15px; margin-top: 6%; border-radius: 12px; margin-bottom: 5%; box-shadow: rgb(236, 233, 233) 1px 1px 5px 2px;">
+                                    <div style="border-bottom: 1px solid rgb(238, 239, 241);     padding-bottom: 15px;">
+                                        <p
+                                            style="text-align:right;padding-right:10%;padding-top:10%;font-weight:500;font-size:13px;">
+                                            اخر موعد لتقديم العروض </p>
+                                        <div style="text-align: right;">
+
+                                            <i class="far fa-calendar-alt"
+                                                style=" text-align:right;color:#37D337;padding-right:10%;font-size:15px;"></i><span
+                                                style=" text-align:right;color:rgb(87 83 77);font-size:12px;padding-right:2px;">
+                                                2022-05-22
+                                            </span><span
+                                                style=" text-align:right;color:rgb(87 83 77);font-size:12px;padding-right:5px;"><i
+                                                    class="far fa-clock"
+                                                    style=" text-align:right;color:#37D337;font-size:15px;"></i>
+                                                12:00</span>
+                                        </div>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <h5 style="padding-top: 8%; text-align: center;color: #62bbc0; ">قيمة الصفقة
+                                        </h5>
+                                        <h6 style="color: rgb(244, 162, 62); text-align: center; ">
+                                            26,000 ريال </h6>
+                                        <div class=" mt-3 text-center" id="price-with-material-accept"
+                                            style="display:none;">
+                                            <small style="padding-top: 8%; text-align: center;color:#019aa2; ">قيمة
+                                                تأمين حجز الصفقة
+
+                                            </small>
+                                            <h6 style="color: rgb(244, 162, 62); text-align: center; ">
+                                                2600 ريال </h6>
+                                        </div>
+                                        <div class=" mt-3 text-center" id="price-with-material" style="display:none;">
+                                            <small style="color: #65a632; text-align: center; ">
+                                                تسعيرة مع المواد </small>
+                                        </div>
+                                        <div style="border-bottom:1px solid #eeeff1;">
+                                            <h5
+                                                style=" color:#019aa2; padding-top:8%;padding-right: 10%;text-align:right; padding-bottom: 2%;font-size:95%;">
+                                                معلومات صاحب
+                                                الطلب </h5>
+                                        </div>
+                                        <div class="mt-3" style="text-align:center;padding-bottom:15px;"><span
+                                                class="text-end" style="color:#019aa2;font-size:14px;"> مقدم
+                                                الطلب:</span><span class="text-end"
+                                                style="color:rgb(87 83 77);font-size:14px;padding-right:5px;"> شركة
+                                                فرسان للمقاولات</span>
+                                            <div style="text-align:center;"><a href="javascript:void(0);"
+                                                    class="btn btn-logo"
+                                                    style="border-radius:9px;background-color:rgb(3, 156, 164);width:69%;color:white;font-size:90%;margin-top:25px;padding:1px 23px;">
+                                                    الملف الشخصي للمنشآة </a></div>
+                                            <div class="mt-3"> 20/100 <span class="far fa-star checked" style="font-size:20px;"
+                                                    aria-hidden=""></span><span class="far fa-star checked"
+                                                    style="font-size:20px;"></span><span class="fa fa-star checked"
+                                                    style="font-size:20px;"></span><span class="fa fa-star checked"
+                                                    style="font-size:20px;"></span><span class="fa fa-star checked"
+                                                    style="font-size:20px;"></span></div>
+                                            <div class="row text-center mt-2">
+                                                <div class="col-md-5 col-sm-2"
+                                                    style="text-align:center;margin-bottom:12px;"><a
+                                                        href="javascript:void(0);" style="color:#039ca4;">
+                                                        <p style="position:relative;top:18px;">رسالة</p><i
+                                                            class="far fa-comment-alt mb-2"
+                                                            style="font-size:25px;color:#039ca4;"></i>
+                                                    </a></div>
+                                                <div class="col-md-7 col-sm-10"><a href="javascript:void(0);"
+                                                        class="btn report"> تقديم بلاغ على الصفقة </a></div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center"><span class="text-end"
+                                                style="color: rgb(1, 154, 162); font-size: 12px;"> الرقم المرجعي
+                                                للصفقة:</span><span class="text-end"
+                                                style="color: rgb(87, 83, 77); font-size: 12px; padding-right: 5px;">
+                                                25896374</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quotes-finish" id="quotes-finish" style="display:none ;">
+                            <h3 style="color:#545454 ;">شكراً لك </h3>
+                            <h5 style="color:#545454 ;">تم ارسال الطلب بنجاح </h5>
+                            <img src="../../assets/images/check.png" alt="" style="width: 5%;margin-top: 5%;">
+                            <p style="color:#000 ;    margin-top: 20px;">في حال الموافقة من قبل صاحب الطلب سيتم
+                                التواصل معك</p>
+
+                            <h6 style="margin-top: 60px;color:#026f90;"> يمكنك الآن مراسلة صاحب الصفقة <i
+                                    class="fa fa-chevron-left	"
+                                    style="     padding-right: 25px;color:#026f90;  vertical-align: middle;  font-size: 25px;"></i>
+                            </h6>
+                            <br>
+                            <h6 style="color:#026f90;    margin-top: 15px;margin-bottom: 90px;">الذهاب إلى قائمة الصفقات
+                                الصادرة<i class="fa fa-chevron-left	"
+                                    style="     padding-right: 20px;color:#026f90; vertical-align: middle;  font-size: 25px;"></i>
+                            </h6>
+                            <p style="color:#000 ;">او يمكنك طلب وسيط من موظفين تعميد ليقوم بإنهاء الصفقة و التأكد من
+                                جميع المواصفات المطلوبة لك مقابل 2.5% من إجمالي الصفقة</p>
+
+                            <a href="/SubmitQuotes" class="btn btn-logo"
+                                style="border-radius: 10px; background-color: rgb(3, 156, 164);  color: white; margin-top: 10px; padding: 7px 12px;">
+                                تقديم طلب وسيط استكمال صفقة من تعميد</a>
+                            <a href="javascript:void(0);" @click="send('back')">
+                                <p style="padding-top: 15px;font-weight: 500; padding-bottom: 15px;">العودة
+                                    للصفحة السابقة</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+</template>
+
+<script>
+
+export default {
+    methods: {
+        send(type) {
+            if (type == 'send') {
+                document.getElementById('main-content').style.display = 'none';
+                document.getElementById('quotes-finish').style.display = 'block';
+            } else {
+                document.getElementById('main-content').style.display = 'block';
+                document.getElementById('quotes-finish').style.display = 'none';
+
+            }
+
+        },
+        openCity(evt, cityName) {
+            if (cityName == 'accept') {
+                var elems = document.getElementsByClassName('negotiation-content');
+                for (var i = 0; i < elems.length; i += 1) {
+                    elems[i].style.display = 'none';
+                }
+                var elems2 = document.getElementsByClassName('accept-content');
+                for (var i2 = 0; i2 < elems2.length; i2 += 1) {
+                    elems2[i2].style.display = 'block';
+                }
+                evt.currentTarget.style.color = "white";
+                evt.currentTarget.style.backgroundColor = "#039ca4";
+                document.getElementById("negotiation").style.color = "#039ca4";
+                document.getElementById("negotiation").style.backgroundColor = "white";
+                document.getElementById('price-with-material-accept').style.display = 'block';
+                document.getElementById('price-with-material').style.display = 'none';
+            }
+            else {
+                var elems3 = document.getElementsByClassName('negotiation-content');
+                for (var i3 = 0; i3 < elems3.length; i3 += 1) {
+                    elems3[i3].style.display = 'block';
+                }
+                var elems4 = document.getElementsByClassName('accept-content');
+                for (var i4 = 0; i4 < elems4.length; i4 += 1) {
+                    elems4[i4].style.display = 'none';
+                }
+
+                evt.currentTarget.style.color = "white";
+                evt.currentTarget.style.backgroundColor = "#039ca4";
+                document.getElementById("accept").style.color = "#039ca4";
+                document.getElementById("accept").style.backgroundColor = "white";
+                document.getElementById('price-with-material-accept').style.display = 'none';
+                document.getElementById('price-with-material').style.display = 'block';
+            }
+
+
+        },
+    },
+
+}
+
+</script>
+<style>
+.container1 {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.container1 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 2px;
+    right: 160px;
+    height: 25px;
+    width: 40px;
+    background-color: #fff;
+    border: 1px solid #a8a8a8;
+}
+
+
+.container1:hover input~.checkmark {
+    background-color: #fff;
+}
+
+
+.container1 input:checked~.checkmark {
+    background-color: #039ca4;
+}
+
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+.container1 input:checked~.checkmark:after {
+    display: block;
+}
+
+
+.container1 .checkmark:after {
+    left: 15px;
+    top: 3px;
+    width: 7px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+
+}
+</style>
