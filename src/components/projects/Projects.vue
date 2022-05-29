@@ -133,7 +133,7 @@
                                                 <h6 class="text-center" style="color: #019aa2;  font-size: 11px;">
                                                     عروض الاسعار المقدمة</h6>
 
-                                                <span style="color:#019aa2;  font-size: 20px; padding-right: 2px;"> 40
+                                                <span style="color:#019aa2;  font-size: 20px; padding-right: 2px;    padding-left: 3px;"> 40
                                                 </span>
                                                 <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 25px;
 "></i>
@@ -278,7 +278,7 @@
                                                 <h6 class="text-center" style="color: #019aa2;  font-size: 11px;">
                                                     عروض الاسعار المقدمة</h6>
 
-                                                <span style="color:#019aa2;  font-size: 20px; padding-right: 2px;"> 40
+                                                <span style="color:#019aa2;  font-size: 20px; padding-right: 2px;    padding-left: 3px;"> 40
                                                 </span>
                                                 <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 25px;
 "></i>
@@ -423,7 +423,7 @@
                                                 <h6 class="text-center" style="color: #019aa2;  font-size: 11px;">
                                                     عروض الاسعار المقدمة</h6>
 
-                                                <span style="color:#019aa2;  font-size: 20px; padding-right: 2px;"> 40
+                                                <span style="color:#019aa2;  font-size: 20px; padding-right: 2px;    padding-left: 3px;"> 40
                                                 </span>
                                                 <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 25px;
 "></i>

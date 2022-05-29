@@ -132,7 +132,7 @@
                                 </a>
                             </li>
                               <li class="nav-item" style=" padding-top: 4px; position: absolute; right: 84%;">
-                                <a href="javascript:void(0);" class="nav-link lang-btn" style="    box-shadow: rgb(240 240 240) 0px 2px 7px 4px; padding: 3px;">
+                                <a href="javascript:void(0);" class=" lang-btn" style="    box-shadow: 0px 1px 5px rgb(0 0 0 / 15%); padding: 3px;">
                                     EN
                                 </a>
                             </li>

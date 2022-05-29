@@ -3632,6 +3632,350 @@ $value_eleven: 1399px;
 }
 
 @media only screen and (min-width: 768px) {
+    .luvion-nav {
+        background-color: transparent;
+        padding: {
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        .navbar {
+            padding: {
+                right: 0;
+                top: 0;
+                left: 0;
+                bottom: 0;
+            }
+            ul {
+                padding-left: 0;
+                list-style-type: none;
+                margin-bottom: 0;
+            }
+            .navbar-nav {
+                font-family: $optional-font-family;
+                margin-left: auto;
+    
+                .nav-item {
+                    position: relative;
+                    padding: {
+                        top: 10px;
+                        bottom: 10px;
+                        left: 0;
+                        right: 0;
+                    }
+                    a {
+                        font: {
+                            size: 13px;
+                            weight: 500;
+                        }
+                        color: #4c9da5;
+                        text-transform: capitalize;
+                        padding: {
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                        }
+                        margin: {
+                            left: 15px;
+                            right: 15px;
+                        }
+                        &:hover, &:focus, &.active {
+                            color: #4cced3;
+                        }
+                        i {
+                            font-size: 10px;
+                            margin-left: 1px;
+                        }
+                    }
+                    .nav-link::before {
+                        content: "";
+                        width: 0px;
+                        height: 2px;
+                        background-color: #039ca4;
+                        position: absolute;
+                        bottom: 0px;
+                        right: 0px;
+                        -webkit-transition: .5s;
+                        transition: .5s;
+                    }
+                    .nav-link::after {
+                        content: "";
+                        width: 0px;
+                        height: 2px;
+                        background-color: #039ca4;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        -webkit-transition: .5s;
+                        transition: .5s;
+                    }
+                    .nav-link:hover::before {
+                        width: 100%;
+                    }
+                    .nav-link:hover::after {
+                        width: 100%;
+                    }
+                    &:last-child {
+                        a {
+                            margin-right: 0;
+                        }
+                    }
+                    &:first-child {
+                        a {
+                            margin-left: 0;
+                        }
+                    }
+                    &:hover, &.active {
+                        a {
+                            color: #4cced3;
+                        }
+                    }
+                    .dropdown-menu {
+                        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+                        background: $white-color;
+                        position: absolute;
+                        border: none;
+                        top: 80px;
+                        left: 0;
+                        width: 250px;
+                        z-index: 99;
+                        display: block;
+                        opacity: 0;
+                        visibility: hidden;
+                        border-radius: 0;
+                        transition: all 0.3s ease-in-out;
+                        padding: {
+                            top: 20px;
+                            left: 5px;
+                            right: 5px;
+                            bottom: 20px;
+                        }
+                        li {
+                            padding: {
+                                left: 0;
+                                right: 0;
+                                top: 0;
+                                bottom: 0;
+                            }
+                            a {
+                                text-transform: capitalize;
+                                padding: 8px 15px;
+                                margin: 0;
+                                color: $black-color;
+                                font: {
+                                    size: 15.5px;
+                                    weight: 500;
+                                }
+                                &:hover, &:focus, &.active {
+                                    color: $main-color;
+                                }
+                            }
+                            .dropdown-menu {
+                                left: -250px;
+                                top: 0;
+                                opacity: 0;
+                                visibility: hidden;
+                                
+                                li {
+                                    a {
+                                        color: $black-color;
+                                        
+                                        &:hover, &:focus, &.active {
+                                            color: $main-color;
+                                        }
+                                    }
+                                    .dropdown-menu {
+                                        left: 220px;
+                                        top: 0;
+                                        opacity: 0;
+                                        visibility: hidden;
+            
+                                        li {
+                                            a {
+                                                color: $black-color;
+            
+                                                &:hover, &:focus, &.active {
+                                                    color: $main-color;
+                                                }
+                                            }
+                                            .dropdown-menu {
+                                                left: -250px;
+                                                top: 0;
+                                                opacity: 0;
+                                                visibility: hidden;
+                    
+                                                li {
+                                                    a {
+                                                        color: $black-color;
+                    
+                                                        &:hover, &:focus, &.active {
+                                                            color: $main-color;
+                                                        }
+                                                    }
+                                                    .dropdown-menu {
+                                                        left: -250px;
+                                                        top: 0;
+                                                        opacity: 0;
+                                                        visibility: hidden;
+                            
+                                                        li {
+                                                            a {
+                                                                color: $black-color;
+                            
+                                                                &:hover, &:focus, &.active {
+                                                                    color: $main-color;
+                                                                }
+                                                            }
+                                                            .dropdown-menu {
+                                                                left: -250px;
+                                                                top: 0;
+                                                                opacity: 0;
+                                                                visibility: hidden;
+                                    
+                                                                li {
+                                                                    a {
+                                                                        color: $black-color;
+                                    
+                                                                        &:hover, &:focus, &.active {
+                                                                            color: $main-color;
+                                                                        }
+                                                                    }
+                                                                    .dropdown-menu {
+                                                                        left: -250px;
+                                                                        top: 0;
+                                                                        opacity: 0;
+                                                                        visibility: hidden;
+                                            
+                                                                        li {
+                                                                            a {
+                                                                                color: $black-color;
+                                            
+                                                                                &:hover, &:focus, &.active {
+                                                                                    color: $main-color;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    &.active {
+                                                                        a {
+                                                                            color: $main-color;
+                                                                        }
+                                                                    }
+                                                                    &:hover {
+                                                                        .dropdown-menu {
+                                                                            opacity: 1;
+                                                                            visibility: visible;
+                                                                            top: -15px;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            &.active {
+                                                                a {
+                                                                    color: $main-color;
+                                                                }
+                                                            }
+                                                            &:hover {
+                                                                .dropdown-menu {
+                                                                    opacity: 1;
+                                                                    visibility: visible;
+                                                                    top: -15px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    &.active {
+                                                        a {
+                                                            color: $main-color;
+                                                        }
+                                                    }
+                                                    &:hover {
+                                                        .dropdown-menu {
+                                                            opacity: 1;
+                                                            visibility: visible;
+                                                            top: -15px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            &.active {
+                                                a {
+                                                    color: $main-color;
+                                                }
+                                            }
+                                            &:hover {
+                                                .dropdown-menu {
+                                                    opacity: 1;
+                                                    visibility: visible;
+                                                    top: -15px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.active {
+                                        a {
+                                            color: $main-color;
+                                        }
+                                    }
+                                    &:hover {
+                                        .dropdown-menu {
+                                            opacity: 1;
+                                            visibility: visible;
+                                            top: -15px;
+                                        }
+                                    }
+                                }
+                            }
+                            &.active {
+                                a {
+                                    color: $main-color;
+                                }
+                            }
+                            &:hover {
+                                .dropdown-menu {
+                                    opacity: 1;
+                                    visibility: visible;
+                                    top: -15px;
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        .dropdown-menu {
+                            opacity: 1;
+                            visibility: visible;
+                            top: 100%;
+                        }
+                    }
+                }
+            }
+            .others-options {
+                margin-left: 25px;
+        
+                .login-btn {
+                    color: $white-color;
+                    font: {
+                        size: 15px;
+                        weight: 300;
+                        family: $optional-font-family;
+                    }
+                    i {
+                        margin-right: 2px;
+                        color: #eae563;
+                    }
+                    &:hover {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+    .lang-btn {
+
+        display: block;
+    }
     .col-1-5 {
         width: 10.666667%;
         text-align: start;
@@ -4632,6 +4976,305 @@ $value_eleven: 1399px;
 }
 
 @media(max-width: 575px) {
+    .luvion-nav {
+        background-color: transparent;
+        padding: {
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        .navbar {
+            padding: {
+                right: 0;
+                top: 0;
+                left: 0;
+                bottom: 0;
+            }
+            ul {
+                padding-left: 0;
+                list-style-type: none;
+                margin-bottom: 0;
+            }
+            .navbar-nav {
+                font-family: $optional-font-family;
+                margin-left: auto;
+    
+                .nav-item {
+                    position: relative;
+                    padding: {
+                        top: 10px;
+                        bottom: 10px;
+                        left: 0;
+                        right: 0;
+                    }
+                    a {
+                        font: {
+                            size: 13px;
+                            weight: 500;
+                        }
+                        color: #4c9da5;
+                        text-transform: capitalize;
+                        padding: {
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                        }
+                        margin: {
+                            left: 15px;
+                            right: 15px;
+                        }
+                        &:hover, &:focus, &.active {
+                            color: $main-color;
+                        }
+                        i {
+                            font-size: 10px;
+                            margin-left: 1px;
+                        }
+                    }
+                    a:hover {
+                        background: #039ca5;
+                        color: white;
+
+                    }
+                    &:last-child {
+                        a {
+                            margin-right: 0;
+                        }
+                    }
+                    &:first-child {
+                        a {
+                            margin-left: 0;
+                        }
+                    }
+                    &:hover, &.active {
+                        a {
+                            color: #4cced3;
+                        }
+                    }
+                    .dropdown-menu {
+                        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+                        background: $white-color;
+                        position: absolute;
+                        border: none;
+                        top: 80px;
+                        left: 0;
+                        width: 250px;
+                        z-index: 99;
+                        display: block;
+                        opacity: 0;
+                        visibility: hidden;
+                        border-radius: 0;
+                        transition: all 0.3s ease-in-out;
+                        padding: {
+                            top: 20px;
+                            left: 5px;
+                            right: 5px;
+                            bottom: 20px;
+                        }
+                        li {
+                            padding: {
+                                left: 0;
+                                right: 0;
+                                top: 0;
+                                bottom: 0;
+                            }
+                            a {
+                                text-transform: capitalize;
+                                padding: 8px 15px;
+                                margin: 0;
+                                color: $black-color;
+                                font: {
+                                    size: 15.5px;
+                                    weight: 500;
+                                }
+                                &:hover, &:focus, &.active {
+                                    color: $main-color;
+                                }
+                            }
+                            .dropdown-menu {
+                                left: -250px;
+                                top: 0;
+                                opacity: 0;
+                                visibility: hidden;
+                                
+                                li {
+                                    a {
+                                        color: $black-color;
+                                        
+                                        &:hover, &:focus, &.active {
+                                            color: $main-color;
+                                        }
+                                    }
+                                    .dropdown-menu {
+                                        left: 220px;
+                                        top: 0;
+                                        opacity: 0;
+                                        visibility: hidden;
+            
+                                        li {
+                                            a {
+                                                color: $black-color;
+            
+                                                &:hover, &:focus, &.active {
+                                                    color: $main-color;
+                                                }
+                                            }
+                                            .dropdown-menu {
+                                                left: -250px;
+                                                top: 0;
+                                                opacity: 0;
+                                                visibility: hidden;
+                    
+                                                li {
+                                                    a {
+                                                        color: $black-color;
+                    
+                                                        &:hover, &:focus, &.active {
+                                                            color: $main-color;
+                                                        }
+                                                    }
+                                                    .dropdown-menu {
+                                                        left: -250px;
+                                                        top: 0;
+                                                        opacity: 0;
+                                                        visibility: hidden;
+                            
+                                                        li {
+                                                            a {
+                                                                color: $black-color;
+                            
+                                                                &:hover, &:focus, &.active {
+                                                                    color: $main-color;
+                                                                }
+                                                            }
+                                                            .dropdown-menu {
+                                                                left: -250px;
+                                                                top: 0;
+                                                                opacity: 0;
+                                                                visibility: hidden;
+                                    
+                                                                li {
+                                                                    a {
+                                                                        color: $black-color;
+                                    
+                                                                        &:hover, &:focus, &.active {
+                                                                            color: $main-color;
+                                                                        }
+                                                                    }
+                                                                    .dropdown-menu {
+                                                                        left: -250px;
+                                                                        top: 0;
+                                                                        opacity: 0;
+                                                                        visibility: hidden;
+                                            
+                                                                        li {
+                                                                            a {
+                                                                                color: $black-color;
+                                            
+                                                                                &:hover, &:focus, &.active {
+                                                                                    color: $main-color;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    &.active {
+                                                                        a {
+                                                                            color: $main-color;
+                                                                        }
+                                                                    }
+                                                                    &:hover {
+                                                                        .dropdown-menu {
+                                                                            opacity: 1;
+                                                                            visibility: visible;
+                                                                            top: -15px;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            &.active {
+                                                                a {
+                                                                    color: $main-color;
+                                                                }
+                                                            }
+                                                            &:hover {
+                                                                .dropdown-menu {
+                                                                    opacity: 1;
+                                                                    visibility: visible;
+                                                                    top: -15px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    &.active {
+                                                        a {
+                                                            color: $main-color;
+                                                        }
+                                                    }
+                                                    &:hover {
+                                                        .dropdown-menu {
+                                                            opacity: 1;
+                                                            visibility: visible;
+                                                            top: -15px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            &.active {
+                                                a {
+                                                    color: $main-color;
+                                                }
+                                            }
+                                            &:hover {
+                                                .dropdown-menu {
+                                                    opacity: 1;
+                                                    visibility: visible;
+                                                    top: -15px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.active {
+                                        a {
+                                            color: $main-color;
+                                        }
+                                    }
+                                    &:hover {
+                                        .dropdown-menu {
+                                            opacity: 1;
+                                            visibility: visible;
+                                            top: -15px;
+                                        }
+                                    }
+                                }
+                            }
+                            &.active {
+                                a {
+                                    color: $main-color;
+                                }
+                            }
+                            &:hover {
+                                .dropdown-menu {
+                                    opacity: 1;
+                                    visibility: visible;
+                                    top: -15px;
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        .dropdown-menu {
+                            opacity: 1;
+                            visibility: visible;
+                            top: 100%;
+                        }
+                    }
+                }
+            }
+           
+        }
+    }
     .project-title-section {
 
         font-size: 20px;
@@ -4658,27 +5301,27 @@ $value_eleven: 1399px;
     .profile-share {
         position: absolute;
         top: 310px;
-        right: 33%;
+        right: 32%;
     }
 
     .profile-rate {
 
         position: absolute;
         top: 250px;
-        right: 38%;
+        right: 37%;
     }
 
     .profile-title {
 
         position: absolute;
         top: 225px;
-        right: 35%;
+        right: 34%;
     }
 
     .logo-profile {
         position: absolute;
         top: 110px;
-        right: 40%;
+        right: 39%;
     }
 
     .header-profile {

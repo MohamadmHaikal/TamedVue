@@ -251,30 +251,107 @@
 
                                         </div>
                                         <div id="comment" class="tabcontent">
-                                            <div class="RHo1pe">
-                                                <header class="c1bOId" jsaction="rcuQ6b:SIRhf" jscontroller="j9sf1"
-                                                    data-review-id="gp:AOqpTOFMhIaA40iw-0oLc8Q1_Oq77hXAHQaAaYkVVS84sNM-qOFmUOK6W3by68s57TvFs1KbT08CgPRFA4qXg-U">
-                                                    <div class="YNR7H"
-                                                        style="    display: flex;  align-items: center;justify-content: space-between;">
-                                                        <div class="gSGphe"
-                                                            style="display: grid; align-items: center; grid-column-gap: 16px;grid-template-columns: repeat(2,max-content);">
-                                                            <img src="https://play-lh.googleusercontent.com/a-/AOh14GgfOYm5Djv-nnv_vqs8OQKKMOba49j55xhk71PgRQ=s32-rw"
-                                                                srcset="https://play-lh.googleusercontent.com/a-/AOh14GgfOYm5Djv-nnv_vqs8OQKKMOba49j55xhk71PgRQ=s64-rw 2x"
-                                                                class="T75of abYEib" aria-hidden="true"
-                                                                style="border-radius: 50%; width: 32px; height: 32px; overflow: hidden;background-size: cover;"
-                                                                data-iml="56266.90000003576">
-                                                            <div class="X5PpBb">فرسان للمقاولات</div>
+                                            <div class="box mt-4"
+                                                style="background: #fff; padding: 25px; border-radius: 3px;box-shadow: 0px 4px 8px rgba(0,0,0,0.15);">
+
+                                                <div class="content"
+                                                    style=" display: flex;flex-wrap: wrap;align-items: center;justify-content: space-between;">
+                                                    <div class="info">
+                                                        <div class="name" style=" font-weight: 600;font-size: 17px;">
+                                                            فرسان للمقاولات</div>
+                                                        <div class="job"
+                                                            style=" font-size: 12px;font-weight: 500;color: #17a2b8;    padding: 3px 0px 3px 0px;">
+                                                            شركة | مقاولات</div>
+                                                        <div class="stars" style="margin-top: 2px;">
+                                                            <i class="fas fa-star" style=" color: #ffd203"></i>
+                                                            <i class="fas fa-star" style=" color: #ffd203;"></i>
+                                                            <i class="far fa-star" style=" color: #ffd203;"></i>
+                                                            <i class="far fa-star" style=" color: #ffd203;"></i>
+                                                            <i class="far fa-star" style=" color: #ffd203;"></i>
                                                         </div>
-
                                                     </div>
+                                                    <div class="image"
+                                                        style=" height: 75px;width: 75px; padding: 3px;background: #17a2b8;border-radius: 50%;">
+                                                        <img src="https://login.tamedksa.com/image/1648718574.png"
+                                                            alt=""
+                                                            style="    background-color: white; border-color: #fff;height: 100%; width: 100%; object-fit: cover;border-radius: 50%;border: 2px solid #fff;">
+                                                    </div>
+                                                </div>
 
-                                                </header>
-                                                <div class="h3YV2d"> نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
-                                                    نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
-                                                    تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
-                                                    نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
-                                                    تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي</div>
+                                                <p style=" padding-top: 10px;">Lorem aliasry ipsum dolor sits ametans,
+                                                    consectetur adipisicing
+                                                    elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos
+                                                    repellendus repudiandae deleniti ideas fuga molestiae, alias.</p> <i
+                                                    class="fas fa-quote-left quote"
+                                                    style=" font-size: 20px;color: #17a2b8;display: flow-root;text-align: end;padding-left: 20px;"></i>
+                                            </div>
+                                            <div class="box mt-4"
+                                                style="background: #fff; padding: 25px; border-radius: 3px;box-shadow: 0px 4px 8px rgba(0,0,0,0.15);">
 
+                                                <div class="content"
+                                                    style=" display: flex;flex-wrap: wrap;align-items: center;justify-content: space-between;">
+                                                    <div class="info">
+                                                        <div class="name" style=" font-weight: 600;font-size: 17px;">
+                                                            فرسان للمقاولات</div>
+                                                        <div class="job"
+                                                            style=" font-size: 12px;font-weight: 500;color: #17a2b8;    padding: 3px 0px 3px 0px;">
+                                                            شركة | مقاولات</div>
+                                                        <div class="stars" style="margin-top: 2px;">
+                                                            <i class="fas fa-star" style=" color: #ffd203"></i>
+                                                            <i class="fas fa-star" style=" color: #ffd203;"></i>
+                                                            <i class="far fa-star" style=" color: #ffd203;"></i>
+                                                            <i class="far fa-star" style=" color: #ffd203;"></i>
+                                                            <i class="far fa-star" style=" color: #ffd203;"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="image"
+                                                        style=" height: 75px;width: 75px; padding: 3px;background: #17a2b8;border-radius: 50%;">
+                                                        <img src="https://login.tamedksa.com/image/1653349843.png"
+                                                            alt=""
+                                                            style="     background-color: white; border-color: #fff;height: 100%; width: 100%; object-fit: cover;border-radius: 50%;border: 2px solid #fff;">
+                                                    </div>
+                                                </div>
+
+                                                <p style=" padding-top: 10px;">Lorem aliasry ipsum dolor sits ametans,
+                                                    consectetur adipisicing
+                                                    elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos
+                                                    repellendus repudiandae deleniti ideas fuga molestiae, alias.</p> <i
+                                                    class="fas fa-quote-left quote"
+                                                    style=" font-size: 20px;color: #17a2b8;display: flow-root;text-align: end;padding-left: 20px;"></i>
+                                            </div>
+                                            <div class="box mt-4"
+                                                style="background: #fff; padding: 25px; border-radius: 3px;box-shadow: 0px 4px 8px rgba(0,0,0,0.15);">
+
+                                                <div class="content"
+                                                    style=" display: flex;flex-wrap: wrap;align-items: center;justify-content: space-between;">
+                                                    <div class="info">
+                                                        <div class="name" style=" font-weight: 600;font-size: 17px;">
+                                                            فرسان للمقاولات</div>
+                                                        <div class="job"
+                                                            style=" font-size: 12px;font-weight: 500;color: #17a2b8;    padding: 3px 0px 3px 0px;">
+                                                            شركة | مقاولات</div>
+                                                        <div class="stars" style="margin-top: 2px;">
+                                                            <i class="fas fa-star" style=" color: #ffd203"></i>
+                                                            <i class="fas fa-star" style=" color: #ffd203;"></i>
+                                                            <i class="far fa-star" style=" color: #ffd203;"></i>
+                                                            <i class="far fa-star" style=" color: #ffd203;"></i>
+                                                            <i class="far fa-star" style=" color: #ffd203;"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="image"
+                                                        style=" height: 75px;width: 75px; padding: 3px;background: #17a2b8;border-radius: 50%;">
+                                                        <img src="https://login.tamedksa.com/image/1648718574.png"
+                                                            alt=""
+                                                            style="    background-color: white; border-color: #fff;height: 100%; width: 100%; object-fit: cover;border-radius: 50%;border: 2px solid #fff;">
+                                                    </div>
+                                                </div>
+
+                                                <p style=" padding-top: 10px;">Lorem aliasry ipsum dolor sits ametans,
+                                                    consectetur adipisicing
+                                                    elitits. Expedita reiciendis itaque placeat thuratu, quasi yiuos
+                                                    repellendus repudiandae deleniti ideas fuga molestiae, alias.</p> <i
+                                                    class="fas fa-quote-left quote"
+                                                    style=" font-size: 20px;color: #17a2b8;display: flow-root;text-align: end;padding-left: 20px;"></i>
                                             </div>
                                         </div>
                                     </div>
