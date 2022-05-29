@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="mt-2" style="text-align: -webkit-center;">
-                    <div class="col-9 mt-3 text-center">
+                    <div class="col-10 mt-3 text-center">
                         <div class="card"
                             style="border-radius: 14px;    margin-bottom: 40px; box-shadow: 1px 1px 5px 2px #ece9e9;">
                             <div class="card-horizontal" style=" display: flex;
@@ -127,34 +127,34 @@
                                     </div>
                                     <div style="padding-left: 1rem; padding-right: 1rem ; ">
                                         <div class="row">
-                                            <div class="col-md-3 text-end mt-2 row-col-with">
-                                                <p class="text-center" style="color: #019aa2;  font-size: 12px;">تاريخ
+                                            <div class="col-md-3 col-6  text-end mt-2 ">
+                                                <p class="text-end" style="color: #019aa2;  font-size: 12px;">تاريخ
                                                     انتهاء المزاد</p>
                                                 <i class='far fa-calendar-alt' style="color: #37D337;"></i>
-                                                <span
-                                                    style="color: rgb(87 83 77);  font-size: 12px; padding-right: 2px;">
+                                                <span class="date-icon"
+                                                    >
                                                     2022-05-22 </span>
-                                                <span
-                                                    style="color: rgb(87 83 77);  font-size: 12px; padding-right: 5px;">
+                                                <span class="time-icon"
+                                                    >
                                                     <i class='far fa-clock' style="color: #37D337;"></i> 12:00</span>
 
                                             </div>
-                                            <div class="col-md-2 row-col-with" style="margin-top: 43px;">
+                                            <div class="col-md-2  col-6  row-col-with view" style="margin-top: 43px;">
                                                 <span style="color: #019aa2;  font-size: 12px; padding-right: 5px;">
                                                     2500 <i class='far fa-eye' style="color: #37D337;"></i></span>
 
                                             </div>
-                                            <div class="col-md-2 mt-2">
-                                                <p class="text-center" style="color: #019aa2;  font-size: 12px;">
-                                                    المشاركين</p>
+                                            <div class="col-md-2 col-6  mt-3">
+                                                <h6 class="text-center" style="color: #019aa2;  font-size: 12px;">
+                                                    المشاركين</h6>
 
                                                 <span style="color:#019aa2;  font-size: 20px; padding-right: 2px;"> 40
                                                 </span>
-                                                <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 30px;
+                                                <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 25px;
 "></i>
 
                                             </div>
-                                            <div class="col-md-2 mt-3">
+                                            <div class="col-md-2 col-6   mt-3">
 
                                                 <h6 class="text-center" style="color: #019aa2;  font-size: 12px;">تأمين
                                                     المشاركة</h6>
@@ -164,7 +164,7 @@
 
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div class="col-md-3 col-6 ">
                                                 <router-link to="/deals-auctions-details" class="btn btn-logo" style="    border-radius: 16px;
     background-color: #039ca4;
     color: white;
@@ -191,7 +191,7 @@
                 </div>
 
                 <div class="mt-2" style="text-align: -webkit-center;">
-                    <div class="col-9 mt-3 text-center">
+                    <div class="col-10 mt-3 text-center">
                         <div class="card"
                             style="border-radius: 14px;    margin-bottom: 40px; box-shadow: 1px 1px 5px 2px #ece9e9;">
                             <div class="card-horizontal" style=" display: flex;
@@ -273,29 +273,29 @@
                                     <div style="padding-left: 1rem; padding-right: 1rem ; ">
                                         <div class="row">
                                             <div class="col-md-3 text-end mt-2 row-col-with">
-                                                <p class="text-center" style="color: #019aa2;  font-size: 12px;">تاريخ
+                                                <p class="text-end" style="color: #019aa2;  font-size: 12px;">تاريخ
                                                     انتهاء الصفقة</p>
                                                 <i class='far fa-calendar-alt' style="color: #37D337;"></i>
-                                                <span
-                                                    style="color: rgb(87 83 77);  font-size: 12px; padding-right: 2px;">
+                                                <span class="date-icon"
+                                                   >
                                                     2022-05-22 </span>
-                                                <span
-                                                    style="color: rgb(87 83 77);  font-size: 12px; padding-right: 5px;">
+                                                <span class="time-icon"
+                                                   >
                                                     <i class='far fa-clock' style="color: #37D337;"></i> 12:00</span>
 
                                             </div>
-                                            <div class="col-md-2 row-col-with" style="margin-top: 43px;">
+                                            <div class="col-md-2 row-col-with view" style="margin-top: 43px;">
                                                 <span style="color: #019aa2;  font-size: 12px; padding-right: 5px;">
                                                     2500 <i class='far fa-eye' style="color: #37D337;"></i></span>
 
                                             </div>
-                                            <div class="col-md-2 mt-2">
-                                                <p class="text-center" style="color: #019aa2;  font-size: 12px;">
-                                                    المشاركين</p>
+                                            <div class="col-md-2 mt-3">
+                                                <h6 class="text-center" style="color: #019aa2;  font-size: 12px;">
+                                                    المشاركين</h6>
 
                                                 <span style="color:#019aa2;  font-size: 20px; padding-right: 2px;"> 40
                                                 </span>
-                                                <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 30px;
+                                                <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 25px;
 "></i>
 
                                             </div>
@@ -336,7 +336,7 @@
                     </div>
                 </div>
                 <div class="mt-2" style="text-align: -webkit-center;">
-                    <div class="col-9 mt-3 text-center">
+                    <div class="col-10 mt-3 text-center">
                         <div class="card"
                             style="border-radius: 14px;    margin-bottom: 40px; box-shadow: 1px 1px 5px 2px #ece9e9;">
                             <div class="card-horizontal" style=" display: flex;
@@ -418,29 +418,29 @@
                                     <div style="padding-left: 1rem; padding-right: 1rem ; ">
                                         <div class="row">
                                             <div class="col-md-3 text-end mt-2 row-col-with">
-                                                <p class="text-center" style="color: #019aa2;  font-size: 12px;">تاريخ
+                                                <p class="text-end" style="color: #019aa2;  font-size: 12px;">تاريخ
                                                     انتهاء المزاد</p>
                                                 <i class='far fa-calendar-alt' style="color: #37D337;"></i>
-                                                <span
-                                                    style="color: rgb(87 83 77);  font-size: 12px; padding-right: 2px;">
+                                                <span class="date-icon"
+                                                 >
                                                     2022-05-22 </span>
-                                                <span
-                                                    style="color: rgb(87 83 77);  font-size: 12px; padding-right: 5px;">
+                                                <span class="time-icon"
+                                                  >
                                                     <i class='far fa-clock' style="color: #37D337;"></i> 12:00</span>
 
                                             </div>
-                                            <div class="col-md-2 row-col-with" style="margin-top: 43px;">
+                                            <div class="col-md-2 row-col-with view" style="margin-top: 43px;">
                                                 <span style="color: #019aa2;  font-size: 12px; padding-right: 5px;">
                                                     2500 <i class='far fa-eye' style="color: #37D337;"></i></span>
 
                                             </div>
-                                            <div class="col-md-2 mt-2">
-                                                <p class="text-center" style="color: #019aa2;  font-size: 12px;">
-                                                    المشاركين</p>
+                                            <div class="col-md-2 mt-3">
+                                                <h6 class="text-center" style="color: #019aa2;  font-size: 12px;">
+                                                    المشاركين</h6>
 
                                                 <span style="color:#019aa2;  font-size: 20px; padding-right: 2px;"> 40
                                                 </span>
-                                                <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 30px;
+                                                <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 25px;
 "></i>
 
                                             </div>

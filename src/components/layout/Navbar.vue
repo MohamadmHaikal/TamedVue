@@ -126,17 +126,17 @@
                                     الإتصال بنا
                                 </a>
                             </li>
-                             <li class="nav-item">
-                                <a href="javascript:void(0);" class="nav-link">
+                             <li class="test ">
+                                <a href="javascript:void(0);" class="nav-link" style="color: white;">
                                     نسخة تجريبية
                                 </a>
                             </li>
-                              <li class="nav-item" style=" padding-top: 4px; position: absolute; right: 80%;">
+                              <li class="nav-item" style=" padding-top: 4px; position: absolute; right: 84%;">
                                 <a href="javascript:void(0);" class="nav-link lang-btn" style="    box-shadow: rgb(240 240 240) 0px 2px 7px 4px; padding: 3px;">
                                     EN
                                 </a>
                             </li>
-                              <li class="nav-item" style="padding-top: 0px; position: absolute; right: 85%;">
+                              <li class="nav-item" style="padding-top: 0px; position: absolute; right: 88%;">
                                 <a href="https://login.tamedksa.com/" class="btn btn-login"
                                     style="    border-radius: 25px;
                                             background-color: #f2a23b;

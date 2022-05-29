@@ -17,7 +17,7 @@
             <div class="section-title">
                 <div class="row">
                     <div class="col-md-6  row-col-with mt-1" style="    width: 50%;">
-                        <h4>الصفقات و المزادات</h4>
+                        <h4 class="project-title-section">الصفقات و المزادات</h4>
 
                     </div>
                     <div class="col-md-6   " style="    width: 50%;">

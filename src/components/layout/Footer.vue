@@ -1,7 +1,7 @@
 <template>
     <div>
         <footer class="footer-area">
-            <div class="container cont">
+            <div class="containerfooter container ">
                 <div class="row">
 
                     <div class="col-lg-3 col-sm-6 col-md-6 text-center footer-area-about">
@@ -19,7 +19,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-sm-6 col-md-6 footer-area-services text-center">
+                    <div class="col-lg-3 col-sm-6 col-md-6   col-6 footer-area-services text-center">
                         <div class="single-footer-widget pl-5">
                             <h3>الخدمات</h3>
 
@@ -38,7 +38,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-sm-6 col-md-6 footer-area-services text-center" >
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6 footer-area-services text-center" >
                         <div class="single-footer-widget">
                             <h3>الاقسام</h3>
                             <div class="row">
@@ -99,14 +99,14 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-7 footer-area-priv">
                             <p style="border-left: solid 1px #a3b1b2;" class="parColor">جميع الحقوق محفوظة
-                                ©2021 - منصةتعميد - المملكة العربية السعودية</p>
+                                ©2021 - منصة تعميد - المملكة العربية السعودية</p>
                                                    <span style="color: #62bbc0;">يدعم المتصفحات</span><img src="../../assets/images/125.png"></div>
 
                         
-                        <div class="col-md-2 col-sm-3">
+                        <div class="col-md-2 col-sm-3 col-1-5">
                             <p style="border-left: solid 1px #a3b1b2;" class="parColor">سياسة الاستخدام</p>
                         </div>
-                        <div class="col-md-2 col-sm-2">
+                        <div class="col-md-2 col-sm-2 col-1-5" >
                             <p class="parColor">سياسة الخصوصية</p>
                         </div>
                          

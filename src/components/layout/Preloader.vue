@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="preloader">
         <div class="loader">
             <div class="shadow"></div>
@@ -11,4 +11,4 @@
     export default {
         name: 'Preloader'
     }
-</script>
+</script> -->

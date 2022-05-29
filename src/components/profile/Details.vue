@@ -11,18 +11,18 @@
                         <img src="https://login.tamedksa.com/image/1648718574.png" alt="Avatar"
                             style="    width: 100px;  border-radius: 50%;  background-color: white;    box-shadow: #dedede 0px 2px 6px -1px;">
                     </div>
-                    <span class="profile-title" >شركة فرسان للمقاولات</span>
-                    <div class="profile-rate  mt-3 "> <span
-                            class="far fa-star" style="font-size:20px; color:#ffd203 ;" aria-hidden=""></span><span
-                            class="far fa-star" style="font-size:20px; color:#ffd203 ;"></span><span
-                            class="fa fa-star checked" style="font-size:20px;"></span><span class="fa fa-star checked"
+                    <span class="profile-title">شركة فرسان للمقاولات</span>
+                    <div class="profile-rate  mt-3 "> <span class="far fa-star" style="font-size:20px; color:#ffd203 ;"
+                            aria-hidden=""></span><span class="far fa-star"
+                            style="font-size:20px; color:#ffd203 ;"></span><span class="fa fa-star checked"
+                            style="font-size:20px;"></span><span class="fa fa-star checked"
                             style="font-size:20px;"></span><span class="fa fa-star checked"
                             style="font-size:20px;"></span></div>
-                    <div class="profile-share"><span
-                            style="margin-left: 6px; margin-bottom: 2px;">2568</span><i class="far fa-eye"
-                            style="font-size: 20px;color: rgb(1, 154, 162);"></i><svg version="1.1" id="Layer_1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-                            y="0px" viewBox="0 0 512 512" xml:space="preserve" style="width: 20px; margin-right: 20px;">
+                    <div class="profile-share"><span style="margin-left: 6px; margin-bottom: 2px;">2568</span><i
+                            class="far fa-eye" style="font-size: 20px;color: rgb(1, 154, 162);"></i><svg version="1.1"
+                            id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"
+                            style="width: 20px; margin-right: 20px;">
                             <g>
                                 <polygon points="334.9,120.6 256,41.7 177.1,120.6 156.3,99.7 256,0 355.7,99.7 	">
                                 </polygon>
@@ -50,7 +50,7 @@
                                                 المنشآة</button>
                                             <button class="tablinks profile" @click="openCity($event, 'Tokyo')">
                                                 المشاريع</button>
-                                            <button class="tablinks profile" @click="openCity($event, 'Tokyo')">
+                                            <button class="tablinks profile" @click="openCity($event, 'comment')">
                                                 تعليقات</button>
                                         </div>
 
@@ -176,7 +176,106 @@
                                         </div>
 
                                         <div id="Tokyo" class="tabcontent">
+                                            <div class="section-area ptb-70 pt-0">
+                                                <div class="containp  container">
+                                                    <div class="section-title">
+                                                        <div class="row">
+                                                            <div class="col-md-12  row-col-with">
+                                                                <h4> مشاريع المنشآة</h4>
 
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="feedback-slides">
+                                                        <carousel :autoplay="5000" :settings="settings"
+                                                            :wrap-around="true" :breakpoints="breakpoints">
+                                                            <slide v-for="slide in carouselItems" :key="slide.id">
+
+                                                                <div class="single-section-post">
+                                                                    <div class="section-image">
+                                                                        <router-link to="/ProjectDetails">
+                                                                            <img :src="slide.image" alt="image">
+                                                                        </router-link>
+
+                                                                        <div class="date">
+                                                                            <i class="far fa-calendar-alt"></i>
+                                                                            2022-04-08
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="section-post-content">
+                                                                        <div class="row section-title">
+                                                                            <h6>
+                                                                                <router-link to="/ProjectDetails">{{
+                                                                                        slide.title
+                                                                                }}</router-link>
+                                                                            </h6>
+
+                                                                            <span>{{ slide.location }}</span>
+                                                                            <br>
+                                                                            <span>{{ slide.category }}</span>
+                                                                        </div>
+                                                                        <div class="row">
+
+                                                                            <div
+                                                                                class="col-md-6 col-xs-12 section-title date-end">
+                                                                                <span>اخر موعد تقديم 08/05/2022</span>
+                                                                                <br>
+                                                                                <router-link to="/ProjectDetails"
+                                                                                    class="show">تقديم عرض</router-link>
+                                                                            </div>
+                                                                            <div class="col-md-6 col-xs-12 price">
+                                                                                <p>قيمة المشروع</p>
+                                                                                <span>الأفضل سعر</span>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <!-- <p>{{slide.description}}</p> -->
+                                                                        <!-- <router-link to="/blog-details" class="read-more-btn">Read More <i
+                                        class="fas fa-arrow-right"></i></router-link> -->
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </slide>
+
+                                                            <template #addons>
+                                                                <!-- <Navigation /> -->
+                                                                <Pagination />
+                                                            </template>
+                                                        </carousel>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div id="comment" class="tabcontent">
+                                            <div class="RHo1pe">
+                                                <header class="c1bOId" jsaction="rcuQ6b:SIRhf" jscontroller="j9sf1"
+                                                    data-review-id="gp:AOqpTOFMhIaA40iw-0oLc8Q1_Oq77hXAHQaAaYkVVS84sNM-qOFmUOK6W3by68s57TvFs1KbT08CgPRFA4qXg-U">
+                                                    <div class="YNR7H"
+                                                        style="    display: flex;  align-items: center;justify-content: space-between;">
+                                                        <div class="gSGphe"
+                                                            style="display: grid; align-items: center; grid-column-gap: 16px;grid-template-columns: repeat(2,max-content);">
+                                                            <img src="https://play-lh.googleusercontent.com/a-/AOh14GgfOYm5Djv-nnv_vqs8OQKKMOba49j55xhk71PgRQ=s32-rw"
+                                                                srcset="https://play-lh.googleusercontent.com/a-/AOh14GgfOYm5Djv-nnv_vqs8OQKKMOba49j55xhk71PgRQ=s64-rw 2x"
+                                                                class="T75of abYEib" aria-hidden="true"
+                                                                style="border-radius: 50%; width: 32px; height: 32px; overflow: hidden;background-size: cover;"
+                                                                data-iml="56266.90000003576">
+                                                            <div class="X5PpBb">فرسان للمقاولات</div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </header>
+                                                <div class="h3YV2d"> نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                                                    نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                                                    تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي
+                                                    نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي نص
+                                                    تجريبي نص تجريبي نص تجريبي نص تجريبي نص تجريبي</div>
+
+                                            </div>
                                         </div>
                                     </div>
 
@@ -207,7 +306,8 @@
                                         <br>
                                         <span
                                             style="  text-align: right; padding-top: 10%;font-weight: 500; font-size: 13px; color:#5f5f5f ;">
-                                            تاريخ التسجيل 05/05/2022</span>
+                                            تاريخ التسجيل </span>
+                                        <span style="color:#039ca4 ;">05/05/2022</span>
 
                                     </div>
                                     <div class="row">
@@ -254,6 +354,14 @@
 import "vue3-circle-progress/dist/circle-progress.css";
 import CircleProgress from "vue3-circle-progress";
 
+import {
+    Carousel,
+    Slide,
+    Pagination,
+    // Navigation
+} from 'vue3-carousel';
+
+import 'vue3-carousel/dist/carousel.css';
 
 export default {
 
@@ -279,7 +387,72 @@ export default {
         element.classList.add("active-profile");
         document.getElementById('London').style.display = "block";
     },
-    components: { CircleProgress }
+    components: {
+        CircleProgress, Carousel,
+        Slide,
+        Pagination,
+    },
+
+    data: () => ({
+        carouselItems: [{
+            id: 1,
+            image: require('../../assets/images/blog/blog-1.jpg'),
+            title: 'مشروع تأثيث مبنى في طريق النهضة',
+            location: 'الرياض - طريق النهضة',
+            category: 'التصنيف: أثاث',
+            description: 'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ',
+        },
+        {
+            id: 2,
+            image: require('../../assets/images/blog/blog-2.jpg'),
+            title: 'مشروع تأثيث مبنى في طريق النهضة',
+            location: 'الرياض - طريق النهضة',
+            category: 'التصنيف: أثاث',
+            description: 'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ',
+        },
+        {
+            id: 3,
+            image: require('../../assets/images/blog/blog-3.jpg'),
+            title: 'مشروع تأثيث مبنى في طريق النهضة',
+            location: 'الرياض - طريق النهضة',
+            category: 'التصنيف: أثاث',
+            description: 'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis..',
+        },
+        {
+            id: 4,
+            image: require('../../assets/images/blog/blog-3.jpg'),
+            title: 'مشروع تأثيث مبنى في طريق النهضة',
+            location: 'الرياض - طريق النهضة',
+            category: 'التصنيف: أثاث',
+            description: 'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis..',
+        },
+        {
+            id: 5,
+            image: require('../../assets/images/blog/blog-2.jpg'),
+            title: 'مشروع تأثيث مبنى في طريق النهضة',
+            location: 'الرياض - طريق النهضة',
+            category: 'التصنيف: أثاث',
+            description: 'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ',
+        },
+        ],
+        settings: {
+
+            snapAlign: 'center',
+            // transition:300
+        },
+        breakpoints: {
+            // 700px and up
+            500: {
+                itemsToShow: 1,
+                snapAlign: 'center',
+            },
+            // 1024 and up
+            1024: {
+                itemsToShow: 2,
+                snapAlign: 'start',
+            },
+        },
+    }),
 }
 
 

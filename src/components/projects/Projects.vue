@@ -3,7 +3,7 @@
         <div class="about-area pb-70">
             <div class="containp  container">
                 <div class="mt-2" style="text-align: -webkit-center;">
-                    <div class="col-9 mt-3 text-center">
+                    <div class="col-10 mt-3 text-center">
                         <div class="row mt-4">
                             <div class="col-lg-4">
 
@@ -32,7 +32,7 @@
 
                 </div>
                 <div class="mt-2" style="text-align: -webkit-center;">
-                    <div class="col-9 mt-3 text-center">
+                    <div class="col-10 mt-3 text-center">
                         <div class="card"
                             style="border-radius: 14px;    margin-bottom: 40px; box-shadow: 1px 1px 5px 2px #ece9e9;">
                             <div class="card-horizontal" style=" display: flex;
@@ -46,13 +46,13 @@
 
                                             <div class="col-md-9">
                                                 <div class="row text-end">
-                                                    <div class="col-md-4">
-                                                        <i class='far fa-clock' style="color: #ababab;"></i>
-                                                        <span style="color: #ababab;"> التاريخ: </span>
-                                                        <span style="color: #ababab;"> 2022/02/22</span>
+                                                    <div class="col-md-4 col-6 pt-1">
+                                                        <i class='far fa-clock' style="color: #ababab; font-size: 13px;"></i>
+                                                        <span style="color: #ababab;    font-size: 13px;"> التاريخ: </span>
+                                                        <span style="color: #ababab;  font-size: 13px;"> 2022/02/22</span>
 
                                                     </div>
-                                                                          <div class="col-md-3">
+                                                                          <div class="col-md-3 col-6">
                                                         <div style=" background-color: #9fcf95; text-align: center;">
                                                             <p style="    color: white;
     padding-top: 1px;
@@ -112,34 +112,34 @@
                                     </div>
                                     <div style="padding-left: 1rem; padding-right: 1rem ; ">
                                         <div class="row">
-                                            <div class="col-md-3 text-end mt-2 row-col-with" >
-                                                <p class="text-center" style="color: #019aa2;  font-size: 12px;"> اخر
+                                            <div class="col-md-3  col-6  text-end mt-2 " >
+                                                <p class="text-end" style="color: #019aa2;  font-size: 12px;"> اخر
                                                     موعد لتقديم العروض</p>
                                                 <i class='far fa-calendar-alt' style="color: #37D337;"></i>
-                                                <span
-                                                    style="color: rgb(87 83 77);  font-size: 12px; padding-right: 2px;">
+                                                <span class="date-icon" 
+                                                    >
                                                     2022-05-22 </span>
-                                                <span
-                                                    style="color: rgb(87 83 77);  font-size: 12px; padding-right: 5px;">
+                                                <span class="time-icon" 
+                                                >
                                                     <i class='far fa-clock' style="color: #37D337;"></i> 12:00</span>
 
                                             </div>
-                                            <div class="col-md-2 row-col-with" style="margin-top: 43px;">
-                                                <span style="color: #019aa2;  font-size: 12px; padding-right: 5px;">
+                                            <div class="col-md-2 row-col-with view" style="margin-top: 43px;">
+                                                <span  style="color: #019aa2;  font-size: 12px; padding-right: 5px;">
                                                     2500 <i class='far fa-eye' style="color: #37D337;"></i></span>
 
                                             </div>
-                                            <div class="col-md-2 mt-2">
-                                                <p class="text-center" style="color: #019aa2;  font-size: 9px;">
-                                                    عروض الاسعار المقدمة</p>
+                                            <div class="col-md-2 col-6 mt-3">
+                                                <h6 class="text-center" style="color: #019aa2;  font-size: 11px;">
+                                                    عروض الاسعار المقدمة</h6>
 
                                                 <span style="color:#019aa2;  font-size: 20px; padding-right: 2px;"> 40
                                                 </span>
-                                                <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 30px;
+                                                <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 25px;
 "></i>
 
                                             </div>
-                                            <div class="col-md-2 mt-3">
+                                            <div class="col-md-2 col-6 mt-3">
 
                                                 <h6 class="text-center" style="color: #019aa2;  font-size: 12px;">
                                                     قيمةالمشروع
@@ -150,7 +150,7 @@
 
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div class="col-md-3 col-6 ">
                                                 <router-link to="/ProjectDetails" class="btn btn-logo" style="    border-radius: 16px;
     background-color: #039ca4;
     color: white;
@@ -179,7 +179,7 @@
                 </div>
 
                 <div class="mt-2" style="text-align: -webkit-center;">
-                    <div class="col-9 mt-3 text-center">
+                    <div class="col-10 mt-3 text-center">
                         <div class="card"
                             style="border-radius: 14px;    margin-bottom: 40px; box-shadow: 1px 1px 5px 2px #ece9e9;">
                             <div class="card-horizontal" style=" display: flex;
@@ -192,13 +192,13 @@
                                         <div class="row text-end">
                                             <div class="col-md-9">
                                                 <div class="row text-end">
-                                                    <div class="col-md-4">
-                                                        <i class='far fa-clock' style="color: #ababab;"></i>
-                                                        <span style="color: #ababab;"> التاريخ: </span>
-                                                        <span style="color: #ababab;"> 2022/02/22</span>
+                                                    <div class="col-md-4 pt-1 col-6">
+                                                        <i class='far fa-clock' style="color: #ababab; font-size: 13px;"></i>
+                                                        <span style="color: #ababab;     font-size: 13px;"> التاريخ: </span>
+                                                        <span style="color: #ababab;  font-size: 13px;"> 2022/02/22</span>
 
                                                     </div>
-                                                    <div class="col-md-3">
+                                                    <div class="col-md-3 col-6">
                                                    <div style=" background-color: #ebebeb; text-align: center;">
                                                             <p style="    color: white;
     padding-top: 1px;
@@ -257,34 +257,34 @@
                                     </div>
                                     <div style="padding-left: 1rem; padding-right: 1rem ; ">
                                         <div class="row">
-                                            <div class="col-md-3 text-end mt-2 row-col-with">
-                                                <p class="text-center" style="color: #019aa2;  font-size: 12px;">
+                                            <div class="col-md-3 col-6 text-end mt-2 ">
+                                                <p class="text-end" style="color: #019aa2;  font-size: 12px;">
                                                     اخر موعد لتقديم العروض </p>
                                                 <i class='far fa-calendar-alt' style="color: #37D337;"></i>
-                                                <span
+                                                <span class="date-icon" 
                                                     style="color: rgb(87 83 77);  font-size: 12px; padding-right: 2px;">
                                                     2022-05-22 </span>
-                                                <span
+                                                <span class="time-icon" 
                                                     style="color: rgb(87 83 77);  font-size: 12px; padding-right: 5px;">
                                                     <i class='far fa-clock' style="color: #37D337;"></i> 12:00</span>
 
                                             </div>
-                                            <div class="col-md-2 row-col-with" style="margin-top: 43px;">
+                                            <div class="col-md-2 row-col-with view" style="margin-top: 43px;">
                                                 <span style="color: #019aa2;  font-size: 12px; padding-right: 5px;">
                                                     2500 <i class='far fa-eye' style="color: #37D337;"></i></span>
 
                                             </div>
-                                            <div class="col-md-2 mt-2">
-                                                <p class="text-center" style="color: #019aa2;  font-size: 9px;">
-                                                    عروض الاسعار المقدمة</p>
+                                            <div class="col-md-2 col-6 mt-3">
+                                                <h6 class="text-center" style="color: #019aa2;  font-size: 11px;">
+                                                    عروض الاسعار المقدمة</h6>
 
                                                 <span style="color:#019aa2;  font-size: 20px; padding-right: 2px;"> 40
                                                 </span>
-                                                <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 30px;
+                                                <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 25px;
 "></i>
 
                                             </div>
-                                            <div class="col-md-2 mt-3">
+                                            <div class="col-md-2  col-6 mt-3">
 
                                                 <h6 class="text-center" style="color: #019aa2;  font-size: 12px;">
                                                     قيمةالمشروع
@@ -294,7 +294,7 @@
                                                     الأفضل سعر </span>
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div class="col-md-3 col-6">
                                                 <router-link class="btn btn-logo" to="/ProjectDetails" style="    border-radius: 16px;
     background-color: #039ca4;
     color: white;
@@ -323,7 +323,7 @@
                     </div>
                 </div>
                 <div class="mt-2" style="text-align: -webkit-center;">
-                    <div class="col-9 mt-3 text-center">
+                    <div class="col-10 mt-3 text-center">
                         <div class="card"
                             style="border-radius: 14px;    margin-bottom: 40px; box-shadow: 1px 1px 5px 2px #ece9e9;">
                             <div class="card-horizontal" style=" display: flex;
@@ -336,13 +336,13 @@
                                         <div class="row text-end">
                                             <div class="col-md-9">
                                                 <div class="row text-end">
-                                                    <div class="col-md-4">
-                                                        <i class='far fa-clock' style="color: #ababab;"></i>
-                                                        <span style="color: #ababab;"> التاريخ: </span>
-                                                        <span style="color: #ababab;"> 2022/02/22</span>
+                                                    <div class="col-md-4 col-6 pt-1">
+                                                        <i class='far fa-clock' style="color: #ababab; font-size: 13px;"></i>
+                                                        <span style="color: #ababab;     font-size: 13px;"> التاريخ: </span>
+                                                        <span style="color: #ababab;  font-size: 13px;"> 2022/02/22</span>
 
                                                     </div>
-                                                                           <div class="col-md-3">
+                                                                           <div class="col-md-3 col-6">
                                                         <div style=" background-color: #9fcf95; text-align: center;">
                                                             <p style="    color: white;
     padding-top: 1px;
@@ -402,34 +402,34 @@
                                     </div>
                                     <div style="padding-left: 1rem; padding-right: 1rem ; ">
                                         <div class="row">
-                                            <div class="col-md-3 text-end mt-2 row-col-with">
-                                                <p class="text-center" style="color: #019aa2;  font-size: 12px;"> اخر
+                                            <div class="col-md-3   col-6 text-end mt-2 ">
+                                                <p class="text-end" style="color: #019aa2;  font-size: 12px;"> اخر
                                                     موعد لتقديم العروض</p>
                                                 <i class='far fa-calendar-alt' style="color: #37D337;"></i>
-                                                <span
+                                                <span class="date-icon" 
                                                     style="color: rgb(87 83 77);  font-size: 12px; padding-right: 2px;">
                                                     2022-05-22 </span>
-                                                <span
+                                                <span class="time-icon" 
                                                     style="color: rgb(87 83 77);  font-size: 12px; padding-right: 5px;">
                                                     <i class='far fa-clock' style="color: #37D337;"></i> 12:00</span>
 
                                             </div>
-                                            <div class="col-md-2 row-col-with" style="margin-top: 43px; ">
+                                            <div class="col-md-2 row-col-with view" style="margin-top: 43px; ">
                                                 <span style="color: #019aa2;  font-size: 12px; padding-right: 5px;">
                                                     2500 <i class='far fa-eye' style="color: #37D337;"></i></span>
 
                                             </div>
-                                            <div class="col-md-2 mt-2">
-                                                <p class="text-center" style="color: #019aa2;  font-size: 9px;">
-                                                    عروض الاسعار المقدمة</p>
+                                            <div class="col-md-2 col-6 mt-3">
+                                                <h6 class="text-center" style="color: #019aa2;  font-size: 11px;">
+                                                    عروض الاسعار المقدمة</h6>
 
                                                 <span style="color:#019aa2;  font-size: 20px; padding-right: 2px;"> 40
                                                 </span>
-                                                <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 30px;
+                                                <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 25px;
 "></i>
 
                                             </div>
-                                            <div class="col-md-2 mt-3">
+                                            <div class="col-md-2 col-6 mt-3">
 
                                                 <h6 class="text-center" style="color: #019aa2;  font-size: 12px;">
                                                     قيمةالمشروع
@@ -439,7 +439,7 @@
                                                     الأفضل سعر </span>
                                             </div>
 
-                                            <div class="col-md-3">
+                                            <div class="col-md-3 col-6">
                                                 <router-link to="/ProjectDetails" class="btn btn-logo" style="    border-radius: 16px;
     background-color: #039ca4;
     color: white;

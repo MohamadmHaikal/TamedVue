@@ -4,7 +4,7 @@
             <div class="section-title">
                 <div class="row">
                     <div class="col-md-6  row-col-with" style="    width: 50%;">
-                        <h4>أحدث المشاريع</h4>
+                        <h4 class="project-title-section">أحدث المشاريع</h4>
 
                     </div>
                     <div class="col-md-6   " style="    width: 50%;">
