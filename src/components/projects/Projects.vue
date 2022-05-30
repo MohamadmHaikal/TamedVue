@@ -6,37 +6,26 @@
                     <div class="col-10 mt-3 text-center">
                         <div class="row mt-4">
                             <div class="col-lg-4">
-
-
-                                <input type="text" placeholder="البحث عن خدمة" style="   width: 100%;
-    
-                            border-radius: 20px;
-                            border-color: #b7b7b7;
-                            border-width: 1px;
-                            padding: 8px 19px 11px 4px;">
-                                <i class='fas fa-search' style="    right: 44%;
-    bottom: 48%;
-    color: #b7b7b7;
-    position: relative;"></i>
-
-
+                                <input type="text" placeholder="البحث عن خدمة"
+                                    style="width: 100%; border-radius: 20px;border-color: #b7b7b7;border-width: 1px; padding: 8px 19px 11px 4px;">
+                                <i class='fas fa-search'
+                                    style="right: 44%;bottom: 48%;color: #b7b7b7;position: relative;"></i>
                             </div>
                             <div class="col-md-4"></div>
 
-                            <div class="col-md-4 btn-project-search" ><a href="/login" class="btn btn-project-search" style="border-radius: 25px;
-    background-color: #039ca4;
-    color: white;
-    padding: 7px 42px 7px 42px;">بحث متقدم </a></div>
+                            <div class="col-md-4 btn-project-search"><a href="/login" class="btn btn-project-search"
+                                    style="border-radius: 25px; background-color: #039ca4;color: white;padding: 7px 42px 7px 42px;">بحث
+                                    متقدم </a></div>
                         </div>
                     </div>
 
                 </div>
-                <div class="mt-2" style="text-align: -webkit-center;">
+                <div v-for="ad in ads" v-bind:key="ad.id" class="mt-2" style="text-align: -webkit-center;">
                     <div class="col-10 mt-3 text-center">
                         <div class="card"
-                            style="border-radius: 14px;    margin-bottom: 40px; box-shadow: 1px 1px 5px 2px #ece9e9;">
-                            <div class="card-horizontal" style=" display: flex;
-    flex: 1 1 auto; border-radius: 13px 13px 13px 13px; ">
+                            style="border-radius: 14px;  margin-bottom: 40px; box-shadow: 1px 1px 5px 2px #ece9e9;">
+                            <div class="card-horizontal"
+                                style=" display: flex; flex: 1 1 auto; border-radius: 13px 13px 13px 13px; ">
 
                                 <div class="card-body"
                                     style="border-radius: 13px 13px 13px 13px; padding-right: 0px; padding-left: 0px;">
@@ -47,25 +36,35 @@
                                             <div class="col-md-9">
                                                 <div class="row text-end">
                                                     <div class="col-md-4 col-6 pt-1">
-                                                        <i class='far fa-clock' style="color: #ababab; font-size: 13px;"></i>
-                                                        <span style="color: #ababab;    font-size: 13px;"> التاريخ: </span>
-                                                        <span style="color: #ababab;  font-size: 13px;"> 2022/02/22</span>
+                                                        <i class='far fa-clock'
+                                                            style="color: #ababab; font-size: 13px;"></i>
+                                                        <span style="color: #ababab;    font-size: 13px;"> التاريخ:
+                                                        </span>
+                                                        <span style="color: #ababab;  font-size: 13px;">{{ ad.created
+                                                        }}</span>
 
                                                     </div>
-                                                                          <div class="col-md-3 col-6">
-                                                        <div style=" background-color: #9fcf95; text-align: center;">
-                                                            <p style="    color: white;
-    padding-top: 1px;
-    padding-bottom: 1px;">
+                                                    <div class="col-md-3 col-6">
+                                                        <div v-if="ad.status == 1"
+                                                            style=" background-color: #9fcf95; text-align: center;">
+                                                            <p
+                                                                style="color: white; padding-top: 1px; padding-bottom: 1px;">
                                                                 لم التوقيع بعد
                                                             </p>
-
-
+                                                        </div>
+                                                        <div v-else
+                                                            style=" background-color: #ebebeb; text-align: center;">
+                                                            <p
+                                                                style="color: white;padding-top: 1px;padding-bottom: 1px;">
+                                                                تم التوقيع
+                                                            </p>
                                                         </div>
                                                     </div>
-                                                  <div class="col-md-4"><span style="color:#019aa2;font-size:12px;"> الرقم المرجعي : </span><span style="color:rgb(87 83 77);font-size:12px;"> 25887496</span></div>
-
-
+                                                    <div class="col-md-4"><span style="color:#019aa2;font-size:12px;">
+                                                            الرقم المرجعي : </span><span
+                                                            style="color:rgb(87 83 77);font-size:12px;">
+                                                            {{ ad.reference_number }}</span>
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -76,15 +75,11 @@
 
                                         <div class="row text-end mt-3 mb-2">
                                             <div class="col-md-8">
-                                                <span style="color: #019aa2;"> مشروع تأثيث مبنى في طريق النهضة</span>
-                                                <p class="mt-2" style="color: rgb(87 83 77);"> مطلوب شركة لتأثيث مبنى
-                                                    لحي النهضة حسب المواصفات المرفقة</p>
+                                                <span style="color: #019aa2;"> {{ ad.title }}</span>
+                                                <p class="mt-2" style="color: rgb(87 83 77);">{{ ad.description }}</p>
                                             </div>
                                             <div class="col-md-4 mt-1">
-
-
                                             </div>
-
                                         </div>
 
                                     </div>
@@ -93,16 +88,18 @@
                                         <div class="row text-end mt-2">
                                             <div class="col-md-12">
                                                 <span style="color: #019aa2;"> النشاط : </span>
-                                                <span style="color: rgb(87 83 77);"> تأثيث</span>
+                                                <span style="color: rgb(87 83 77);"> {{ ad.activity }}</span>
 
                                             </div>
                                             <div class="col-md-8 mt-2  mb-2">
-
-
-                                                <span style="color: rgb(87 83 77);     color: rgb(87 83 77);
-    font-size: 12px;"><i class='fas fa-map-marker-alt' style="color: #ababab;"></i> العنوان : </span>
-                                                <span style="color: rgb(87 83 77);     color: rgb(87 83 77);
-    font-size: 12px;"> المملكة العربية السعودية - الرياض - طريق النهضة</span>
+                                                <span
+                                                    style="color: rgb(87 83 77); color: rgb(87 83 77);font-size: 12px;"><i
+                                                        class='fas fa-map-marker-alt' style="color: #ababab;"></i>
+                                                    العنوان : </span>
+                                                <span
+                                                    style="color: rgb(87 83 77); color: rgb(87 83 77);font-size: 12px;">
+                                                    المملكة العربية السعودية - {{ ad.city }} - {{ ad.neighborhood
+                                                    }}</span>
                                             </div>
                                             <div class="col-md-4 mt-2 mb-2">
 
@@ -112,31 +109,33 @@
                                     </div>
                                     <div style="padding-left: 1rem; padding-right: 1rem ; ">
                                         <div class="row">
-                                            <div class="col-md-3  col-6  text-end mt-2 " >
+                                            <div class="col-md-3  col-6  text-end mt-2 ">
                                                 <p class="text-end" style="color: #019aa2;  font-size: 12px;"> اخر
                                                     موعد لتقديم العروض</p>
                                                 <i class='far fa-calendar-alt' style="color: #37D337;"></i>
-                                                <span class="date-icon" 
-                                                    >
-                                                    2022-05-22 </span>
-                                                <span class="time-icon" 
-                                                >
-                                                    <i class='far fa-clock' style="color: #37D337;"></i> 12:00</span>
+                                                <span class="date-icon">
+                                                    {{ ad.created }} </span>
+                                                <span class="time-icon">
+                                                    <i class='far fa-clock' style="color: #37D337;"></i> {{ ad.time
+                                                    }}</span>
 
                                             </div>
-                                            <div class="col-md-2 row-col-with view" style="margin-top: 43px;">
-                                                <span  style="color: #019aa2;  font-size: 12px; padding-right: 5px;">
-                                                    2500 <i class='far fa-eye' style="color: #37D337;"></i></span>
+                                            <div class="col-md-1 row-col-with view" style="margin-top: 43px;">
+                                                <span style="color: #019aa2;  font-size: 14px; padding-right: 5px;">
+                                                    {{ ad.seenCount }} <i class='far fa-eye'
+                                                        style="color: #37D337;"></i></span>
 
                                             </div>
-                                            <div class="col-md-2 col-6 mt-3">
+                                            <div class="col-md-3 col-6 mt-3">
                                                 <h6 class="text-center" style="color: #019aa2;  font-size: 11px;">
                                                     عروض الاسعار المقدمة</h6>
 
-                                                <span style="color:#019aa2;  font-size: 20px; padding-right: 2px;    padding-left: 3px;"> 40
+                                                <span
+                                                    style="color:#019aa2;  font-size: 20px; padding-right: 2px;    padding-left: 3px;">
+                                                    {{ ad.QuotesCount }}
                                                 </span>
-                                                <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 25px;
-"></i>
+                                                <i class='far fa-file-alt	'
+                                                    style="color: #019aa2;  font-size: 25px;"></i>
 
                                             </div>
                                             <div class="col-md-2 col-6 mt-3">
@@ -145,321 +144,30 @@
                                                     قيمةالمشروع
                                                 </h6>
 
-                                                <span style="color:#d4a259;  font-size: 17px; padding-right: 2px;">
+                                                <span v-if="ad.pricestatus == 'on'"
+                                                    style="color:#d4a259;  font-size: 17px; padding-right: 2px;">
                                                     الأفضل سعر </span>
+                                                <span v-else
+                                                    style="color:#d4a259;  font-size: 17px; padding-right: 2px;">
+                                                    {{ ad.price }} </span>
 
                                             </div>
 
                                             <div class="col-md-3 col-6 ">
-                                                <router-link to="/ProjectDetails" class="btn btn-logo" style="    border-radius: 16px;
-    background-color: #039ca4;
-    color: white;
-    margin-top: 25px;
-    padding: 7px 30px 7px 30px;">التفاصيل</router-link>
+                                                <router-link :to="{ name: 'details', params: { projectId: ad.id } }"
+                                                    class="btn btn-logo"
+                                                    style="border-radius: 16px;background-color: #039ca4;color: white;margin-top: 25px;padding: 7px 30px 7px 30px;">
+                                                    التفاصيل</router-link>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="img-square-wrapper " style="     border-right: 1px solid #d8d8d8;
-    width: 265px;
-  
-    height: 280px;
-    border-right: 1px solid rgb(216, 216, 216);
-">
-
+                                <div class="img-square-wrapper "
+                                    style="     border-right: 1px solid #d8d8d8; width: 265px;height: 280px;border-right: 1px solid rgb(216, 216, 216);">
                                     <img class=""
                                         style="border-radius: 13px 0px 0px 13px;  height: 282px; width:100% ;  border-right: 1px solid #d8d8d8;"
-                                        src="https://media.istockphoto.com/photos/bohemian-living-room-interior-3d-render-picture-id1182454657?k=20&m=1182454657&s=612x612&w=0&h=1xEsm7BqeicA8jYk9KlerUtGsAgzzo530l5Ak1HJdnc=" alt="Card image cap">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-2" style="text-align: -webkit-center;">
-                    <div class="col-10 mt-3 text-center">
-                        <div class="card"
-                            style="border-radius: 14px;    margin-bottom: 40px; box-shadow: 1px 1px 5px 2px #ece9e9;">
-                            <div class="card-horizontal" style=" display: flex;
-    flex: 1 1 auto; border-radius: 13px 13px 13px 13px; ">
-
-                                <div class="card-body"
-                                    style="border-radius: 13px 13px 13px 13px; padding-right: 0px; padding-left: 0px;">
-                                    <div
-                                        style=" border-bottom: 1px solid #d8d8d8; padding-left: 1rem; padding-right: 1rem ;">
-                                        <div class="row text-end">
-                                            <div class="col-md-9">
-                                                <div class="row text-end">
-                                                    <div class="col-md-4 pt-1 col-6">
-                                                        <i class='far fa-clock' style="color: #ababab; font-size: 13px;"></i>
-                                                        <span style="color: #ababab;     font-size: 13px;"> التاريخ: </span>
-                                                        <span style="color: #ababab;  font-size: 13px;"> 2022/02/22</span>
-
-                                                    </div>
-                                                    <div class="col-md-3 col-6">
-                                                   <div style=" background-color: #ebebeb; text-align: center;">
-                                                            <p style="    color: white;
-    padding-top: 1px;
-    padding-bottom: 1px;">
-                                                                تم التوقيع 
-                                                            </p>
-
-
-                                                        </div>
-                                                    </div>
-                                                  <div class="col-md-4"><span style="color:#019aa2;font-size:12px;"> الرقم المرجعي : </span><span style="color:rgb(87 83 77);font-size:12px;"> 25887496</span></div>
-
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-3 " style="padding-right: 20px;">
-                                            </div>
-
-                                        </div>
-
-                                        <div class="row text-end mt-3 mb-2">
-                                            <div class="col-md-8">
-                                                <span style="color: #019aa2;"> مشروع تأثيث مبنى في طريق النهضة </span>
-                                                <p class="mt-2" style="color: rgb(87 83 77);"> مطلوب شركة لتأثيث مبنى
-                                                    لحي النهضة حسب المواصفات المرفقة</p>
-                                            </div>
-                                            <div class="col-md-4 mt-1">
-
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    <div
-                                        style=" border-bottom: 1px solid #d8d8d8; padding-left: 1rem; padding-right: 1rem ;">
-                                        <div class="row text-end mt-2">
-                                            <div class="col-md-12">
-                                                <span style="color: #019aa2;"> النشاط : </span>
-                                                <span style="color: rgb(87 83 77);"> تأثيث</span>
-
-                                            </div>
-                                            <div class="col-md-8 mt-2  mb-2">
-
-
-                                                <span style="color: rgb(87 83 77);     color: rgb(87 83 77);
-    font-size: 12px;"><i class='fas fa-map-marker-alt' style="color: #ababab;"></i> العنوان : </span>
-                                                <span style="color: rgb(87 83 77);     color: rgb(87 83 77);
-    font-size: 12px;"> المملكة العربية السعودية - الرياض - طريق النهضة</span>
-                                            </div>
-                                            <div class="col-md-4 mt-2 mb-2">
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div style="padding-left: 1rem; padding-right: 1rem ; ">
-                                        <div class="row">
-                                            <div class="col-md-3 col-6 text-end mt-2 ">
-                                                <p class="text-end" style="color: #019aa2;  font-size: 12px;">
-                                                    اخر موعد لتقديم العروض </p>
-                                                <i class='far fa-calendar-alt' style="color: #37D337;"></i>
-                                                <span class="date-icon" 
-                                                    style="color: rgb(87 83 77);  font-size: 12px; padding-right: 2px;">
-                                                    2022-05-22 </span>
-                                                <span class="time-icon" 
-                                                    style="color: rgb(87 83 77);  font-size: 12px; padding-right: 5px;">
-                                                    <i class='far fa-clock' style="color: #37D337;"></i> 12:00</span>
-
-                                            </div>
-                                            <div class="col-md-2 row-col-with view" style="margin-top: 43px;">
-                                                <span style="color: #019aa2;  font-size: 12px; padding-right: 5px;">
-                                                    2500 <i class='far fa-eye' style="color: #37D337;"></i></span>
-
-                                            </div>
-                                            <div class="col-md-2 col-6 mt-3">
-                                                <h6 class="text-center" style="color: #019aa2;  font-size: 11px;">
-                                                    عروض الاسعار المقدمة</h6>
-
-                                                <span style="color:#019aa2;  font-size: 20px; padding-right: 2px;    padding-left: 3px;"> 40
-                                                </span>
-                                                <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 25px;
-"></i>
-
-                                            </div>
-                                            <div class="col-md-2  col-6 mt-3">
-
-                                                <h6 class="text-center" style="color: #019aa2;  font-size: 12px;">
-                                                    قيمةالمشروع
-                                                </h6>
-
-                                                <span style="color:#d4a259;  font-size: 17px; padding-right: 2px;">
-                                                    الأفضل سعر </span>
-                                            </div>
-
-                                            <div class="col-md-3 col-6">
-                                                <router-link class="btn btn-logo" to="/ProjectDetails" style="    border-radius: 16px;
-    background-color: #039ca4;
-    color: white;
-    margin-top: 25px;
-    padding: 7px 30px 7px 30px;">التفاصيل</router-link>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="img-square-wrapper " style="     border-right: 1px solid #d8d8d8;
-    width: 265px;
-   
-    height: 280px;
-    border-right: 1px solid rgb(216, 216, 216);
-">
-
-                                    <img class=""
-                                        style="border-radius: 13px 0px 0px 13px;   width:100% ;  height: 282px;  border-right: 1px solid #d8d8d8;"
-                                        src="https://media.istockphoto.com/photos/bohemian-living-room-interior-3d-render-picture-id1182454657?k=20&m=1182454657&s=612x612&w=0&h=1xEsm7BqeicA8jYk9KlerUtGsAgzzo530l5Ak1HJdnc=" alt="Card image cap">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-2" style="text-align: -webkit-center;">
-                    <div class="col-10 mt-3 text-center">
-                        <div class="card"
-                            style="border-radius: 14px;    margin-bottom: 40px; box-shadow: 1px 1px 5px 2px #ece9e9;">
-                            <div class="card-horizontal" style=" display: flex;
-    flex: 1 1 auto; border-radius: 13px 13px 13px 13px; ">
-
-                                <div class="card-body"
-                                    style="border-radius: 13px 13px 13px 13px; padding-right: 0px; padding-left: 0px;">
-                                    <div
-                                        style=" border-bottom: 1px solid #d8d8d8; padding-left: 1rem; padding-right: 1rem ;">
-                                        <div class="row text-end">
-                                            <div class="col-md-9">
-                                                <div class="row text-end">
-                                                    <div class="col-md-4 col-6 pt-1">
-                                                        <i class='far fa-clock' style="color: #ababab; font-size: 13px;"></i>
-                                                        <span style="color: #ababab;     font-size: 13px;"> التاريخ: </span>
-                                                        <span style="color: #ababab;  font-size: 13px;"> 2022/02/22</span>
-
-                                                    </div>
-                                                                           <div class="col-md-3 col-6">
-                                                        <div style=" background-color: #9fcf95; text-align: center;">
-                                                            <p style="    color: white;
-    padding-top: 1px;
-    padding-bottom: 1px;">
-                                                                لم التوقيع بعد
-                                                            </p>
-
-
-                                                        </div>
-                                                    </div>
-                                                  <div class="col-md-4"><span style="color:#019aa2;font-size:12px;"> الرقم المرجعي : </span><span style="color:rgb(87 83 77);font-size:12px;"> 25887496</span></div>
-
-
-                                                </div>
-
-                                            </div>
-                                            <div class="col-md-3 " style="padding-right: 20px;">
-                                            </div>
-
-                                        </div>
-
-                                        <div class="row text-end mt-3 mb-2">
-                                            <div class="col-md-8">
-                                                <span style="color: #019aa2;"> مشروع تأثيث مبنى في طريق النهضة </span>
-                                                <p class="mt-2" style="color: rgb(87 83 77);"> مطلوب شركة لتأثيث مبنى
-                                                    لحي النهضة حسب المواصفات المرفقة</p>
-                                            </div>
-                                            <div class="col-md-4 mt-1">
-
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    <div
-                                        style=" border-bottom: 1px solid #d8d8d8; padding-left: 1rem; padding-right: 1rem ;">
-                                        <div class="row text-end mt-2">
-                                            <div class="col-md-12">
-                                                <span style="color: #019aa2;"> النشاط : </span>
-                                                <span style="color: rgb(87 83 77);"> تأثيث</span>
-
-                                            </div>
-                                            <div class="col-md-8 mt-2  mb-2">
-
-
-                                                <span style="color: rgb(87 83 77);     color: rgb(87 83 77);
-    font-size: 12px;"><i class='fas fa-map-marker-alt' style="color: #ababab;"></i> العنوان : </span>
-                                                <span style="color: rgb(87 83 77);     color: rgb(87 83 77);
-    font-size: 12px;"> المملكة العربية السعودية - الرياض - طريق النهضة</span>
-                                            </div>
-                                            <div class="col-md-4 mt-2 mb-2">
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div style="padding-left: 1rem; padding-right: 1rem ; ">
-                                        <div class="row">
-                                            <div class="col-md-3   col-6 text-end mt-2 ">
-                                                <p class="text-end" style="color: #019aa2;  font-size: 12px;"> اخر
-                                                    موعد لتقديم العروض</p>
-                                                <i class='far fa-calendar-alt' style="color: #37D337;"></i>
-                                                <span class="date-icon" 
-                                                    style="color: rgb(87 83 77);  font-size: 12px; padding-right: 2px;">
-                                                    2022-05-22 </span>
-                                                <span class="time-icon" 
-                                                    style="color: rgb(87 83 77);  font-size: 12px; padding-right: 5px;">
-                                                    <i class='far fa-clock' style="color: #37D337;"></i> 12:00</span>
-
-                                            </div>
-                                            <div class="col-md-2 row-col-with view" style="margin-top: 43px; ">
-                                                <span style="color: #019aa2;  font-size: 12px; padding-right: 5px;">
-                                                    2500 <i class='far fa-eye' style="color: #37D337;"></i></span>
-
-                                            </div>
-                                            <div class="col-md-2 col-6 mt-3">
-                                                <h6 class="text-center" style="color: #019aa2;  font-size: 11px;">
-                                                    عروض الاسعار المقدمة</h6>
-
-                                                <span style="color:#019aa2;  font-size: 20px; padding-right: 2px;    padding-left: 3px;"> 40
-                                                </span>
-                                                <i class='far fa-file-alt	' style="color: #019aa2;     font-size: 25px;
-"></i>
-
-                                            </div>
-                                            <div class="col-md-2 col-6 mt-3">
-
-                                                <h6 class="text-center" style="color: #019aa2;  font-size: 12px;">
-                                                    قيمةالمشروع
-                                                </h6>
-
-                                                <span style="color:#d4a259;  font-size: 17px; padding-right: 2px;">
-                                                    الأفضل سعر </span>
-                                            </div>
-
-                                            <div class="col-md-3 col-6">
-                                                <router-link to="/ProjectDetails" class="btn btn-logo" style="    border-radius: 16px;
-    background-color: #039ca4;
-    color: white;
-    margin-top: 25px;
-    padding: 7px 30px 7px 30px;">التفاصيل</router-link>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="img-square-wrapper " style="     border-right: 1px solid #d8d8d8;
-    width: 265px;
-   
-    height: 280px;
-    border-right: 1px solid rgb(216, 216, 216);
-">
-
-                                    <img class=""
-                                        style="border-radius: 13px 0px 0px 13px; height: 282px;   width:100% ;   border-right: 1px solid #d8d8d8;"
-                                        src="https://media.istockphoto.com/photos/bohemian-living-room-interior-3d-render-picture-id1182454657?k=20&m=1182454657&s=612x612&w=0&h=1xEsm7BqeicA8jYk9KlerUtGsAgzzo530l5Ak1HJdnc=" alt="Card image cap">
+                                        :src="ad.cover" alt="Card image cap">
                                 </div>
                             </div>
 
@@ -475,12 +183,29 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 </template>
 
 <script>
+import {
+    defineComponent
+} from 'vue';
+import axios from 'axios';
 
+export default defineComponent({
+
+    data() {
+        return {
+            ads: [],
+        };
+    },
+    async mounted() {
+        const { data } = await axios.get(
+            "https://login.tamedksa.com/api/ads/1/all"
+        );
+        this.ads = data;
+
+    },
+})
 
 </script>

@@ -6,10 +6,9 @@
                 <div class="mt-2" style="text-align: -webkit-center;">
                     <div class="col-md-9 col-sm-12 mt-3 text-center">
                         <div class="text-end">
-                            <h3 class="title mt-5 mb-3">مشروع تأثيث مبنى في طريق النهضة</h3>
+                            <h3 class="title mt-5 mb-3">{{ads.title}}</h3>
                             <span class="text-end " style="color: #019aa2;    font-size: 14px;"> الرقم المرجعي:</span>
-                            <span class="text-end"
-                                style="color: rgb(87 83 77) ;    font-size: 14px; padding-right: 5px;"> 25896374</span>
+                            <span class="text-end" style="color: rgb(87 83 77) ;    font-size: 14px; padding-right: 5px;"> {{ads.reference_number}}</span>
                             <div class="row mt-3">
                                 <div class="col-md-9 col-sm-12 ">
                                     <span><i class="fas fa-star pr-2"
@@ -24,7 +23,7 @@
                                         display: inline-block;"></span>
                                     <i class="fas fa-map-marker-alt	" style="color: #019aa2;font-size: 20px;
     margin-right: 20px;"></i>
-                                    <span style=" margin-right: 6px;">الرياض - حي اليرموك</span>
+                                    <span style=" margin-right: 6px;">{{ads.city}} - {{ads.neighborhood}}</span>
                                     <span style="margin-bottom: 2px;
                                         margin-right: 12px;
                                         height: 5px;
@@ -33,7 +32,7 @@
                                         border-radius: 50%;
                                         display: inline-block;"></span>
                                     <i class="far fa-clock project-header"></i>
-                                    <span style=" margin-right: 6px;">التاريخ : 2022/02/22</span>
+                                    <span style=" margin-right: 6px;">التاريخ : {{ads.created}}</span>
                                     <span style="margin-bottom: 2px;
                                         margin-right: 12px;
                                         height: 5px;
@@ -42,7 +41,7 @@
                                         border-radius: 50%;
                                         display: inline-block;"></span>
 
-                                    <span style="margin-right: 20px;">2655</span>
+                                    <span style="margin-right: 20px;">{{ads.seenCount}}</span>
                                     <i class="far fa-eye" style="color: #019aa2;font-size: 20px;
     margin-right: 10px;"></i>
                                 </div>
@@ -137,9 +136,7 @@
                                 <div style="border-bottom: 1px solid rgb(238, 239, 241); padding-bottom: 10%;">
 
                                     <h6 style="color:#0d0d0d ;padding-top: 5%; font-weight: 700;">الوصف</h6>
-                                    <p style="max-width: 52ch; color: rgb(13, 13, 13);font-weight: 400;">بيع مواد حديد
-                                        بناء بالرياض حديد سابك شبه جديد ولا يوجد به اي
-                                        عيوب الكمية 200 طن حديد</p>
+                                    <p style="max-width: 52ch; color: rgb(13, 13, 13);font-weight: 400;">{{ads.description}}</p>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-8  project-deadline">
@@ -148,17 +145,17 @@
                                             اخر موعد لتقديم العروض </p>
                                         <i class="far fa-calendar-alt"
                                             style="color:#37D337;padding-right: 2%;   font-size: 15px; "></i>
-                                        <span style="color:rgb(87 83 77);font-size:15px;padding-right:2px;"> 2022-05-22
+                                        <span style="color:rgb(87 83 77);font-size:15px;padding-right:2%;">  {{ ads.created}}
                                         </span>
                                         <span style="color:rgb(87 83 77);font-size:15px;padding-right:5px;">
                                             <i class="far fa-clock" style="color:#37D337;    font-size: 15px;"></i>
-                                            12:00</span>
+                                            {{ads.time}}</span>
                                     </div>
                                     <div class="col-md-4 project-activite">
                                         <span style="color: #019aa2;    font-size: 14px;">
                                             النشاط:</span>
                                         <span style="color: rgb(87 83 77) ;    font-size: 14px; padding-right: 5px;">
-                                            مقاولات</span>
+                                            {{ads.activity}}</span>
 
                                     </div>
                                     <div class="col-md-12 mt-4">
@@ -240,7 +237,8 @@
                                                     <td
                                                         style=" border-right: 1px solid #ccc; border-top: 1px solid #ccc; border-top-right-radius: 20px;">
                                                         <div style="padding: 30px;"> <img
-                                                                src="../../assets/images/pdf.png" alt="" style="width: 30%;"> <span
+                                                                src="../../assets/images/pdf.png" alt=""
+                                                                style="width: 30%;"> <span
                                                                 style=" color:#019aa2;  padding-right: 2px;  font-size: 20px;">
                                                                 <a href="javascript:void(0);"
                                                                     style=" color:#019aa2;">تحميل</a></span>
@@ -249,7 +247,8 @@
                                                     <td
                                                         style=" border-top: 1px solid #ccc;    border-left: 1px solid #ccc; border-right: 1px solid #ccc; border-top-left-radius: 20px;">
                                                         <div style="padding: 30px;"><img
-                                                                src="../../assets/images/3d.png" alt="" style="width: 30%;"> <span
+                                                                src="../../assets/images/3d.png" alt=""
+                                                                style="width: 30%;"> <span
                                                                 style=" color:#019aa2;  padding-right: 2px;  font-size: 20px;">
                                                                 <a href="javascript:void(0);"
                                                                     style=" color:#019aa2;">تحميل</a></span>
@@ -260,7 +259,8 @@
                                                     <td
                                                         style="border-right: 1px solid #ccc;     border-bottom: 1px solid #ccc;   border-top: 1px solid #ccc; border-bottom-right-radius: 20px;">
                                                         <div style="padding: 30px;"><img
-                                                                src="../../assets/images/Excel.png" alt="" style="width: 30%;"> <span
+                                                                src="../../assets/images/Excel.png" alt=""
+                                                                style="width: 30%;"> <span
                                                                 style=" color:#019aa2; padding-right: 2px;   font-size: 20px;">
                                                                 <a href="javascript:void(0);"
                                                                     style=" color:#019aa2;">تحميل</a></span>
@@ -268,7 +268,8 @@
                                                     </td>
                                                     <td style="border: 1px solid #ccc;border-bottom-left-radius: 20px;">
                                                         <div style="padding: 30px;"><img
-                                                                src="../../assets/images/autoca.png" alt="" style="width: 30%;"> <span
+                                                                src="../../assets/images/autoca.png" alt=""
+                                                                style="width: 30%;"> <span
                                                                 style=" color:#019aa2;   padding-right: 2px; font-size: 20px;">
                                                                 <a href="javascript:void(0);"
                                                                     style=" color:#019aa2;">تحميل</a></span>
@@ -345,23 +346,28 @@
                                 <div
                                     style="width: 75%; height: 330px; margin-top: 6%; border-radius: 12px; margin-bottom: 5%;  box-shadow: rgb(236 233 233) 1px 1px 5px 2px;">
                                     <div style="border-bottom: 1px solid #eeeff1 ;">
-                                        <h5 style="padding-top: 8%;text-align: right;padding-right: 10%;color: #62bbc0;">قيمة المشروع
+                                        <h5
+                                            style="padding-top: 8%;text-align: right;padding-right: 10%;color: #62bbc0;">
+                                            قيمة المشروع
                                         </h5>
-                                        <h6 style="color: #f4a23e; text-align: right;padding-right: 15%;"> 600,000 ريال
-                                        </h6>
 
+                                        <h6 v-if="ads.pricestatus == 'on'" style="color: #f4a23e; text-align: right;padding-right: 15%;">
+                                         الأفضل سعر
+                                        </h6>
+                                        <h6 v-else style="color: #f4a23e; text-align: right;padding-right: 15%;">{{ads.price}} ريال
+                                        </h6>
                                     </div>
                                     <div style="text-align: right;">
                                         <p
-                                            style="  text-align: right; padding-right: 13%;padding-top: 10%;font-weight: 500; font-size: 13px;">
+                                            style=" color:#019aa2 ; text-align: right; padding-right: 13%;padding-top: 10%;font-weight: 500; font-size: 13px;">
                                             اخر موعد لتقديم العروض </p>
                                         <i class="far fa-calendar-alt"
                                             style="color:#37D337;padding-right: 13%;   font-size: 15px; "></i>
-                                        <span style="color:rgb(87 83 77);font-size:12px;padding-right:2px;"> 2022-05-22
+                                        <span style="color:rgb(87 83 77);font-size:15px;padding-right:2%;"> {{ads.created}}
                                         </span>
-                                        <span style="color:rgb(87 83 77);font-size:12px;padding-right:5px;">
-                                            <i class="far fa-clock" style="color:#37D337;    font-size: 15px;"></i>
-                                            12:00</span>
+                                        <span style="color:rgb(87 83 77);font-size:15px;padding-right:5px;">
+                                            <i class="far fa-clock" style="color:#37D337;      padding-right: 15px;  font-size: 15px;"></i>
+                                            {{ads.time}}</span>
                                         <div style="text-align:center ;">
                                             <a href="javascript:void(0);" class="btn btn-logo"
                                                 style="border-radius:16px;background-color:#039ca4; width:85%;color:white;margin-top:25px;padding:7px 30px 7px 30px;">تقديم
@@ -373,14 +379,16 @@
                                                 المرجعي للمشروع:</span>
                                             <span class="text-end"
                                                 style="color: rgb(87 83 77) ;font-size: 12px; padding-right: 5px;">
-                                                25896374</span>
+                                                {{ads.reference_number}}</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div
                                     style="width: 75%;  margin-top: 6%; border-radius: 12px;  box-shadow: rgb(236 233 233) 1px 1px 5px 2px;     margin-bottom: 25px;">
                                     <div style="border-bottom: 1px solid #eeeff1 ;">
-                                        <h5 style="padding-top: 8%;text-align: center;    color: #62bbc0;font-size: 95%;">معلومات صاحب
+                                        <h5
+                                            style="padding-top: 8%;text-align: center;    color: #62bbc0;font-size: 95%;">
+                                            معلومات صاحب
                                             الطلب
                                         </h5>
 
@@ -390,8 +398,7 @@
                                         <span class="text-end " style="color: #019aa2;    font-size: 14px;"> مقدم
                                             الطلب:</span>
                                         <span class="text-end"
-                                            style="color: rgb(87 83 77) ;    font-size: 14px; padding-right: 5px;"> شركة
-                                            فرسان للمقاولات</span>
+                                            style="color: rgb(87 83 77) ;    font-size: 14px; padding-right: 5px;"> {{ author.name}}</span>
 
 
                                         <div style="text-align:center ;">
@@ -413,7 +420,7 @@
                                         <div class="row text-center mt-2">
                                             <div class="col-md-5 col-sm-2"
                                                 style="text-align: center;margin-bottom: 12px;">
-                                                <a href="javascript:void(0);" style="color: #039ca4;">
+                                                <a :href="'https://login.tamedksa.com/chat/'+author.id" style="color: #039ca4;">
                                                     <p style="position: relative; top: 18px">رسالة</p>
                                                     <i class="far fa-comment-alt mb-2"
                                                         style="font-size: 25px; color: #039ca4;"></i>
@@ -444,7 +451,7 @@
 </template>
 
 <script>
-
+import axios from 'axios';
 export default {
     methods: {
 
@@ -463,11 +470,25 @@ export default {
             evt.currentTarget.className += " active";
         },
     },
-    mounted: function () {
+   
+    data() {
+        return {
+            ads: [],
+            author: [],
+        };
+    },
+    async mounted() {
+        var id=this.$route.params.projectId;
         var element = document.getElementById("buttonlinks");
         element.classList.add("active");
         document.getElementById('London').style.display = "block";
-    }
+        const { data } = await axios.get(
+            'https://login.tamedksa.com/api/ads/'+id+'/details'
+        );
+        this.ads = data;
+        this.author =data['author'];
+
+    },
 }
 
 
