@@ -189,8 +189,10 @@
                                                             يوجد
                                                             سكن</span> <span
                                                             style="margin-bottom: 2px;      margin-left: 15px; margin-right: 20px; height: 7px; width: 7px; background-color: rgb(187, 187, 187); border-radius: 50%; display: inline-block;"></span>
-                                                        <br><i class="fa fa-check text-center"
+                                                        <br><i v-if="arrayInfo['هل يوجد سكن ؟']=='on'" class="fa fa-check text-center"
                                                             style="font-size: 24px;margin-right: 65px;color: #35b348;"></i>
+                                                            <i v-else class="fa fa-close text-center"
+                                                            style="font-size: 24px;margin-right: 65px;color: #de0000;"></i>
                                                     </div>
 
                                                     <div class="col-md-4 col-6 conditional"
@@ -200,8 +202,11 @@
                                                         <span style="color:#c2c2c2 ; padding-right: 5px;">هل تتوفر
                                                             كهرباء</span> <span
                                                             style="margin-bottom: 2px;      margin-right: 10px; height: 7px; width: 7px; background-color: rgb(187, 187, 187); border-radius: 50%; display: inline-block;"></span>
-                                                        <br><i class="fa fa-check text-center"
+                                                        <br><i v-if="arrayInfo['هل يوجد كهرباء ؟']=='on'" class="fa fa-check text-center"
                                                             style="font-size: 24px;margin-right: 65px;color: #35b348;     margin-top: 20px;"></i>
+                                                            <i v-else class="fa fa-close text-center"
+                                                             style="font-size: 24px;margin-right: 65px;color: #de0000;     margin-top: 20px;"
+                                                          ></i>
                                                     </div>
 
                                                     <div class="col-md-4 col-6 conditional"
@@ -210,8 +215,10 @@
                                                             style="    font-size: 25px;  color: #039ca4; margin-top: 15px;"></i>
                                                         <span style="color:#c2c2c2 ; padding-right: 5px;">هل تتوفر
                                                             مواصلات</span>
-                                                        <br><i class="fa fa-check text-center"
+                                                        <br><i v-if="arrayInfo['هل يوجد مواصلات ؟']=='on'" class="fa fa-check text-center"
                                                             style="font-size: 24px;margin-right: 65px;color: #35b348;     margin-top: 20px;"></i>
+                                                            <i v-else class="fa fa-close text-center"
+                                                            style="font-size: 24px;margin-right: 65px;color: #de0000;     margin-top: 20px;"></i>
                                                     </div>
 
                                                 </div>
@@ -221,8 +228,10 @@
                                                         style="    font-size: 25px;  color: #039ca4; margin-top: 15px;"></i>
                                                     <span style="color:#c2c2c2 ; padding-right: 5px;">
                                                         دفعة مقدمة</span>
-                                                    <br><i class="fa fa-check text-center"
+                                                    <br><i  v-if="arrayInfo['هل يوجد دفعة أولى ؟']=='on'"  class="fa fa-check text-center"
                                                         style="font-size: 24px;margin-right: 65px;color: #35b348;     margin-top: 20px;"></i>
+                                                        <i v-else class="fa fa-close text-center"
+                                                        style="font-size: 24px;margin-right: 65px;color: #de0000;     margin-top: 20px;"></i>
                                                 </div>
 
                                             </div>
@@ -240,8 +249,11 @@
                                                                 src="../../assets/images/pdf.png" alt=""
                                                                 style="width: 30%;"> <span
                                                                 style=" color:#019aa2;  padding-right: 2px;  font-size: 20px;">
-                                                                <a href="javascript:void(0);"
-                                                                    style=" color:#019aa2;">تحميل</a></span>
+                                                                <a v-if="files['pdf']== null" href="javascript:void(0);"
+                                                                    style=" color:#019aa2;" >غير متوفر</a>
+                                                                    <a v-else href="" :download="'https://login.tamedksa.com/image/'+files['pdf']"
+                                                                    style=" color:#019aa2;" >تحميل</a>
+                                                                    </span>
                                                         </div>
                                                     </td>
                                                     <td
@@ -262,8 +274,11 @@
                                                                 src="../../assets/images/Excel.png" alt=""
                                                                 style="width: 30%;"> <span
                                                                 style=" color:#019aa2; padding-right: 2px;   font-size: 20px;">
-                                                                <a href="javascript:void(0);"
-                                                                    style=" color:#019aa2;">تحميل</a></span>
+                                                                   <a v-if="files['xlsx']== null" href="javascript:void(0);"
+                                                                    style=" color:#019aa2;" >غير متوفر</a>
+                                                                    <a v-else href="" :download="'https://login.tamedksa.com/image/'+files['xlsx']"
+                                                                    style=" color:#019aa2;" >تحميل</a>
+                                                                    </span>
                                                         </div>
                                                     </td>
                                                     <td style="border: 1px solid #ccc;border-bottom-left-radius: 20px;">
@@ -290,7 +305,8 @@
                                                         <br>
                                                         <small style="color:#333333 ;">العمالة</small>
                                                         <br>
-                                                        <small style="color:#019aa2 ;">على الكفالة او عقد اجير</small>
+                                                        <small v-if="application_conditions['employment']=='on warranty'" style="color:#019aa2 ;">على الكفالة</small>
+                                                        <small v-else style="color:#019aa2 ;"> عقد اجير</small>
                                                     </div>
 
                                                     <div class="col-md-4  col-6 text-center">
@@ -299,7 +315,8 @@
                                                         <br>
                                                         <small style="color:#333333 ;">فئة التصنيف</small>
                                                         <br>
-                                                        <small style="color:#019aa2 ;">لايهم</small>
+                                                        <small v-if="arrayInfo['Category_Category']==null" style="color:#019aa2 ;">لايهم</small>
+                                                           <small v-else style="color:#019aa2 ;">{{arrayInfo['Category_Category']}}</small>
                                                     </div>
                                                     <div class="col-md-4 col-6 text-center">
                                                         <img src="../../assets/images/daman.png" alt=""
@@ -307,7 +324,8 @@
                                                         <br>
                                                         <small style="color:#333333 ;">ضمان بنكي</small>
                                                         <br>
-                                                        <small style="color:#019aa2 ;">لايهم</small>
+                                                        <small v-if="application_conditions['Bank_guarantee']==0" style="color:#019aa2 ;">لايهم</small>
+                                                        <small v-else style="color:#019aa2 ;">مطلوب</small>
                                                     </div>
                                                 </div>
                                             </div>
@@ -317,22 +335,8 @@
                                             <div class="mt-3"
                                                 style="border: 1px solid #ccc;border-radius: 25px;padding: 20px;">
                                                 <div class="row">
-                                                    <div class="col-md-4 col-6 text-center">
-                                                        <a href="javascript:void(0);" class="btn paper"> صورة السجل
-                                                            التجاري</a>
-                                                    </div>
-
-                                                    <div class="col-md-4 col-6 text-center">
-                                                        <a href="javascript:void(0);" class="btn paper">الدخل
-                                                            والزكاة</a>
-                                                    </div>
-                                                    <div class="col-md-4 col-6 text-center">
-                                                        <a href="javascript:void(0);" class="btn paper"> ضريبة القيمة
-                                                            المضافة </a>
-                                                    </div>
-                                                    <div class="col-md-4 col-6 text-center">
-                                                        <a href="javascript:void(0);" class="btn paper"> شهادة تصنيف
-                                                        </a>
+                                                    <div v-for="paper in papers" v-bind:key="paper"  class="col-md-4 col-6 text-center">
+                                                        <a href="javascript:void(0);" class="btn paper">{{paper}}</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -475,6 +479,10 @@ export default {
         return {
             ads: [],
             author: [],
+            papers: [],
+            files: [],
+            arrayInfo: [],
+            application_conditions:[],
         };
     },
     async mounted() {
@@ -487,7 +495,15 @@ export default {
         );
         this.ads = data;
         this.author =data['author'];
-
+        this.papers =data['req_paper'];
+        this.arrayInfo =data['infoArray'];
+        this.application_conditions =data['application_conditions'];
+        data['files'].forEach(element => {
+           
+            this.files[element['info']['type']]=element['file'];
+        });
+       
+      console.log(this.application_conditions);
     },
 }
 

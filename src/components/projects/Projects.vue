@@ -7,7 +7,7 @@
                         <div class="row mt-4">
                             <div class="col-lg-4">
                                 <input type="text" placeholder="البحث عن خدمة"
-                                    style="width: 100%; border-radius: 20px;border-color: #b7b7b7;border-width: 1px; padding: 8px 19px 11px 4px;">
+                                 style="width:100%;border-radius: 20px;border-color: #c1c1c1;border-top-color: #ffffff;border-width: 1px; border-left-color: #ffffff; padding: 8px 19px 11px 4px;">
                                 <i class='fas fa-search'
                                     style="right: 44%;bottom: 48%;color: #b7b7b7;position: relative;"></i>
                             </div>
@@ -187,25 +187,28 @@
 </template>
 
 <script>
-import {
-    defineComponent
-} from 'vue';
 import axios from 'axios';
+import { ref } from 'vue'
 
-export default defineComponent({
-
-    data() {
-        return {
-            ads: [],
-        };
-    },
-    async mounted() {
-        const { data } = await axios.get(
+const loadUserData = async () => {
+  return new Promise((resolve) => {
+    setTimeout(() => { resolve(  axios.get(
             "https://login.tamedksa.com/api/ads/1/all"
-        );
-        this.ads = data;
+        ))
 
-    },
-})
+    }, 2000)
+  })
+}
+
+export default {
+   
+  async setup() {
+    const ads = ref(await loadUserData())['_rawValue']['data'];
+console.log(ads);
+    return {
+      ads,
+    }
+  },
+}
 
 </script>

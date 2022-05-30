@@ -148,6 +148,10 @@ p {
     &.disabled, &:disabled {
         opacity: 1;
     }
+    &:hover{
+
+        color: #72d7e1;
+    }
 }
 .btn-warning {
     background-color: transparent;

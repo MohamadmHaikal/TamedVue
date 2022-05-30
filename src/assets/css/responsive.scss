@@ -3632,6 +3632,17 @@ $value_eleven: 1399px;
 }
 
 @media only screen and (min-width: 768px) {
+    .shimmer-margin{    margin-right: 13px;}
+    .date-icon-loader {
+        color:rgba(0, 0, 0, 0.0);
+        font-size: 12px;
+        padding-right: 5px;
+    }
+    .time-icon-loader {
+        color:rgba(0, 0, 0, 0.0);
+        font-size: 12px;
+        padding-right: 5px;
+    }
     .luvion-nav {
         background-color: transparent;
         padding: {
@@ -4976,6 +4987,19 @@ $value_eleven: 1399px;
 }
 
 @media(max-width: 575px) {
+    .ref-number{
+        margin-top: 15px;
+    }
+    .date-icon-loader {
+        color:rgba(0, 0, 0, 0.0);
+        font-size: 12px;
+        padding-right: 5px;
+    }
+    .time-icon-loader {
+        color:rgba(0, 0, 0, 0.0);
+        font-size: 12px;
+        padding-right: 5px;
+    }
     .luvion-nav {
         background-color: transparent;
         padding: {

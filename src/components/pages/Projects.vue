@@ -2,7 +2,16 @@
     <div>
         <Navbar />
         <PageTitle />
-        <Projects />
+        <Suspense>
+
+            <template #default>
+                <Projects />
+            </template>
+            <template #fallback>
+                <ProjectCardSkeleton />
+            </template>
+
+        </Suspense>
         <Footer />
     </div>
 </template>
@@ -11,6 +20,7 @@
 import Navbar from '../layout/Navbar'
 import PageTitle from '../projects/PageTitle'
 import Projects from '../projects/Projects'
+import ProjectCardSkeleton from '../projects/ProjectCardSkeleton'
 import Footer from '../layout/Footer'
 
 export default {
@@ -19,6 +29,7 @@ export default {
         Navbar,
         PageTitle,
         Projects,
+        ProjectCardSkeleton,
         Footer,
     }
 }
