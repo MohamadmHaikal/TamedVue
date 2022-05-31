@@ -6,9 +6,11 @@
                 <div class="mt-2" style="text-align: -webkit-center;">
                     <div class="col-md-9 col-sm-12 mt-3 text-center">
                         <div class="text-end">
-                            <h3 class="title mt-5 mb-3">{{ads.title}}</h3>
+                            <h3 class="title mt-5 mb-3">{{ ads.title }}</h3>
                             <span class="text-end " style="color: #019aa2;    font-size: 14px;"> الرقم المرجعي:</span>
-                            <span class="text-end" style="color: rgb(87 83 77) ;    font-size: 14px; padding-right: 5px;"> {{ads.reference_number}}</span>
+                            <span class="text-end"
+                                style="color: rgb(87 83 77) ;    font-size: 14px; padding-right: 5px;">
+                                {{ ads.reference_number }}</span>
                             <div class="row mt-3">
                                 <div class="col-md-9 col-sm-12 ">
                                     <span><i class="fas fa-star pr-2"
@@ -23,7 +25,7 @@
                                         display: inline-block;"></span>
                                     <i class="fas fa-map-marker-alt	" style="color: #019aa2;font-size: 20px;
     margin-right: 20px;"></i>
-                                    <span style=" margin-right: 6px;">{{ads.city}} - {{ads.neighborhood}}</span>
+                                    <span style=" margin-right: 6px;">{{ ads.city }} - {{ ads.neighborhood }}</span>
                                     <span style="margin-bottom: 2px;
                                         margin-right: 12px;
                                         height: 5px;
@@ -32,7 +34,7 @@
                                         border-radius: 50%;
                                         display: inline-block;"></span>
                                     <i class="far fa-clock project-header"></i>
-                                    <span style=" margin-right: 6px;">التاريخ : {{ads.created}}</span>
+                                    <span style=" margin-right: 6px;">التاريخ : {{ ads.created }}</span>
                                     <span style="margin-bottom: 2px;
                                         margin-right: 12px;
                                         height: 5px;
@@ -41,7 +43,7 @@
                                         border-radius: 50%;
                                         display: inline-block;"></span>
 
-                                    <span style="margin-right: 20px;">{{ads.seenCount}}</span>
+                                    <span style="margin-right: 20px;">{{ ads.seenCount }}</span>
                                     <i class="far fa-eye" style="color: #019aa2;font-size: 20px;
     margin-right: 10px;"></i>
                                 </div>
@@ -69,16 +71,18 @@
 
                         </div>
                         <div class="text-center">
-                            <div class="hh-gallery hh-grid-gallery mt-4"
+                            <div v-if="images.length >= 5" class="hh-gallery hh-grid-gallery mt-4"
                                 style="position: relative; display: flex; Height: 30%;Overflow: hidden;">
                                 <div class="controls"
                                     style="left: 30px; right: auto; position: absolute; bottom: 30px; right: 20px;display: flex; align-items: center;z-index: 1;">
-                                    <a href="javascript: void(0);" class="view-gallery item-link"
+                                    <a @click="openModal(); currentSlide(1)" href="javascript: void(0);"
+                                        class="view-gallery item-link"
                                         style="    background: #eee; border-radius: 3px; font-size: 13px;font-weight: 500;padding: 5px 10px;color: #333;display: flex;align-items: center;">
                                         <span>عرض كل الصور</span>
                                         <i class="ti-gallery"></i>
                                     </a>
-                                    <span><a href="javascript: void(0);" class="view-gallery item-link"
+                                    <span><a @click="openModal(); currentSlide(1)" href="javascript: void(0);"
+                                            class="view-gallery item-link"
                                             style="  margin-right: 5px;  background: #eee; border-radius: 3px; font-size: 13px;font-weight: 500;padding: 5px 10px;color: #333;display: flex;align-items: center;">
                                             <span>عرض كل الفيديوهات</span>
                                             <i class="ti-gallery"></i>
@@ -86,15 +90,13 @@
                                 </div>
                                 <div class="item" style="flex: 2 1 0%; margin-right: 4px;">
                                     <div class="item-inner" style="width: 100%;padding-top: 130%;position: relative;">
-                                        <img src="https://blagat.sa/storage/u-144/2022/04/11/10-1649682005-500x750.jpg"
-                                            alt="10"
+                                        <img :src="'https://login.tamedksa.com/image/' + images[0]" alt="10"
                                             style=" border-radius: 1px 18px 18px 1px;position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;">
                                     </div>
                                 </div>
                                 <div class="item" style="flex: 2 1 0%;margin-right: 4px;">
                                     <div class="item-inner" style="width: 100%;padding-top: 130%;position: relative;">
-                                        <img src="https://blagat.sa/storage/u-144/2022/04/11/7-1649682004-500x750.jpg"
-                                            alt="7"
+                                        <img :src="'https://login.tamedksa.com/image/' + images[1]" alt="7"
                                             style="position: absolute;top: 0;  left: 0; width: 100%; height: 100%;  object-fit: cover;">
                                     </div>
                                 </div>
@@ -102,8 +104,7 @@
                                     <div class="item-outer" style="height: calc(50% - 2px);">
                                         <div class="item-inner"
                                             style="height: 100%; padding-top: 0;padding-top: 130%; position: relative;">
-                                            <img src="https://blagat.sa/storage/u-144/2022/04/11/9-1649682004-500x750.jpg"
-                                                alt="9"
+                                            <img :src="'https://login.tamedksa.com/image/' + images[2]" alt="9"
                                                 style="position: absolute; top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;">
                                         </div>
                                     </div>
@@ -112,22 +113,222 @@
                                     <div class="item-outer" style="height: calc(50% - 2px);">
                                         <div class="item-inner"
                                             style="height: 100%;width: 100%;position: relative; padding-top: 0;">
-                                            <img src="https://blagat.sa/storage/u-144/2022/04/11/8-1649682004-500x750.jpg"
-                                                alt="8"
+                                            <img :src="'https://login.tamedksa.com/image/' + images[3]" alt="8"
                                                 style="position: absolute;top: 0;left: 0; width: 100%;height: 100%;object-fit: cover;">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="item" style="flex: 2 1 0%;margin-right: 4px;">
                                     <div class="item-inner" style="width: 100%;padding-top: 130%;position: relative;">
-                                        <img src="https://blagat.sa/storage/u-144/2022/04/11/4-1649682003-500x750.jpg"
-                                            alt="4"
+                                        <img :src="'https://login.tamedksa.com/image/' + images[4]" alt="4"
                                             style=" border-radius: 18px 1px 1px 18px;position: absolute;top: 0px;left: 0px;width: 100%; height: 100%;object-fit: cover;">
                                     </div>
                                 </div>
                                 <div class="data-gallery"
                                     data-gallery="W3sic3JjIjoiaHR0cHM6XC9cL2JsYWdhdC5zYVwvc3RvcmFnZVwvdS0xNDRcLzIwMjJcLzA0XC8xMVwvMTAtMTY0OTY4MjAwNS5qcGcifSx7InNyYyI6Imh0dHBzOlwvXC9ibGFnYXQuc2FcL3N0b3JhZ2VcL3UtMTQ0XC8yMDIyXC8wNFwvMTFcLzctMTY0OTY4MjAwNC5qcGcifSx7InNyYyI6Imh0dHBzOlwvXC9ibGFnYXQuc2FcL3N0b3JhZ2VcL3UtMTQ0XC8yMDIyXC8wNFwvMTFcLzktMTY0OTY4MjAwNC5qcGcifSx7InNyYyI6Imh0dHBzOlwvXC9ibGFnYXQuc2FcL3N0b3JhZ2VcL3UtMTQ0XC8yMDIyXC8wNFwvMTFcLzgtMTY0OTY4MjAwNC5qcGcifSx7InNyYyI6Imh0dHBzOlwvXC9ibGFnYXQuc2FcL3N0b3JhZ2VcL3UtMTQ0XC8yMDIyXC8wNFwvMTFcLzQtMTY0OTY4MjAwMy5qcGcifSx7InNyYyI6Imh0dHBzOlwvXC9ibGFnYXQuc2FcL3N0b3JhZ2VcL3UtMTQ0XC8yMDIyXC8wNFwvMTFcLzEtMTY0OTY4MjAwMi5qcGcifSx7InNyYyI6Imh0dHBzOlwvXC9ibGFnYXQuc2FcL3N0b3JhZ2VcL3UtMTQ0XC8yMDIyXC8wNFwvMTFcLzItMTY0OTY4MjAwMi5qcGcifSx7InNyYyI6Imh0dHBzOlwvXC9ibGFnYXQuc2FcL3N0b3JhZ2VcL3UtMTQ0XC8yMDIyXC8wNFwvMTFcLzYtMTY0OTY4MjAwMy5qcGcifSx7InNyYyI6Imh0dHBzOlwvXC9ibGFnYXQuc2FcL3N0b3JhZ2VcL3UtMTQ0XC8yMDIyXC8wNFwvMTFcLzMtMTY0OTY4MjAwMy5qcGcifSx7InNyYyI6Imh0dHBzOlwvXC9ibGFnYXQuc2FcL3N0b3JhZ2VcL3UtMTQ0XC8yMDIyXC8wNFwvMTFcLzUtMTY0OTY4MjAwMy5qcGcifV0=">
                                 </div>
+                            </div>
+                            <div v-else-if="images.length == 4" class="hh-gallery hh-grid-gallery mt-4"
+                                style=" position: relative; display: flex; Height: 30%;Overflow: hidden;">
+                                <div class="controls">
+                                    <a href="javascript: void(0);" @click="openModal(); currentSlide(1)"
+                                        class="view-gallery item-link"
+                                        style="  margin-right: 5px;  background: #eee; border-radius: 3px; font-size: 13px;font-weight: 500;padding: 5px 10px;color: #333;display: flex;align-items: center;">
+                                        <span>عرض كل الصور</span>
+                                        <i class="ti-gallery"></i>
+                                    </a>
+                                    <span><a href="javascript: void(0);" @click="openModal(); currentSlide(1)"
+                                            class="view-gallery item-link"
+                                            style="  margin-right: 5px;  background: #eee; border-radius: 3px; font-size: 13px;font-weight: 500;padding: 5px 10px;color: #333;display: flex;align-items: center;">
+                                            <span>عرض كل الفيديوهات</span>
+                                            <i class="ti-gallery"></i>
+                                        </a></span>
+                                </div>
+                                <div class="item" style="flex: 2 1 0%; margin-right: 4px;">
+                                    <div class="item-inner" style="width: 100%;padding-top: 130%;position: relative;">
+                                        <img :src="'https://login.tamedksa.com/image/' + images[0]" alt="10"
+                                            style=" border-radius: 1px 18px 18px 1px;position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;">
+                                    </div>
+                                </div>
+
+                                <div class="item item-small" style="margin-right: 4px;flex: 1 1 0%;">
+                                    <div class="item-outer" style="height: calc(50% - 2px);">
+                                        <div class="item-inner"
+                                            style="height: 100%; padding-top: 0;padding-top: 130%; position: relative;">
+                                            <img :src="'https://login.tamedksa.com/image/' + images[1]" alt="9"
+                                                style="position: absolute; top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;">
+                                        </div>
+                                    </div>
+                                    <div class="space" style=" margin-top: 4px;">
+                                    </div>
+                                    <div class="item-outer" style="height: calc(50% - 2px);">
+                                        <div class="item-inner"
+                                            style="height: 100%;width: 100%;position: relative; padding-top: 0;">
+                                            <img :src="'https://login.tamedksa.com/image/' + images[2]" alt="8"
+                                                style="position: absolute;top: 0;left: 0; width: 100%;height: 100%;object-fit: cover;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item" style="flex: 2 1 0%;margin-right: 4px;">
+                                    <div class="item-inner" style="width: 100%;padding-top: 130%;position: relative;">
+                                        <img :src="'https://login.tamedksa.com/image/' + images[3]" alt="4"
+                                            style=" border-radius: 18px 1px 1px 18px;position: absolute;top: 0px;left: 0px;width: 100%; height: 100%;object-fit: cover;">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div v-else-if="images.length == 3" class="hh-gallery hh-grid-gallery mt-4"
+                                style=" position: relative; display: flex; Height: 30%;Overflow: hidden;">
+                                <div class="controls">
+                                    <a href="javascript: void(0);" @click="openModal(); currentSlide(1)"
+                                        class="view-gallery item-link"
+                                        style="  margin-right: 5px;  background: #eee; border-radius: 3px; font-size: 13px;font-weight: 500;padding: 5px 10px;color: #333;display: flex;align-items: center;">
+                                        <span>عرض كل الصور</span>
+                                        <i class="ti-gallery"></i>
+                                    </a>
+                                    <span><a href="javascript: void(0);" @click="openModal(); currentSlide(1)"
+                                            class="view-gallery item-link"
+                                            style="  margin-right: 5px;  background: #eee; border-radius: 3px; font-size: 13px;font-weight: 500;padding: 5px 10px;color: #333;display: flex;align-items: center;">
+                                            <span>عرض كل الفيديوهات</span>
+                                            <i class="ti-gallery"></i>
+                                        </a></span>
+                                </div>
+                                <div class="item" style="flex: 2 1 0%; margin-right: 4px;">
+                                    <div class="item-inner" style="width: 100%;padding-top: 130%;position: relative;">
+                                        <img :src="'https://login.tamedksa.com/image/' + images[0]" alt="10"
+                                            style=" border-radius: 1px 18px 18px 1px;position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;">
+                                    </div>
+                                </div>
+
+                                <div class="item item-small" style="margin-right: 4px;flex: 1 1 0%;">
+
+                                    <div class="space" style=" margin-top: 4px;">
+                                    </div>
+
+                                    <div class="item-inner"
+                                        style="height: 100%;width: 100%;position: relative; padding-top: 0;">
+                                        <img :src="'https://login.tamedksa.com/image/' + images[1]" alt="8"
+                                            style="position: absolute;top: -4px;left: 0; width: 100%;height: 100%;object-fit: cover;">
+                                    </div>
+
+                                </div>
+                                <div class="item" style="flex: 2 1 0%;margin-right: 4px;">
+                                    <div class="item-inner" style="width: 100%;padding-top: 130%;position: relative;">
+                                        <img :src="'https://login.tamedksa.com/image/' + images[2]" alt="4"
+                                            style=" border-radius: 18px 1px 1px 18px;position: absolute;top: 0px;left: 0px;width: 100%; height: 100%;object-fit: cover;">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div v-else-if="images.length == 2" class="hh-gallery hh-grid-gallery mt-4"
+                                style=" position: relative; display: flex; Height: 30%;Overflow: hidden;">
+                                <div class="controls">
+                                    <a href="javascript: void(0);" @click="openModal(); currentSlide(1)"
+                                        class="view-gallery item-link"
+                                        style="  margin-right: 5px;  background: #eee; border-radius: 3px; font-size: 13px;font-weight: 500;padding: 5px 10px;color: #333;display: flex;align-items: center;">
+                                        <span>عرض كل الصور</span>
+                                        <i class="ti-gallery"></i>
+                                    </a>
+                                    <span><a href="javascript: void(0);" @click="openModal(); currentSlide(1)"
+                                            class="view-gallery item-link"
+                                            style="  margin-right: 5px;  background: #eee; border-radius: 3px; font-size: 13px;font-weight: 500;padding: 5px 10px;color: #333;display: flex;align-items: center;">
+                                            <span>عرض كل الفيديوهات</span>
+                                            <i class="ti-gallery"></i>
+                                        </a></span>
+                                </div>
+                                <div class="item" style="flex: 2 1 0%; margin-right: 4px;">
+                                    <div class="item-inner" style="width: 100%;padding-top: 130%;position: relative;">
+                                        <img :src="'https://login.tamedksa.com/image/' + images[0]" alt="10"
+                                            style=" border-radius: 1px 18px 18px 1px;position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;">
+                                    </div>
+                                </div>
+
+
+                                <div class="item" style="flex: 2 1 0%;margin-right: 4px;">
+                                    <div class="item-inner" style="width: 100%;padding-top: 130%;position: relative;">
+                                        <img :src="'https://login.tamedksa.com/image/' + images[1]" alt="4"
+                                            style=" border-radius: 18px 1px 1px 18px;position: absolute;top: 0px;left: 0px;width: 100%; height: 100%;object-fit: cover;">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div v-else-if="images.length == 1" class="hh-gallery hh-grid-gallery mt-4"
+                                style=" position: relative; display: flex; Height: 30%;Overflow: hidden;">
+                                <div class="controls">
+                                    <a href="javascript: void(0);" @click="openModal(); currentSlide(1)"
+                                        class="view-gallery item-link"
+                                        style="  margin-right: 5px;  background: #eee; border-radius: 3px; font-size: 13px;font-weight: 500;padding: 5px 10px;color: #333;display: flex;align-items: center;">
+                                        <span>عرض كل الصور</span>
+                                        <i class="ti-gallery"></i>
+                                    </a>
+                                    <span><a href="javascript: void(0);" @click="openModal(); currentSlide(1)"
+                                            class="view-gallery item-link"
+                                            style="  margin-right: 5px;  background: #eee; border-radius: 3px; font-size: 13px;font-weight: 500;padding: 5px 10px;color: #333;display: flex;align-items: center;">
+                                            <span>عرض كل الفيديوهات</span>
+                                            <i class="ti-gallery"></i>
+                                        </a></span>
+                                </div>
+                                <div class="item" style="flex: 2 1 0%; margin-right: 4px;">
+                                    <div class="item-inner" style="width: 100%;padding-top: 130%;position: relative;">
+                                        <img :src="'https://login.tamedksa.com/image/' + images[0]" alt="10"
+                                            style=" border-radius: 18px 18px 18px 18px;position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;">
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                            <div id="myModal" class="modal" style=" padding-top: 130px;background-color: black;">
+                                <span class="close cursor" @click="closeModal()"
+                                    style=" cursor: pointer; color: #999;position: fixed;top: 10px;right: 25px;font-size: 35px;font-weight: bold;">&times;</span>
+                                <div class="modal-content"
+                                    style="position: relative;background-color: #fefefe;margin: auto; padding: 0; width: 60%; max-width: 1200px;    height: 80%;    direction: ltr;">
+
+                                    <div v-for="i in AllImage.length" :key="i" class="mySlides">
+                                        <div class="numbertext"
+                                            style="font-size: 18px; color: #999;padding: 8px 12px;position: fixed;top: 10px; left: 60px;">
+                                            {{ i }} / {{ AllImage.length }}</div>
+                                        <img :src="'https://login.tamedksa.com/image/' + AllImage[i - 1].file"
+                                            style=" width: 100%;height: 100%;">
+                                        <a class="close cursor" href=""
+                                            :download="'https://login.tamedksa.com/image/' + AllImage[i - 1].file"
+                                            style="cursor: pointer; color: #999; position: fixed; top: 22px;right: 100px; font-size: 18px;"><i
+                                                class="fa fa-download"></i></a>
+                                    </div>
+
+                                    <!-- <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <video width="400" controls style="width: 100%;height: 100%;">
+                        <source src="mov_bbb.mp4" type="video/mp4">
+                        <source src="mov_bbb.ogg" type="video/ogg">
+                        Your browser does not support HTML video.
+                    </video>
+
+                </div> -->
+                                    <a class="next" @click="plusSlides(-1)"
+                                        style=" right: 0; border-radius: 3px 0 0 3px;background-color: rgba(0, 0, 0, 0.5); cursor: pointer;position: fixed;top: 50%;width: auto; padding: 16px; margin-top: -50px; color: white; font-weight: bold; font-size: 20px;transition: 0.6s ease; border-radius: 0 3px 3px 0;user-select: none;-webkit-user-select: none;"><i
+                                            class="fa fa-arrow-right"></i></a>
+                                    <a class="prev" @click="plusSlides(1)"
+                                        style="top: 50%;font-size: 22px;left: 10px; cursor: pointer; position: fixed;width: auto; padding: 16px; margin-top: -50px; color: white;font-weight: bold; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; -webkit-user-select: none; "><i
+                                            class="fa fa-arrow-left"></i></a>
+
+                                </div>
+                            </div>
+                            <div style="display:none ;">
+                                <div class="row">
+
+                                    <div v-for="img in AllImage" v-bind:key="img.id" class="column">
+                                        <img :src="'https://login.tamedksa.com/image/' + img.file"
+                                            style="width:100% cursor: pointer;"
+                                            @click="openModal(); currentSlide(img.id)" class="hover-shadow cursor">
+                                    </div>
+
+                                </div>
+
+
+
+
                             </div>
                         </div>
                         <div class="row" style="    padding-right: 0px; 
@@ -136,7 +337,8 @@
                                 <div style="border-bottom: 1px solid rgb(238, 239, 241); padding-bottom: 10%;">
 
                                     <h6 style="color:#0d0d0d ;padding-top: 5%; font-weight: 700;">الوصف</h6>
-                                    <p style="max-width: 52ch; color: rgb(13, 13, 13);font-weight: 400;">{{ads.description}}</p>
+                                    <p style="max-width: 52ch; color: rgb(13, 13, 13);font-weight: 400;">
+                                        {{ ads.description }}</p>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-8  project-deadline">
@@ -145,17 +347,19 @@
                                             اخر موعد لتقديم العروض </p>
                                         <i class="far fa-calendar-alt"
                                             style="color:#37D337;padding-right: 2%;   font-size: 15px; "></i>
-                                        <span style="color:rgb(87 83 77);font-size:15px;padding-right:2%;">  {{ ads.created}}
+                                        <span style="color:rgb(87 83 77);font-size:15px;padding-right:2%;"> {{
+                                                ads.created
+                                        }}
                                         </span>
                                         <span style="color:rgb(87 83 77);font-size:15px;padding-right:5px;">
                                             <i class="far fa-clock" style="color:#37D337;    font-size: 15px;"></i>
-                                            {{ads.time}}</span>
+                                            {{ ads.time }}</span>
                                     </div>
                                     <div class="col-md-4 project-activite">
                                         <span style="color: #019aa2;    font-size: 14px;">
                                             النشاط:</span>
                                         <span style="color: rgb(87 83 77) ;    font-size: 14px; padding-right: 5px;">
-                                            {{ads.activity}}</span>
+                                            {{ ads.activity }}</span>
 
                                     </div>
                                     <div class="col-md-12 mt-4">
@@ -189,9 +393,10 @@
                                                             يوجد
                                                             سكن</span> <span
                                                             style="margin-bottom: 2px;      margin-left: 15px; margin-right: 20px; height: 7px; width: 7px; background-color: rgb(187, 187, 187); border-radius: 50%; display: inline-block;"></span>
-                                                        <br><i v-if="arrayInfo['هل يوجد سكن ؟']=='on'" class="fa fa-check text-center"
+                                                        <br><i v-if="arrayInfo['هل يوجد سكن ؟'] == 'on'"
+                                                            class="fa fa-check text-center"
                                                             style="font-size: 24px;margin-right: 65px;color: #35b348;"></i>
-                                                            <i v-else class="fa fa-close text-center"
+                                                        <i v-else class="fa fa-close text-center"
                                                             style="font-size: 24px;margin-right: 65px;color: #de0000;"></i>
                                                     </div>
 
@@ -202,11 +407,11 @@
                                                         <span style="color:#c2c2c2 ; padding-right: 5px;">هل تتوفر
                                                             كهرباء</span> <span
                                                             style="margin-bottom: 2px;      margin-right: 10px; height: 7px; width: 7px; background-color: rgb(187, 187, 187); border-radius: 50%; display: inline-block;"></span>
-                                                        <br><i v-if="arrayInfo['هل يوجد كهرباء ؟']=='on'" class="fa fa-check text-center"
+                                                        <br><i v-if="arrayInfo['هل يوجد كهرباء ؟'] == 'on'"
+                                                            class="fa fa-check text-center"
                                                             style="font-size: 24px;margin-right: 65px;color: #35b348;     margin-top: 20px;"></i>
-                                                            <i v-else class="fa fa-close text-center"
-                                                             style="font-size: 24px;margin-right: 65px;color: #de0000;     margin-top: 20px;"
-                                                          ></i>
+                                                        <i v-else class="fa fa-close text-center"
+                                                            style="font-size: 24px;margin-right: 65px;color: #de0000;     margin-top: 20px;"></i>
                                                     </div>
 
                                                     <div class="col-md-4 col-6 conditional"
@@ -215,9 +420,10 @@
                                                             style="    font-size: 25px;  color: #039ca4; margin-top: 15px;"></i>
                                                         <span style="color:#c2c2c2 ; padding-right: 5px;">هل تتوفر
                                                             مواصلات</span>
-                                                        <br><i v-if="arrayInfo['هل يوجد مواصلات ؟']=='on'" class="fa fa-check text-center"
+                                                        <br><i v-if="arrayInfo['هل يوجد مواصلات ؟'] == 'on'"
+                                                            class="fa fa-check text-center"
                                                             style="font-size: 24px;margin-right: 65px;color: #35b348;     margin-top: 20px;"></i>
-                                                            <i v-else class="fa fa-close text-center"
+                                                        <i v-else class="fa fa-close text-center"
                                                             style="font-size: 24px;margin-right: 65px;color: #de0000;     margin-top: 20px;"></i>
                                                     </div>
 
@@ -228,9 +434,10 @@
                                                         style="    font-size: 25px;  color: #039ca4; margin-top: 15px;"></i>
                                                     <span style="color:#c2c2c2 ; padding-right: 5px;">
                                                         دفعة مقدمة</span>
-                                                    <br><i  v-if="arrayInfo['هل يوجد دفعة أولى ؟']=='on'"  class="fa fa-check text-center"
+                                                    <br><i v-if="arrayInfo['هل يوجد دفعة أولى ؟'] == 'on'"
+                                                        class="fa fa-check text-center"
                                                         style="font-size: 24px;margin-right: 65px;color: #35b348;     margin-top: 20px;"></i>
-                                                        <i v-else class="fa fa-close text-center"
+                                                    <i v-else class="fa fa-close text-center"
                                                         style="font-size: 24px;margin-right: 65px;color: #de0000;     margin-top: 20px;"></i>
                                                 </div>
 
@@ -249,11 +456,13 @@
                                                                 src="../../assets/images/pdf.png" alt=""
                                                                 style="width: 30%;"> <span
                                                                 style=" color:#019aa2;  padding-right: 2px;  font-size: 20px;">
-                                                                <a v-if="files['pdf']== null" href="javascript:void(0);"
-                                                                    style=" color:#019aa2;" >غير متوفر</a>
-                                                                    <a v-else href="" :download="'https://login.tamedksa.com/image/'+files['pdf']"
-                                                                    style=" color:#019aa2;" >تحميل</a>
-                                                                    </span>
+                                                                <a v-if="files['pdf'] == null"
+                                                                    href="javascript:void(0);"
+                                                                    style=" color:#019aa2;">غير متوفر</a>
+                                                                <a v-else href=""
+                                                                    :download="'https://login.tamedksa.com/image/' + files['pdf']"
+                                                                    style=" color:#019aa2;">تحميل</a>
+                                                            </span>
                                                         </div>
                                                     </td>
                                                     <td
@@ -274,11 +483,13 @@
                                                                 src="../../assets/images/Excel.png" alt=""
                                                                 style="width: 30%;"> <span
                                                                 style=" color:#019aa2; padding-right: 2px;   font-size: 20px;">
-                                                                   <a v-if="files['xlsx']== null" href="javascript:void(0);"
-                                                                    style=" color:#019aa2;" >غير متوفر</a>
-                                                                    <a v-else href="" :download="'https://login.tamedksa.com/image/'+files['xlsx']"
-                                                                    style=" color:#019aa2;" >تحميل</a>
-                                                                    </span>
+                                                                <a v-if="files['xlsx'] == null"
+                                                                    href="javascript:void(0);"
+                                                                    style=" color:#019aa2;">غير متوفر</a>
+                                                                <a v-else href=""
+                                                                    :download="'https://login.tamedksa.com/image/' + files['xlsx']"
+                                                                    style=" color:#019aa2;">تحميل</a>
+                                                            </span>
                                                         </div>
                                                     </td>
                                                     <td style="border: 1px solid #ccc;border-bottom-left-radius: 20px;">
@@ -305,7 +516,9 @@
                                                         <br>
                                                         <small style="color:#333333 ;">العمالة</small>
                                                         <br>
-                                                        <small v-if="application_conditions['employment']=='on warranty'" style="color:#019aa2 ;">على الكفالة</small>
+                                                        <small
+                                                            v-if="application_conditions['employment'] == 'on warranty'"
+                                                            style="color:#019aa2 ;">على الكفالة</small>
                                                         <small v-else style="color:#019aa2 ;"> عقد اجير</small>
                                                     </div>
 
@@ -315,8 +528,11 @@
                                                         <br>
                                                         <small style="color:#333333 ;">فئة التصنيف</small>
                                                         <br>
-                                                        <small v-if="arrayInfo['Category_Category']==null" style="color:#019aa2 ;">لايهم</small>
-                                                           <small v-else style="color:#019aa2 ;">{{arrayInfo['Category_Category']}}</small>
+                                                        <small v-if="arrayInfo['Category_Category'] == null"
+                                                            style="color:#019aa2 ;">لايهم</small>
+                                                        <small v-else style="color:#019aa2 ;">{{
+                                                                arrayInfo['Category_Category']
+                                                        }}</small>
                                                     </div>
                                                     <div class="col-md-4 col-6 text-center">
                                                         <img src="../../assets/images/daman.png" alt=""
@@ -324,7 +540,8 @@
                                                         <br>
                                                         <small style="color:#333333 ;">ضمان بنكي</small>
                                                         <br>
-                                                        <small v-if="application_conditions['Bank_guarantee']==0" style="color:#019aa2 ;">لايهم</small>
+                                                        <small v-if="application_conditions['Bank_guarantee'] == 0"
+                                                            style="color:#019aa2 ;">لايهم</small>
                                                         <small v-else style="color:#019aa2 ;">مطلوب</small>
                                                     </div>
                                                 </div>
@@ -335,8 +552,9 @@
                                             <div class="mt-3"
                                                 style="border: 1px solid #ccc;border-radius: 25px;padding: 20px;">
                                                 <div class="row">
-                                                    <div v-for="paper in papers" v-bind:key="paper"  class="col-md-4 col-6 text-center">
-                                                        <a href="javascript:void(0);" class="btn paper">{{paper}}</a>
+                                                    <div v-for="paper in papers" v-bind:key="paper"
+                                                        class="col-md-4 col-6 text-center">
+                                                        <a href="javascript:void(0);" class="btn paper">{{ paper }}</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -355,10 +573,12 @@
                                             قيمة المشروع
                                         </h5>
 
-                                        <h6 v-if="ads.pricestatus == 'on'" style="color: #f4a23e; text-align: right;padding-right: 15%;">
-                                         الأفضل سعر
+                                        <h6 v-if="ads.pricestatus == 'on'"
+                                            style="color: #f4a23e; text-align: right;padding-right: 15%;">
+                                            الأفضل سعر
                                         </h6>
-                                        <h6 v-else style="color: #f4a23e; text-align: right;padding-right: 15%;">{{ads.price}} ريال
+                                        <h6 v-else style="color: #f4a23e; text-align: right;padding-right: 15%;">
+                                            {{ ads.price }} ريال
                                         </h6>
                                     </div>
                                     <div style="text-align: right;">
@@ -367,11 +587,13 @@
                                             اخر موعد لتقديم العروض </p>
                                         <i class="far fa-calendar-alt"
                                             style="color:#37D337;padding-right: 13%;   font-size: 15px; "></i>
-                                        <span style="color:rgb(87 83 77);font-size:15px;padding-right:2%;"> {{ads.created}}
+                                        <span style="color:rgb(87 83 77);font-size:15px;padding-right:2%;">
+                                            {{ ads.created }}
                                         </span>
                                         <span style="color:rgb(87 83 77);font-size:15px;padding-right:5px;">
-                                            <i class="far fa-clock" style="color:#37D337;      padding-right: 15px;  font-size: 15px;"></i>
-                                            {{ads.time}}</span>
+                                            <i class="far fa-clock"
+                                                style="color:#37D337;      padding-right: 15px;  font-size: 15px;"></i>
+                                            {{ ads.time }}</span>
                                         <div style="text-align:center ;">
                                             <a href="javascript:void(0);" class="btn btn-logo"
                                                 style="border-radius:16px;background-color:#039ca4; width:85%;color:white;margin-top:25px;padding:7px 30px 7px 30px;">تقديم
@@ -383,7 +605,7 @@
                                                 المرجعي للمشروع:</span>
                                             <span class="text-end"
                                                 style="color: rgb(87 83 77) ;font-size: 12px; padding-right: 5px;">
-                                                {{ads.reference_number}}</span>
+                                                {{ ads.reference_number }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -402,7 +624,9 @@
                                         <span class="text-end " style="color: #019aa2;    font-size: 14px;"> مقدم
                                             الطلب:</span>
                                         <span class="text-end"
-                                            style="color: rgb(87 83 77) ;    font-size: 14px; padding-right: 5px;"> {{ author.name}}</span>
+                                            style="color: rgb(87 83 77) ;    font-size: 14px; padding-right: 5px;"> {{
+                                                    author.name
+                                            }}</span>
 
 
                                         <div style="text-align:center ;">
@@ -424,7 +648,8 @@
                                         <div class="row text-center mt-2">
                                             <div class="col-md-5 col-sm-2"
                                                 style="text-align: center;margin-bottom: 12px;">
-                                                <a :href="'https://login.tamedksa.com/chat/'+author.id" style="color: #039ca4;">
+                                                <a :href="'https://login.tamedksa.com/chat/' + author.id"
+                                                    style="color: #039ca4;">
                                                     <p style="position: relative; top: 18px">رسالة</p>
                                                     <i class="far fa-comment-alt mb-2"
                                                         style="font-size: 25px; color: #039ca4;"></i>
@@ -455,9 +680,41 @@
 </template>
 
 <script>
+
 import axios from 'axios';
+var slideIndex = 1;
 export default {
+
     methods: {
+        openModal() {
+            document.getElementById("myModal").style.display = "block";
+        },
+        closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        },
+        plusSlides(n) {
+            this.showSlides(slideIndex += n);
+        },
+
+        currentSlide(n) {
+            this.showSlides(slideIndex = n);
+        },
+
+        showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+
+
+        },
+
 
         openCity(evt, cityName) {
             var i, tabcontent, tablinks;
@@ -474,36 +731,46 @@ export default {
             evt.currentTarget.className += " active";
         },
     },
-   
+
     data() {
         return {
+
             ads: [],
             author: [],
             papers: [],
             files: [],
             arrayInfo: [],
-            application_conditions:[],
+            images: [],
+            AllImage: [],
+            application_conditions: [],
         };
     },
     async mounted() {
-        var id=this.$route.params.projectId;
+        var id = this.$route.params.projectId;
         var element = document.getElementById("buttonlinks");
         element.classList.add("active");
         document.getElementById('London').style.display = "block";
         const { data } = await axios.get(
-            'https://login.tamedksa.com/api/ads/'+id+'/details'
+            'https://login.tamedksa.com/api/ads/' + id + '/details'
         );
         this.ads = data;
-        this.author =data['author'];
-        this.papers =data['req_paper'];
-        this.arrayInfo =data['infoArray'];
-        this.application_conditions =data['application_conditions'];
+        this.author = data['author'];
+        this.papers = data['req_paper'];
+        this.arrayInfo = data['infoArray'];
+        this.application_conditions = data['application_conditions'];
         data['files'].forEach(element => {
-           
-            this.files[element['info']['type']]=element['file'];
+
+            this.files[element['info']['type']] = element['file'];
         });
-       
-      console.log(this.application_conditions);
+        data['files'].forEach(element => {
+
+            this.images.push(element['file']);
+        });
+        data['files'].forEach(element => {
+
+            this.AllImage.push(element);
+        });
+        console.log(this.images);
     },
 }
 
@@ -534,4 +801,20 @@ table {
     border-collapse: unset;
     width: 100%;
 }
+</style>
+
+<style>
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
 </style>

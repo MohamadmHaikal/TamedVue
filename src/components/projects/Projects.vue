@@ -75,7 +75,8 @@
 
                                         <div class="row text-end mt-3 mb-2">
                                             <div class="col-md-8">
-                                                <span style="color: #019aa2;"> {{ ad.title }}</span>
+                                            <router-link :to="{ name: 'details', params: { projectId: ad.id } }">
+                                                <span style="color: #019aa2;"> {{ ad.title }}</span></router-link>
                                                 <p class="mt-2" style="color: rgb(87 83 77);">{{ ad.description }}</p>
                                             </div>
                                             <div class="col-md-4 mt-1">
@@ -165,9 +166,10 @@
                                 </div>
                                 <div class="img-square-wrapper "
                                     style="     border-right: 1px solid #d8d8d8; width: 265px;height: 280px;border-right: 1px solid rgb(216, 216, 216);">
+                                    <router-link :to="{ name: 'details', params: { projectId: ad.id } }">
                                     <img class=""
                                         style="border-radius: 13px 0px 0px 13px;  height: 282px; width:100% ;  border-right: 1px solid #d8d8d8;"
-                                        :src="ad.cover" alt="Card image cap">
+                                        :src="ad.cover" alt="Card image cap"></router-link>
                                 </div>
                             </div>
 

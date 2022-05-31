@@ -1,19 +1,16 @@
 <template>
-    <div :class="['navbar-area', {'is-sticky': isSticky}]">
+    <div :class="['navbar-area', { 'is-sticky': isSticky }]">
         <div class="luvion-nav">
-            <div class="container contain" >
+            <div class="container contain">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <router-link class="navbar-brand" to="/">
                         <img src="../../assets/images/logo2.e73a83f9.png" alt="image" style="width: 120px;">
                         <img src="../../assets/images/logo2.e73a83f9.png" alt="image" style="width: 120px;">
                     </router-link>
 
-                    <div 
-                        class="navbar-toggler"
-                        @click="active = !active" :aria-pressed="active ? 'true' : 'false'"
+                    <div class="navbar-toggler" @click="active = !active" :aria-pressed="active ? 'true' : 'false'"
                         v-bind:class="{ 'active': button_active_state }"
-                        v-on:click="button_active_state = !button_active_state"
-                    >
+                        v-on:click="button_active_state = !button_active_state">
                         <span class="icon-bar top-bar"></span>
                         <span class="icon-bar middle-bar"></span>
                         <span class="icon-bar bottom-bar"></span>
@@ -25,20 +22,20 @@
                                 <router-link to="/about-us" class="nav-link">
                                     عن تعميد
                                 </router-link>
-                               
+
                             </li>
                             <li class="nav-item">
                                 <router-link to="/projects" class="nav-link">
                                     المشاريع
-                                </router-link >
+                                </router-link>
                             </li>
                             <li class="nav-item">
-                               <router-link to="/DealsAuctions" class="nav-link">
+                                <router-link to="/DealsAuctions" class="nav-link">
                                     الصفقات / المزادات
                                 </router-link>
-                              
+
                             </li>
- 
+
                             <li class="nav-item">
                                 <a href="javascript:void(0);" class="nav-link">
                                     تمويل العقود
@@ -112,31 +109,32 @@
                             <li class="nav-item">
                                 <a href="javascript:void(0);" class="nav-link">
                                     المركز الإعلامي
-                                   
+
                                 </a>
-                            </li>
-                            <li class="nav-item">
-                                   <router-link to="/contact" class="nav-link">
-                                    نماذج العقود
-                                </router-link>
-                               
                             </li>
                             <li class="nav-item">
                                 <a href="javascript:void(0);" class="nav-link">
-                                    الإتصال بنا
+                                    نماذج العقود
                                 </a>
+
                             </li>
-                             <li class="test ">
+                            <li class="nav-item">
+                                <router-link to="/contact" class="nav-link">
+                                    الإتصال بنا
+                                </router-link>
+                            </li>
+                            <li class="test ">
                                 <a href="javascript:void(0);" class="nav-link" style="color: white;">
                                     نسخة تجريبية
                                 </a>
                             </li>
-                              <li class="nav-item" style=" padding-top: 4px; position: absolute; right: 84%;">
-                                <a href="javascript:void(0);" class=" lang-btn" style="    box-shadow: 0px 1px 5px rgb(0 0 0 / 15%); padding: 3px;">
+                            <li class="nav-item" style=" padding-top: 4px; position: absolute; right: 84%;">
+                                <a href="javascript:void(0);" class=" lang-btn"
+                                    style="    box-shadow: 0px 1px 5px rgb(0 0 0 / 15%); padding: 3px;">
                                     EN
                                 </a>
                             </li>
-                              <li class="nav-item" style="padding-top: 0px; position: absolute; right: 88%;">
+                            <li class="nav-item" style="padding-top: 0px; position: absolute; right: 88%;">
                                 <a href="https://login.tamedksa.com/" class="btn btn-login"
                                     style="    border-radius: 25px;
                                             background-color: #f2a23b;
@@ -164,7 +162,7 @@
                         </ul>
                     </b-collapse>
                     <div class="others-options">
-                        <a  href="https://login.tamedksa.com/" class="login-btn">
+                        <a href="https://login.tamedksa.com/" class="login-btn">
                             <i class="flaticon-user"></i> تسجيل الدخول
                         </a>
                     </div>
@@ -175,26 +173,26 @@
 </template>
 
 <script>
-    export default {
-        name: 'Navbar',
-        data(){
-            return {
-                isSticky: false,
-                active: false,
-                button_active_state: false
-            }
-        },
-
-        mounted(){
-            const that = this
-            window.addEventListener('scroll', () => {
-                let scrollPos = window.scrollY
-                if(scrollPos >= 100){
-                    that.isSticky = true
-                } else {
-                    that.isSticky = false
-                }
-            })
+export default {
+    name: 'Navbar',
+    data() {
+        return {
+            isSticky: false,
+            active: false,
+            button_active_state: false
         }
+    },
+
+    mounted() {
+        const that = this
+        window.addEventListener('scroll', () => {
+            let scrollPos = window.scrollY
+            if (scrollPos >= 100) {
+                that.isSticky = true
+            } else {
+                that.isSticky = false
+            }
+        })
     }
+}
 </script>

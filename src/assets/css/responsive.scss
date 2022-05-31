@@ -3632,25 +3632,53 @@ $value_eleven: 1399px;
 }
 
 @media only screen and (min-width: 768px) {
-    .shimmer-margin{    margin-right: 13px;}
+    .item {
+        .item-inner {
+            img {
+
+                box-shadow: rgb(0 0 0 / 15%) 0px 1px 5px;
+            }
+        }
+
+        .item-outer {
+            .item-inner {
+                img {
+
+                    box-shadow: rgb(0 0 0 / 15%) 0px 1px 5px;
+                }
+            }
+
+        }
+
+
+    }
+
+    .shimmer-margin {
+        margin-right: 13px;
+    }
+
     .date-icon-loader {
-        color:rgba(0, 0, 0, 0.0);
+        color: rgba(0, 0, 0, 0.0);
         font-size: 12px;
         padding-right: 5px;
     }
+
     .time-icon-loader {
-        color:rgba(0, 0, 0, 0.0);
+        color: rgba(0, 0, 0, 0.0);
         font-size: 12px;
         padding-right: 5px;
     }
+
     .luvion-nav {
         background-color: transparent;
+
         padding: {
             top: 0;
             bottom: 0;
             right: 0;
             left: 0;
         }
+
         .navbar {
             padding: {
                 right: 0;
@@ -3658,48 +3686,60 @@ $value_eleven: 1399px;
                 left: 0;
                 bottom: 0;
             }
+
             ul {
                 padding-left: 0;
                 list-style-type: none;
                 margin-bottom: 0;
             }
+
             .navbar-nav {
                 font-family: $optional-font-family;
                 margin-left: auto;
-    
+
                 .nav-item {
                     position: relative;
+
                     padding: {
                         top: 10px;
                         bottom: 10px;
                         left: 0;
                         right: 0;
                     }
+
                     a {
                         font: {
                             size: 13px;
                             weight: 500;
                         }
+
                         color: #4c9da5;
                         text-transform: capitalize;
+
                         padding: {
                             left: 0;
                             right: 0;
                             top: 0;
                             bottom: 0;
                         }
+
                         margin: {
                             left: 15px;
                             right: 15px;
                         }
-                        &:hover, &:focus, &.active {
+
+                        &:hover,
+                        &:focus,
+                        &.active {
                             color: #4cced3;
                         }
+
                         i {
                             font-size: 10px;
                             margin-left: 1px;
                         }
                     }
+
                     .nav-link::before {
                         content: "";
                         width: 0px;
@@ -3711,6 +3751,7 @@ $value_eleven: 1399px;
                         -webkit-transition: .5s;
                         transition: .5s;
                     }
+
                     .nav-link::after {
                         content: "";
                         width: 0px;
@@ -3722,27 +3763,34 @@ $value_eleven: 1399px;
                         -webkit-transition: .5s;
                         transition: .5s;
                     }
+
                     .nav-link:hover::before {
                         width: 100%;
                     }
+
                     .nav-link:hover::after {
                         width: 100%;
                     }
+
                     &:last-child {
                         a {
                             margin-right: 0;
                         }
                     }
+
                     &:first-child {
                         a {
                             margin-left: 0;
                         }
                     }
-                    &:hover, &.active {
+
+                    &:hover,
+                    &.active {
                         a {
                             color: #4cced3;
                         }
                     }
+
                     .dropdown-menu {
                         box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
                         background: $white-color;
@@ -3757,12 +3805,14 @@ $value_eleven: 1399px;
                         visibility: hidden;
                         border-radius: 0;
                         transition: all 0.3s ease-in-out;
+
                         padding: {
                             top: 20px;
                             left: 5px;
                             right: 5px;
                             bottom: 20px;
                         }
+
                         li {
                             padding: {
                                 left: 0;
@@ -3770,110 +3820,135 @@ $value_eleven: 1399px;
                                 top: 0;
                                 bottom: 0;
                             }
+
                             a {
                                 text-transform: capitalize;
                                 padding: 8px 15px;
                                 margin: 0;
                                 color: $black-color;
+
                                 font: {
                                     size: 15.5px;
                                     weight: 500;
                                 }
-                                &:hover, &:focus, &.active {
+
+                                &:hover,
+                                &:focus,
+                                &.active {
                                     color: $main-color;
                                 }
                             }
+
                             .dropdown-menu {
                                 left: -250px;
                                 top: 0;
                                 opacity: 0;
                                 visibility: hidden;
-                                
+
                                 li {
                                     a {
                                         color: $black-color;
-                                        
-                                        &:hover, &:focus, &.active {
+
+                                        &:hover,
+                                        &:focus,
+                                        &.active {
                                             color: $main-color;
                                         }
                                     }
+
                                     .dropdown-menu {
                                         left: 220px;
                                         top: 0;
                                         opacity: 0;
                                         visibility: hidden;
-            
+
                                         li {
                                             a {
                                                 color: $black-color;
-            
-                                                &:hover, &:focus, &.active {
+
+                                                &:hover,
+                                                &:focus,
+                                                &.active {
                                                     color: $main-color;
                                                 }
                                             }
+
                                             .dropdown-menu {
                                                 left: -250px;
                                                 top: 0;
                                                 opacity: 0;
                                                 visibility: hidden;
-                    
+
                                                 li {
                                                     a {
                                                         color: $black-color;
-                    
-                                                        &:hover, &:focus, &.active {
+
+                                                        &:hover,
+                                                        &:focus,
+                                                        &.active {
                                                             color: $main-color;
                                                         }
                                                     }
+
                                                     .dropdown-menu {
                                                         left: -250px;
                                                         top: 0;
                                                         opacity: 0;
                                                         visibility: hidden;
-                            
+
                                                         li {
                                                             a {
                                                                 color: $black-color;
-                            
-                                                                &:hover, &:focus, &.active {
+
+                                                                &:hover,
+                                                                &:focus,
+                                                                &.active {
                                                                     color: $main-color;
                                                                 }
                                                             }
+
                                                             .dropdown-menu {
                                                                 left: -250px;
                                                                 top: 0;
                                                                 opacity: 0;
                                                                 visibility: hidden;
-                                    
+
                                                                 li {
                                                                     a {
                                                                         color: $black-color;
-                                    
-                                                                        &:hover, &:focus, &.active {
+
+                                                                        &:hover,
+                                                                        &:focus,
+                                                                        &.active {
                                                                             color: $main-color;
                                                                         }
                                                                     }
+
                                                                     .dropdown-menu {
                                                                         left: -250px;
                                                                         top: 0;
                                                                         opacity: 0;
                                                                         visibility: hidden;
-                                            
+
                                                                         li {
                                                                             a {
                                                                                 color: $black-color;
-                                            
-                                                                                &:hover, &:focus, &.active {
+
+                                                                                &:hover,
+                                                                                &:focus,
+                                                                                &.active {
                                                                                     color: $main-color;
                                                                                 }
                                                                             }
                                                                         }
                                                                     }
+
                                                                     &.active {
                                                                         a {
                                                                             color: $main-color;
                                                                         }
                                                                     }
+
                                                                     &:hover {
                                                                         .dropdown-menu {
                                                                             opacity: 1;
@@ -3883,11 +3958,13 @@ $value_eleven: 1399px;
                                                                     }
                                                                 }
                                                             }
+
                                                             &.active {
                                                                 a {
                                                                     color: $main-color;
                                                                 }
                                                             }
+
                                                             &:hover {
                                                                 .dropdown-menu {
                                                                     opacity: 1;
@@ -3897,11 +3974,13 @@ $value_eleven: 1399px;
                                                             }
                                                         }
                                                     }
+
                                                     &.active {
                                                         a {
                                                             color: $main-color;
                                                         }
                                                     }
+
                                                     &:hover {
                                                         .dropdown-menu {
                                                             opacity: 1;
@@ -3911,11 +3990,13 @@ $value_eleven: 1399px;
                                                     }
                                                 }
                                             }
+
                                             &.active {
                                                 a {
                                                     color: $main-color;
                                                 }
                                             }
+
                                             &:hover {
                                                 .dropdown-menu {
                                                     opacity: 1;
@@ -3925,11 +4006,13 @@ $value_eleven: 1399px;
                                             }
                                         }
                                     }
+
                                     &.active {
                                         a {
                                             color: $main-color;
                                         }
                                     }
+
                                     &:hover {
                                         .dropdown-menu {
                                             opacity: 1;
@@ -3939,11 +4022,13 @@ $value_eleven: 1399px;
                                     }
                                 }
                             }
+
                             &.active {
                                 a {
                                     color: $main-color;
                                 }
                             }
+
                             &:hover {
                                 .dropdown-menu {
                                     opacity: 1;
@@ -3953,6 +4038,7 @@ $value_eleven: 1399px;
                             }
                         }
                     }
+
                     &:hover {
                         .dropdown-menu {
                             opacity: 1;
@@ -3962,20 +4048,24 @@ $value_eleven: 1399px;
                     }
                 }
             }
+
             .others-options {
                 margin-left: 25px;
-        
+
                 .login-btn {
                     color: $white-color;
+
                     font: {
                         size: 15px;
                         weight: 300;
                         family: $optional-font-family;
                     }
+
                     i {
                         margin-right: 2px;
                         color: #eae563;
                     }
+
                     &:hover {
                         color: $white-color;
                     }
@@ -3983,10 +4073,12 @@ $value_eleven: 1399px;
             }
         }
     }
+
     .lang-btn {
 
         display: block;
     }
+
     .col-1-5 {
         width: 10.666667%;
         text-align: start;
@@ -4987,27 +5079,32 @@ $value_eleven: 1399px;
 }
 
 @media(max-width: 575px) {
-    .ref-number{
+    .ref-number {
         margin-top: 15px;
     }
+
     .date-icon-loader {
-        color:rgba(0, 0, 0, 0.0);
+        color: rgba(0, 0, 0, 0.0);
         font-size: 12px;
         padding-right: 5px;
     }
+
     .time-icon-loader {
-        color:rgba(0, 0, 0, 0.0);
+        color: rgba(0, 0, 0, 0.0);
         font-size: 12px;
         padding-right: 5px;
     }
+
     .luvion-nav {
         background-color: transparent;
+
         padding: {
             top: 0;
             bottom: 0;
             right: 0;
             left: 0;
         }
+
         .navbar {
             padding: {
                 right: 0;
@@ -5015,68 +5112,85 @@ $value_eleven: 1399px;
                 left: 0;
                 bottom: 0;
             }
+
             ul {
                 padding-left: 0;
                 list-style-type: none;
                 margin-bottom: 0;
             }
+
             .navbar-nav {
                 font-family: $optional-font-family;
                 margin-left: auto;
-    
+
                 .nav-item {
                     position: relative;
+
                     padding: {
                         top: 10px;
                         bottom: 10px;
                         left: 0;
                         right: 0;
                     }
+
                     a {
                         font: {
                             size: 13px;
                             weight: 500;
                         }
+
                         color: #4c9da5;
                         text-transform: capitalize;
+
                         padding: {
                             left: 0;
                             right: 0;
                             top: 0;
                             bottom: 0;
                         }
+
                         margin: {
                             left: 15px;
                             right: 15px;
                         }
-                        &:hover, &:focus, &.active {
+
+                        &:hover,
+                        &:focus,
+                        &.active {
                             color: $main-color;
                         }
+
                         i {
                             font-size: 10px;
                             margin-left: 1px;
                         }
                     }
+
                     a:hover {
                         background: #039ca5;
                         color: white;
 
                     }
+
                     &:last-child {
                         a {
                             margin-right: 0;
                         }
                     }
+
                     &:first-child {
                         a {
                             margin-left: 0;
                         }
                     }
-                    &:hover, &.active {
+
+                    &:hover,
+                    &.active {
                         a {
                             color: #4cced3;
                         }
                     }
+
                     .dropdown-menu {
                         box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
                         background: $white-color;
@@ -5091,12 +5205,14 @@ $value_eleven: 1399px;
                         visibility: hidden;
                         border-radius: 0;
                         transition: all 0.3s ease-in-out;
+
                         padding: {
                             top: 20px;
                             left: 5px;
                             right: 5px;
                             bottom: 20px;
                         }
+
                         li {
                             padding: {
                                 left: 0;
@@ -5104,110 +5220,135 @@ $value_eleven: 1399px;
                                 top: 0;
                                 bottom: 0;
                             }
+
                             a {
                                 text-transform: capitalize;
                                 padding: 8px 15px;
                                 margin: 0;
                                 color: $black-color;
+
                                 font: {
                                     size: 15.5px;
                                     weight: 500;
                                 }
-                                &:hover, &:focus, &.active {
+
+                                &:hover,
+                                &:focus,
+                                &.active {
                                     color: $main-color;
                                 }
                             }
+
                             .dropdown-menu {
                                 left: -250px;
                                 top: 0;
                                 opacity: 0;
                                 visibility: hidden;
-                                
+
                                 li {
                                     a {
                                         color: $black-color;
-                                        
-                                        &:hover, &:focus, &.active {
+
+                                        &:hover,
+                                        &:focus,
+                                        &.active {
                                             color: $main-color;
                                         }
                                     }
+
                                     .dropdown-menu {
                                         left: 220px;
                                         top: 0;
                                         opacity: 0;
                                         visibility: hidden;
-            
+
                                         li {
                                             a {
                                                 color: $black-color;
-            
-                                                &:hover, &:focus, &.active {
+
+                                                &:hover,
+                                                &:focus,
+                                                &.active {
                                                     color: $main-color;
                                                 }
                                             }
+
                                             .dropdown-menu {
                                                 left: -250px;
                                                 top: 0;
                                                 opacity: 0;
                                                 visibility: hidden;
-                    
+
                                                 li {
                                                     a {
                                                         color: $black-color;
-                    
-                                                        &:hover, &:focus, &.active {
+
+                                                        &:hover,
+                                                        &:focus,
+                                                        &.active {
                                                             color: $main-color;
                                                         }
                                                     }
+
                                                     .dropdown-menu {
                                                         left: -250px;
                                                         top: 0;
                                                         opacity: 0;
                                                         visibility: hidden;
-                            
+
                                                         li {
                                                             a {
                                                                 color: $black-color;
-                            
-                                                                &:hover, &:focus, &.active {
+
+                                                                &:hover,
+                                                                &:focus,
+                                                                &.active {
                                                                     color: $main-color;
                                                                 }
                                                             }
+
                                                             .dropdown-menu {
                                                                 left: -250px;
                                                                 top: 0;
                                                                 opacity: 0;
                                                                 visibility: hidden;
-                                    
+
                                                                 li {
                                                                     a {
                                                                         color: $black-color;
-                                    
-                                                                        &:hover, &:focus, &.active {
+
+                                                                        &:hover,
+                                                                        &:focus,
+                                                                        &.active {
                                                                             color: $main-color;
                                                                         }
                                                                     }
+
                                                                     .dropdown-menu {
                                                                         left: -250px;
                                                                         top: 0;
                                                                         opacity: 0;
                                                                         visibility: hidden;
-                                            
+
                                                                         li {
                                                                             a {
                                                                                 color: $black-color;
-                                            
-                                                                                &:hover, &:focus, &.active {
+
+                                                                                &:hover,
+                                                                                &:focus,
+                                                                                &.active {
                                                                                     color: $main-color;
                                                                                 }
                                                                             }
                                                                         }
                                                                     }
+
                                                                     &.active {
                                                                         a {
                                                                             color: $main-color;
                                                                         }
                                                                     }
+
                                                                     &:hover {
                                                                         .dropdown-menu {
                                                                             opacity: 1;
@@ -5217,11 +5358,13 @@ $value_eleven: 1399px;
                                                                     }
                                                                 }
                                                             }
+
                                                             &.active {
                                                                 a {
                                                                     color: $main-color;
                                                                 }
                                                             }
+
                                                             &:hover {
                                                                 .dropdown-menu {
                                                                     opacity: 1;
@@ -5231,11 +5374,13 @@ $value_eleven: 1399px;
                                                             }
                                                         }
                                                     }
+
                                                     &.active {
                                                         a {
                                                             color: $main-color;
                                                         }
                                                     }
+
                                                     &:hover {
                                                         .dropdown-menu {
                                                             opacity: 1;
@@ -5245,11 +5390,13 @@ $value_eleven: 1399px;
                                                     }
                                                 }
                                             }
+
                                             &.active {
                                                 a {
                                                     color: $main-color;
                                                 }
                                             }
+
                                             &:hover {
                                                 .dropdown-menu {
                                                     opacity: 1;
@@ -5259,11 +5406,13 @@ $value_eleven: 1399px;
                                             }
                                         }
                                     }
+
                                     &.active {
                                         a {
                                             color: $main-color;
                                         }
                                     }
+
                                     &:hover {
                                         .dropdown-menu {
                                             opacity: 1;
@@ -5273,11 +5422,13 @@ $value_eleven: 1399px;
                                     }
                                 }
                             }
+
                             &.active {
                                 a {
                                     color: $main-color;
                                 }
                             }
+
                             &:hover {
                                 .dropdown-menu {
                                     opacity: 1;
@@ -5287,6 +5438,7 @@ $value_eleven: 1399px;
                             }
                         }
                     }
+
                     &:hover {
                         .dropdown-menu {
                             opacity: 1;
@@ -5296,9 +5448,10 @@ $value_eleven: 1399px;
                     }
                 }
             }
-           
+
         }
     }
+
     .project-title-section {
 
         font-size: 20px;

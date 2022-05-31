@@ -8,46 +8,49 @@
 
                     </div>
                     <div class="col-md-6   " style="    width: 50%;">
-                        <router-link to="/projects" class="button"> عرض الجميع  </router-link>
+                        <router-link to="/projects" class="button"> عرض الجميع </router-link>
 
                     </div>
                 </div>
             </div>
             <div class="feedback-slides">
-                <carousel :autoplay="5000" :settings="settings" :wrap-around="true" :breakpoints="breakpoints">
+                <carousel :autoplay="carouselItems.length > 3 ? 5000 : 300000" :settings="settings" :wrap-around="true"
+                    :breakpoints="breakpoints">
                     <slide v-for="slide in carouselItems" :key="slide.id">
 
-                        <div class="single-section-post">
+                        <div v-if="slide.id != '!!'" class="single-section-post">
                             <div class="section-image">
-                                <router-link to="/ProjectDetails">
-                                    <img :src="slide.image" alt="image">
-                                </router-link>
+
+                                <img :src="slide.cover" alt="image">
+
 
                                 <div class="date">
-                                    <i class="far fa-calendar-alt"></i> 2022-04-08
+                                    <i class="far fa-calendar-alt"></i> {{ slide.created }}
                                 </div>
                             </div>
 
                             <div class="section-post-content">
                                 <div class="row section-title">
                                     <h6>
-                                        <router-link to="/ProjectDetails">{{ slide.title }}</router-link>
+                                        <router-link :to="{ name: 'details', params: { projectId: slide.id } }">{{ slide.title }}</router-link>
                                     </h6>
 
-                                    <span>{{ slide.location }}</span>
+                                    <span>{{ slide.city }} - {{ slide.neighborhood }}</span>
                                     <br>
-                                    <span>{{ slide.category }}</span>
+                                    <span>{{ slide.activity }}</span>
                                 </div>
                                 <div class="row">
 
-                                    <div class="col-md-6 col-xs-12 section-title date-end" >
-                                        <span>اخر موعد تقديم 08/05/2022</span>
+                                    <div class="col-md-6 col-xs-12 section-title date-end">
+                                        <span>اخر موعد تقديم {{ slide.created }}</span>
                                         <br>
-                                        <router-link to="/ProjectDetails" class="show">تقديم عرض</router-link>
+                                        <router-link :to="{ name: 'details', params: { projectId: slide.id } }"
+                                            class="show">تقديم عرض</router-link>
                                     </div>
                                     <div class="col-md-6 col-xs-12 price">
                                         <p>قيمة المشروع</p>
-                                        <span>الأفضل سعر</span>
+                                        <span v-if="slide.pricestatus == 'on'">الأفضل سعر</span>
+                                        <span v-else>{{ rial }}{{ slide.price }}</span>
                                     </div>
                                 </div>
 
@@ -60,7 +63,7 @@
 
                     </slide>
 
-                    <template #addons>
+                    <template v-if="carouselItems.length > 3" #addons>
                         <!-- <Navigation /> -->
                         <Pagination />
                     </template>
@@ -73,6 +76,7 @@
 </template>
 
 <script>
+
 import {
     defineComponent
 } from 'vue';
@@ -82,7 +86,7 @@ import {
     Pagination,
     // Navigation
 } from 'vue3-carousel';
-
+import axios from 'axios';
 import 'vue3-carousel/dist/carousel.css';
 
 export default defineComponent({
@@ -94,55 +98,25 @@ export default defineComponent({
         // Navigation,
     },
     data: () => ({
-        carouselItems: [{
-            id: 1,
-            image: require('../../assets/images/blog/blog-1.jpg'),
-            title: 'مشروع تأثيث مبنى في طريق النهضة',
-            location: 'الرياض - طريق النهضة',
-            category: 'التصنيف: أثاث',
-            description: 'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ',
-        },
-        {
-            id: 2,
-            image: require('../../assets/images/blog/blog-2.jpg'),
-            title: 'مشروع تأثيث مبنى في طريق النهضة',
-            location: 'الرياض - طريق النهضة',
-            category: 'التصنيف: أثاث',
-            description: 'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ',
-        },
-        {
-            id: 3,
-            image: require('../../assets/images/blog/blog-3.jpg'),
-            title: 'مشروع تأثيث مبنى في طريق النهضة',
-            location: 'الرياض - طريق النهضة',
-            category: 'التصنيف: أثاث',
-            description: 'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis..',
-        },
-        {
-            id: 4,
-            image: require('../../assets/images/blog/blog-3.jpg'),
-            title: 'مشروع تأثيث مبنى في طريق النهضة',
-            location: 'الرياض - طريق النهضة',
-            category: 'التصنيف: أثاث',
-            description: 'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis..',
-        },
-        {
-            id: 5,
-            image: require('../../assets/images/blog/blog-2.jpg'),
-            title: 'مشروع تأثيث مبنى في طريق النهضة',
-            location: 'الرياض - طريق النهضة',
-            category: 'التصنيف: أثاث',
-            description: 'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ',
-        },
+        carouselItems: [
+            {
+                id: '!!',
+                image: require('../../assets/images/blog/blog-1.jpg'),
+                title: 'مشروع تأثيث مبنى في طريق النهضة',
+                location: 'الرياض - طريق النهضة',
+                category: 'التصنيف: أثاث',
+                description: 'Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ',
+            },
         ],
+        rial: 'ريال',
         settings: {
-           
+
             snapAlign: 'center',
             // transition:300
         },
         breakpoints: {
             // 700px and up
-           500: {
+            500: {
                 itemsToShow: 1,
                 snapAlign: 'center',
             },
@@ -153,5 +127,13 @@ export default defineComponent({
             },
         },
     }),
+
+    async mounted() {
+        const { data } = await axios.get(
+            'https://login.tamedksa.com/api/ads/1/all'
+        );
+        this.carouselItems = data;
+
+    }
 })
 </script>
