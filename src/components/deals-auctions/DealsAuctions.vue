@@ -237,7 +237,7 @@
                                             </div>
                                             <div class="col-md-4 mt-1 lg-counter">
 
-                                                <Countdown deadline="2023-12-25 00:00:00" :showLabels="false"
+                                                <Countdown deadline="2022-07-25 17:46:50" :showLabels="false"
                                                     mainFlipBackgroundColor="#019aa2"
                                                     secondFlipBackgroundColor="#019aa2" countdownSize="1.1rem"
                                                     mainColor="#ffff" />

@@ -52,7 +52,7 @@ const routes = [
   { path: "/terms-condition", component: TermsCondition },
   { path: "/projects", component: Projects },
   { path: "/DealsAuctions", component: DealsAuctions },
-  { path: "/profile", component: Profile },
+  { path: "/profile/:id/details", name: 'profile', component: Profile,props: true,},
   { path: '/project/:projectId/details', name: 'details', component: ProjectDetails,props: true,},
   { path: "/deals-auctions-details", component: DealsAuctionsDetails },
   { path: "/SubmitQuotes", component: SubmitQuotes },

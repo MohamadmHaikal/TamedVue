@@ -8,21 +8,25 @@
                         alt="">
                     <div class="logo-profile">
 
-                        <img src="https://login.tamedksa.com/image/1648718574.png" alt="Avatar"
-                            style="    width: 100px;  border-radius: 50%;  background-color: white;    box-shadow: #dedede 0px 2px 6px -1px;">
+                        <img :src="'https://login.tamedksa.com/image/'+user.logo" alt="Avatar"
+                            style="    width: 100px; height:100px ; border-radius: 50%;  background-color: white;    box-shadow: #dedede 0px 2px 6px -1px;">
                     </div>
-                    <span class="profile-title">شركة فرسان للمقاولات</span>
+                    <div class="profile-title">
+                    <span >{{ user.name }}</span>
+                    </div>
                     <div class="profile-rate  mt-3 "> <span class="far fa-star" style="font-size:20px; color:#ffd203 ;"
                             aria-hidden=""></span><span class="far fa-star"
                             style="font-size:20px; color:#ffd203 ;"></span><span class="fa fa-star checked"
                             style="font-size:20px;"></span><span class="fa fa-star checked"
                             style="font-size:20px;"></span><span class="fa fa-star checked"
                             style="font-size:20px;"></span></div>
-                    <div class="profile-share"><span style="margin-left: 6px; margin-bottom: 2px;">2568</span><i
-                            class="far fa-eye" style="font-size: 20px;color: rgb(1, 154, 162);"></i><svg version="1.1"
-                            id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"
-                            style="width: 20px; margin-right: 20px;">
+                    <div class="profile-share">
+                   
+                    <span
+                            style="margin-left: 6px; margin-bottom: 2px;">{{ user.seenCount }}</span><i class="far fa-eye"
+                            style="font-size: 20px;color: rgb(1, 154, 162);"></i> <a href="javascript:void(0);"><svg version="1.1" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                            y="0px" viewBox="0 0 512 512" xml:space="preserve" style="width: 20px; margin-right: 20px;">
                             <g>
                                 <polygon points="334.9,120.6 256,41.7 177.1,120.6 156.3,99.7 256,0 355.7,99.7 	">
                                 </polygon>
@@ -31,7 +35,7 @@
 		v267.9c0,8.9,6,14.9,14.9,14.9h297.7c8.9,0,14.9-6,14.9-14.9V199.4c0-8.9-6-14.9-14.9-14.9H300.7v-29.8h104.2
 		c25.3,0,44.7,19.3,44.7,44.7v267.9C449.5,492.6,430.1,512,404.8,512z"></path>
                             </g>
-                        </svg><span style="margin-right: 6px; margin-bottom: 2px;">مشاركة</span></div>
+                        </svg><span style="margin-right: 6px; margin-bottom: 2px;">مشاركة</span></a></div>
                 </div>
                 <div style="text-align: -webkit-center;">
                     <div class="col-md-10 col-sm-12 mt-3 text-center">
@@ -63,10 +67,7 @@
                                                     عن المنشآة</small>
                                                 <div class="mt-3"
                                                     style="border:1px solid #019aa2;border-radius:25px;padding:20px;">
-                                                    <span> فرسان مؤسسة سعودية تأسست بالرياض عام 1431 هجري وتعنى بنشاطات
-                                                        متنوعة ومنها التشيد والبناء وتنفيذ اعمال البراندات وبناء
-                                                        المستودعات الحديثة وتجهيز مكاتب الشركات بجميع مستوياتها الفاخرة
-                                                        والمتوسطة</span>
+                                                    <span>{{ user.description }}</span>
                                                 </div>
                                             </div>
                                             <h5 class="mt-4">معلومات إضافية</h5>
@@ -83,7 +84,8 @@
                                                             <span
                                                                 style="color:#c7c7c7 ;font-size: 10px;font-weight: 500; padding: 0px 5px 0px 0px;">عدد
                                                                 العملاء:</span>
-                                                            <span style=" color: #039ca4;   font-size: 10px;"> +500 عميل
+                                                            <span style=" color: #039ca4;   font-size: 10px;">
+                                                                +{{ user.Customers }} عميل
                                                             </span>
                                                         </div>
                                                         <div class="col-md-3 col-6">
@@ -92,7 +94,8 @@
                                                             <span
                                                                 style="color:#c7c7c7 ;font-size: 10px;font-weight: 500; padding: 0px 5px 0px 0px;">عدد
                                                                 المشاريع:</span>
-                                                            <span style=" color: #039ca4;   font-size: 10px;"> 200 مشروع
+                                                            <span style=" color: #039ca4;   font-size: 10px;">
+                                                                {{ projects.length }} مشروع
                                                             </span>
                                                         </div>
                                                         <div class="col-md-3 col-6">
@@ -101,8 +104,8 @@
                                                             <span
                                                                 style="color:#c7c7c7 ;font-size: 8px;font-weight: 500; padding: 0px 5px 0px 0px;">النشاط
                                                                 الرئيسي:</span>
-                                                            <span style=" color: #039ca4;   font-size: 10px;"> تشيد
-                                                                وبناء</span>
+                                                            <span style=" color: #039ca4;   font-size: 10px;">
+                                                                {{ user.activity }}</span>
                                                         </div>
                                                         <div class="col-md-3 col-6">
                                                             <img src="../../assets/images/tasnef.png" alt=""
@@ -119,7 +122,7 @@
                                             </div>
                                             <div class="row mt-4">
                                                 <div class="col-md-6 text-end">
-                                                    <h5 class="mb-4 mt-4">العنوان الرئيسي</h5>
+                                                    <h5 class="mb-4 mt-4 address">العنوان الرئيسي</h5>
                                                     <i class="fas fa-map-marker-alt"
                                                         style="color: rgb(1, 154, 162); font-size: 20px; "></i>
                                                     <span
@@ -127,7 +130,7 @@
                                                         الرئيسي: </span>
                                                     <span
                                                         style="color:#858585 ;      font-weight: 500;  font-size: small;">
-                                                        المملكة العربية السعودية الرياض </span>
+                                                        المملكة العربية السعودية {{ user.city }} </span>
                                                 </div>
                                                 <div class="col-md-6 text-center">
                                                     <h5 class="mb-4 mt-4" style="color: #019fa8;">نسبة إنجاز العمل</h5>
@@ -163,8 +166,12 @@
                                                                         src="../../assets/images/pdf.png" alt=""
                                                                         style=" width: 30%;"><br> <span
                                                                         style=" color:#019aa2;  padding-right: 2px;  font-size: 20px;">
-                                                                        <a href="javascript:void(0);"
-                                                                            style=" color:#333333;    padding-left: 5%;">تحميل</a></span>
+
+                                                                        <a v-if="user.profile!=null" href="" :download="'https://login.tamedksa.com/image/'+user.profile['file']"
+                                                                            style=" color:#17a2b8;    padding-left: 5%;">تحميل</a>
+                                                                        <a v-else href="javascript:void(0);"
+                                                                            style=" color:#333333;    padding-left: 5%;">غير متوفر</a>
+                                                                    </span>
                                                                 </div>
                                                             </td>
 
@@ -200,7 +207,7 @@
 
                                                                         <div class="date">
                                                                             <i class="far fa-calendar-alt"></i>
-                                                                            2022-04-08
+                                                                          {{user.registration_date}}
                                                                         </div>
                                                                     </div>
 
@@ -384,13 +391,13 @@
                                         <span
                                             style="  text-align: right; padding-top: 10%;font-weight: 500; font-size: 13px; color:#5f5f5f ;">
                                             تاريخ التسجيل </span>
-                                        <span style="color:#039ca4 ;">05/05/2022</span>
+                                        <span style="color:#039ca4 ;">{{user.registration_date}}</span>
 
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12 text-center">
                                             <span class="text-center mt-3"
-                                                style=" font-size: 350%;font-weight: bold; color:#039ca4;">24</span><br>
+                                                style=" font-size: 350%;font-weight: bold; color:#039ca4;">{{user.contract}}</span><br>
 
                                         </div>
                                         <div class="col-md-12 text-center">
@@ -405,7 +412,7 @@
                                 <br>
 
                                 <br><br>
-                                <a href="javascript:void(0);" class="btn-chat-profile"><i
+                                <a :href="'https://login.tamedksa.com/chat/'+user.id" class="btn-chat-profile"><i
                                         class="far fa-comment-alt mb-2" style="font-size:25px;color:#039ca4;"></i><small
                                         style="    position: relative;top: 15px;left: 65px;">محادثة مع
                                         المنشآة</small></a>
@@ -439,7 +446,7 @@ import {
 } from 'vue3-carousel';
 
 import 'vue3-carousel/dist/carousel.css';
-
+import axios from 'axios';
 export default {
 
     methods: {
@@ -459,17 +466,24 @@ export default {
             evt.currentTarget.className += " active-profile";
         },
     },
-    mounted: function () {
-        var element = document.getElementById("buttonlinks");
-        element.classList.add("active-profile");
-        document.getElementById('London').style.display = "block";
-    },
+
     components: {
         CircleProgress, Carousel,
         Slide,
         Pagination,
     },
-
+    async mounted() {
+        var id = this.$route.params.id;
+        var element = document.getElementById("buttonlinks");
+        element.classList.add("active-profile");
+        document.getElementById('London').style.display = "block";
+        const { data } = await axios.get(
+            'https://login.tamedksa.com/api/profile/' + id + '/details'
+        );
+        this.user = data;
+        this.projects = data['projects'];
+        console.log(data);
+    },
     data: () => ({
         carouselItems: [{
             id: 1,
@@ -529,6 +543,8 @@ export default {
                 snapAlign: 'start',
             },
         },
+        user: [],
+        projects: [],
     }),
 }
 

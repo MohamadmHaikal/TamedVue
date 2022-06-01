@@ -630,9 +630,9 @@
 
 
                                         <div style="text-align:center ;">
-                                            <a href="javascript:void(0);" class="btn btn-logo"
+                                           <router-link :to="'/profile/'+author.id+'/details'" class="btn btn-logo"
                                                 style=" border-radius: 9px; background-color: rgb(3, 156, 164);   width: 69%;   color: white; font-size: 90%; margin-top: 25px;  padding: 1px 23px;">
-                                                الملف الشخصي للمنشآة </a>
+                                                الملف الشخصي للمنشآة </router-link>
 
                                         </div>
                                         <div class="mt-3">

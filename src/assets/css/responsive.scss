@@ -4119,14 +4119,16 @@ $value_eleven: 1399px;
 
         position: relative;
         bottom: 85px;
-        right: 45.5%;
+        right: 45%;
     }
 
     .profile-title {
 
         position: relative;
         bottom: 80px;
-        right: 44%;
+        width: 15%;
+        right: 42%;
+        text-align: center;
     }
 
     .logo-profile {
@@ -5485,20 +5487,27 @@ $value_eleven: 1399px;
 
         position: absolute;
         top: 250px;
-        right: 37%;
+        right: 36%;
+    }
+
+    .address {
+        text-align: center;
     }
 
     .profile-title {
 
         position: absolute;
         top: 225px;
-        right: 34%;
+        right: 35%;
+        width: 30%;
+        text-align: center;
     }
 
     .logo-profile {
         position: absolute;
         top: 110px;
-        right: 39%;
+        right: 37.9%;
+        ;
     }
 
     .header-profile {
@@ -5512,7 +5521,7 @@ $value_eleven: 1399px;
     .btn-chat-profile {
 
         color: #039ca4;
-        margin-right: 33%;
+        margin-right: 35%;
         border-radius: 12px;
         padding-top: 30px;
         padding-left: 17px;
