@@ -7,7 +7,7 @@
                         <div class="row mt-4">
                             <div class="col-lg-4">
                                 <input type="text" placeholder="البحث عن خدمة"
-                                 style="width:100%;border-radius: 20px;border-color: #c1c1c1;border-top-color: #ffffff;border-width: 1px; border-left-color: #ffffff; padding: 8px 19px 11px 4px;">
+                                    style="width:100%;border-radius: 20px;border-color: #c1c1c1;border-top-color: #ffffff;border-width: 1px; border-left-color: #ffffff; padding: 8px 19px 11px 4px;">
                                 <i class='fas fa-search'
                                     style="right: 44%;bottom: 48%;color: #b7b7b7;position: relative;"></i>
                             </div>
@@ -75,8 +75,9 @@
 
                                         <div class="row text-end mt-3 mb-2">
                                             <div class="col-md-8">
-                                            <router-link :to="{ name: 'details', params: { projectId: ad.id } }">
-                                                <span style="color: #019aa2;"> {{ ad.title }}</span></router-link>
+                                                <router-link :to="{ name: 'details', params: { projectId: ad.id } }">
+                                                    <span style="color: #019aa2;"> {{ ad.title }}</span>
+                                                </router-link>
                                                 <p class="mt-2" style="color: rgb(87 83 77);">{{ ad.description }}</p>
                                             </div>
                                             <div class="col-md-4 mt-1">
@@ -150,7 +151,7 @@
                                                     الأفضل سعر </span>
                                                 <span v-else
                                                     style="color:#d4a259;  font-size: 17px; padding-right: 2px;">
-                                                    {{ ad.price }} </span>
+                                                    {{ ad.price }} ريال</span>
 
                                             </div>
 
@@ -167,9 +168,10 @@
                                 <div class="img-square-wrapper "
                                     style="     border-right: 1px solid #d8d8d8; width: 265px;height: 280px;border-right: 1px solid rgb(216, 216, 216);">
                                     <router-link :to="{ name: 'details', params: { projectId: ad.id } }">
-                                    <img class=""
-                                        style="border-radius: 13px 0px 0px 13px;  height: 282px; width:100% ;  border-right: 1px solid #d8d8d8;"
-                                        :src="ad.cover" alt="Card image cap"></router-link>
+                                        <img class=""
+                                            style="border-radius: 13px 0px 0px 13px;  height: 282px; width:100% ;  border-right: 1px solid #d8d8d8;"
+                                            :src="ad.cover" alt="Card image cap">
+                                    </router-link>
                                 </div>
                             </div>
 
@@ -193,24 +195,25 @@ import axios from 'axios';
 import { ref } from 'vue'
 
 const loadUserData = async () => {
-  return new Promise((resolve) => {
-    setTimeout(() => { resolve(  axios.get(
-            "https://login.tamedksa.com/api/ads/1/all"
-        ))
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(axios.get(
+                "https://login.tamedksa.com/api/ads/1/all"
+            ))
 
-    }, 2000)
-  })
+        }, 2000)
+    })
 }
 
 export default {
-   
-  async setup() {
-    const ads = ref(await loadUserData())['_rawValue']['data'];
-console.log(ads);
-    return {
-      ads,
-    }
-  },
+
+    async setup() {
+        const ads = ref(await loadUserData())['_rawValue']['data'];
+        console.log(ads);
+        return {
+            ads,
+        }
+    },
 }
 
 </script>

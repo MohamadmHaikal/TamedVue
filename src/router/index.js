@@ -54,7 +54,7 @@ const routes = [
   { path: "/DealsAuctions", component: DealsAuctions },
   { path: "/profile/:id/details", name: 'profile', component: Profile,props: true,},
   { path: '/project/:projectId/details', name: 'details', component: ProjectDetails,props: true,},
-  { path: "/deals-auctions-details", component: DealsAuctionsDetails },
+  { path: "/deals-auctions/:id/details",  name:'deals-auctions-details',component: DealsAuctionsDetails,props: true, },
   { path: "/SubmitQuotes", component: SubmitQuotes },
 ];
 
