@@ -193,7 +193,6 @@
 <script>
 import axios from 'axios';
 import { ref } from 'vue'
-
 const loadUserData = async () => {
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -204,7 +203,6 @@ const loadUserData = async () => {
         }, 2000)
     })
 }
-
 export default {
 
     async setup() {

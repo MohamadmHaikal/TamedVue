@@ -367,10 +367,15 @@
                                             <button id="buttonlinks" class="tablinks"
                                                 @click="openCity($event, 'London')">الميزات
                                                 المقدمة</button>
-                                            <button class="tablinks" @click="openCity($event, 'Paris')">ملفات
+                                            <button v-if="ads.type == 1" class="tablinks"
+                                                @click="openCity($event, 'Paris')">ملفات
                                                 المشروع</button>
-                                            <button class="tablinks" @click="openCity($event, 'Tokyo')">
+                                            <button v-else class="tablinks" @click="openCity($event, 'Paris')">ملفات
+                                                ال{{ ads.infoArray.dealsOrAuction }}</button>
+                                            <button v-if="ads.type==1" class="tablinks" @click="openCity($event, 'Tokyo')">
                                                 شروط التقديم</button>
+                                                <button v-else class="tablinks" @click="openCity($event, 'Tokyo')">
+                                                شروط الشراء</button>
                                         </div>
 
                                         <div id="London" class="tabcontent">
@@ -445,7 +450,9 @@
                                         </div>
 
                                         <div id="Paris" class="tabcontent">
-                                            <h3 style="color:#000000">تحميل ملفات المشروع</h3>
+                                            <h3 v-if="ads.type == 1" style="color:#000000">تحميل ملفات المشروع</h3>
+                                            <h3 v-else style="color:#000000">تحميل ملفات
+                                                ال{{ ads.infoArray.dealsOrAuction }}</h3>
                                             <table class="mt-5"
                                                 style=" border-collapse: separate;border-spacing: 0;min-width: 350px;">
 
@@ -506,7 +513,9 @@
                                         </div>
 
                                         <div id="Tokyo" class="tabcontent">
-                                            <h3 style="color:#000000">شروط التقديم للمشروع</h3>
+                                            <h3 v-if="ads.type == 1" style="color:#000000">شروط التقديم للمشروع</h3>
+                                            <h3 v-else style="color:#000000">شروط التقديم
+                                                لل{{ ads.infoArray.dealsOrAuction }}</h3>
                                             <div class="mt-5"
                                                 style="    border: 1px solid #ccc;border-radius: 25px;padding: 20px;">
                                                 <div class="row mt-4">
@@ -568,11 +577,14 @@
                                 <div
                                     style="width: 75%; height: 330px; margin-top: 6%; border-radius: 12px; margin-bottom: 5%;  box-shadow: rgb(236 233 233) 1px 1px 5px 2px;">
                                     <div style="border-bottom: 1px solid #eeeff1 ;">
-                                        <h5
+                                        <h5 v-if="ads.type == 1"
                                             style="padding-top: 8%;text-align: right;padding-right: 10%;color: #62bbc0;">
                                             قيمة المشروع
                                         </h5>
-
+                                        <h5 v-else
+                                            style="padding-top: 8%;text-align: right;padding-right: 10%;color: #62bbc0;">
+                                            قيمة ال{{ ads.infoArray.dealsOrAuction }}
+                                        </h5>
                                         <h6 v-if="ads.pricestatus == 'on'"
                                             style="color: #f4a23e; text-align: right;padding-right: 15%;">
                                             الأفضل سعر
@@ -595,14 +607,20 @@
                                                 style="color:#37D337;      padding-right: 15px;  font-size: 15px;"></i>
                                             {{ ads.time }}</span>
                                         <div style="text-align:center ;">
-                                            <a href="javascript:void(0);" class="btn btn-logo"
+                                            <a v-if="ads.type == 1" href="javascript:void(0);" class="btn btn-logo"
                                                 style="border-radius:16px;background-color:#039ca4; width:85%;color:white;margin-top:25px;padding:7px 30px 7px 30px;">تقديم
                                                 عرض سعر للمشروع </a>
-
+                                            <a v-else href="javascript:void(0);" class="btn btn-logo"
+                                                style="border-radius:16px;background-color:#039ca4; width:85%;color:white;margin-top:25px;padding:7px 30px 7px 30px;">تقديم
+                                                عرض سعر لل{{ ads.infoArray.dealsOrAuction }} </a>
                                         </div>
                                         <div class="text-center mt-5">
-                                            <span class="text-end " style="color: #019aa2;    font-size: 12px;"> الرقم
+                                            <span v-if="ads.type == 1" class="text-end "
+                                                style="color: #019aa2;    font-size: 12px;"> الرقم
                                                 المرجعي للمشروع:</span>
+                                            <span v-else class="text-end " style="color: #019aa2;    font-size: 12px;">
+                                                الرقم
+                                                المرجعي لل{{ ads.infoArray.dealsOrAuction }}:</span>
                                             <span class="text-end"
                                                 style="color: rgb(87 83 77) ;font-size: 12px; padding-right: 5px;">
                                                 {{ ads.reference_number }}</span>
@@ -630,7 +648,7 @@
 
 
                                         <div style="text-align:center ;">
-                                           <router-link :to="'/profile/'+author.id+'/details'" class="btn btn-logo"
+                                            <router-link :to="'/profile/' + author.id + '/details'" class="btn btn-logo"
                                                 style=" border-radius: 9px; background-color: rgb(3, 156, 164);   width: 69%;   color: white; font-size: 90%; margin-top: 25px;  padding: 1px 23px;">
                                                 الملف الشخصي للمنشآة </router-link>
 
@@ -657,8 +675,10 @@
 
                                             </div>
                                             <div class="col-md-7 col-sm-10">
-                                                <a href="javascript:void(0);" class="btn report">
+                                                <a v-if="ads.type==1" href="javascript:void(0);" class="btn report">
                                                     تقديم بلاغ على المشروع </a>
+                                                     <a v-else href="javascript:void(0);" class="btn report">
+                                                    تقديم بلاغ على ال{{ ads.infoArray.dealsOrAuction}} </a>
                                             </div>
                                         </div>
                                     </div>
@@ -682,6 +702,20 @@
 <script>
 
 import axios from 'axios';
+import { ref } from 'vue';
+import { useRoute } from "vue-router";
+const loadUserData = async () => {
+    var id = useRoute().params.projectId;
+    console.log(id);
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(axios.get(
+                'https://login.tamedksa.com/api/ads/' + id + '/details'
+            ))
+
+        }, 3000)
+    })
+}
 var slideIndex = 1;
 export default {
 
@@ -732,48 +766,40 @@ export default {
         },
     },
 
-    data() {
-        return {
 
-            ads: [],
-            author: [],
-            papers: [],
-            files: [],
-            arrayInfo: [],
-            images: [],
-            AllImage: [],
-            application_conditions: [],
-        };
-    },
     async mounted() {
-        var id = this.$route.params.projectId;
+
         var element = document.getElementById("buttonlinks");
         element.classList.add("active");
         document.getElementById('London').style.display = "block";
-        const { data } = await axios.get(
-            'https://login.tamedksa.com/api/ads/' + id + '/details'
-        );
-        this.ads = data;
-        this.author = data['author'];
-        this.papers = data['req_paper'];
-        this.arrayInfo = data['infoArray'];
-        this.application_conditions = data['application_conditions'];
-        data['files'].forEach(element => {
 
-            this.files[element['info']['type']] = element['file'];
-        });
-        data['files'].forEach(element => {
+    },
+    async setup() {
+        const ads = ref(await loadUserData())['_rawValue']['data'];
+        console.log(ads);
+        var author = [], papers = [], files = [], arrayInfo = [], images = [], AllImage = [], application_conditions = [];
+        author = ads['author'];
+        papers = ads['req_paper'];
+        arrayInfo = ads['infoArray'];
+        application_conditions = ads['application_conditions'];
+        ads['files'].forEach(element => {
 
-            this.images.push(element['file']);
+            files[element['info']['type']] = element['file'];
         });
-        data['files'].forEach(element => {
+        ads['files'].forEach(element => {
 
-            this.AllImage.push(element);
+            images.push(element['file']);
         });
-        console.log(this.images);
+        ads['files'].forEach(element => {
+
+            AllImage.push(element);
+        });
+        console.log(images);
+        return {
+            ads, author, papers, files, arrayInfo, images, AllImage, application_conditions
+        }
     },
 }
-
 
 </script>
 <style>
@@ -816,5 +842,4 @@ table {
     width: 100%;
     height: 100%;
 }
-
 </style>
