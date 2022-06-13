@@ -12,7 +12,7 @@
                             <h3>مشاريع المقاولات</h3>
                             <p>تقدم تعميد خدمة نشر مشاريع المقاولات الخاصة للمنشآت ومنخلال نشر المشروع سيتم ارساله الى جميع منشآت التشيد والبناء في المملكة وخلال ساعات سيتم ارسال عرو ض الأسعار وبعدها يمكنك اختيارالعرض المناسب</p>
 
-                            <router-link to="/features-1" class="read-more-btn">Read More</router-link>
+                            <router-link to="/blog/project" class="read-more-btn">اقرأ أكثر</router-link>
                         </div>
                     </div>
 
@@ -25,7 +25,7 @@
                             <h3>الصفقات / المزادات</h3>
                             <p>تقدم تعميد خدمة نشر مشاريع المقاولات الخاصة للمنشآت ومنخلال نشر المشروع سيتم ارساله الى جميع منشآت التشيد والبناء في المملكة وخلال ساعات سيتم ارسال عرو ض الأسعار وبعدها يمكنك اختيارالعرض المناسب</p>
 
-                            <router-link to="/features-1" class="read-more-btn">Read More</router-link>
+                            <router-link to="/blog/project" class="read-more-btn">اقرأ أكثر</router-link>
                         </div>
                     </div>
 
@@ -38,7 +38,7 @@
                             <h3>الحصول على المواد</h3>
                             <p>تقدم تعميد خدمة نشر مشاريع المقاولات الخاصة للمنشآت ومنخلال نشر المشروع سيتم ارساله الى جميع منشآت التشيد والبناء في المملكة وخلال ساعات سيتم ارسال عرو ض الأسعار وبعدها يمكنك اختيارالعرض المناسب</p>
 
-                            <router-link to="/features-1" class="read-more-btn">Read More</router-link>
+                            <router-link to="/blog/project" class="read-more-btn">اقرأ أكثر</router-link>
                         </div>
                     </div>
 
@@ -51,7 +51,7 @@
                             <h3>الآمان لعمليات التعاقدات</h3>
                             <p>تقدم تعميد خدمة نشر مشاريع المقاولات الخاصة للمنشآت ومنخلال نشر المشروع سيتم ارساله الى جميع منشآت التشيد والبناء في المملكة وخلال ساعات سيتم ارسال عرو ض الأسعار وبعدها يمكنك اختيارالعرض المناسب</p>
 
-                            <router-link to="/features-1" class="read-more-btn">Read More</router-link>
+                            <router-link to="/blog/project" class="read-more-btn">اقرأ أكثر</router-link>
                         </div>
                     </div>
                 </div>

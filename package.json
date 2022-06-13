@@ -12,12 +12,12 @@
     "@babel/preset-env": "^7.18.2",
     "axios": "^0.27.2",
     "core-js": "^3.18.0",
+    "lightgallery": "2.0.0-beta.4",
     "vue": "^3.2.31",
     "vue-router": "^4.0.13",
     "vue3-carousel": "^0.1.38",
     "vue3-circle-progress": "^1.0.7",
-    "vue3-flip-countdown": "^0.1.6",
-    "lightgallery": "2.0.0-beta.4"
+    "vue3-flip-countdown": "^0.1.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.13",

@@ -23,6 +23,7 @@ import Contact from "../components/pages/Contact";
 import PrivacyPolicy from "../components/pages/PrivacyPolicy";
 import TermsCondition from "../components/pages/TermsCondition";
 import Projects from "../components/pages/Projects";
+import BlogDetails from "../components/pages/BlogDetails";
 import DealsAuctions from "../components/pages/DealsAuctions";
 import Profile from "../components/pages/Profile";
 import ProjectDetails from "../components/pages/ProjectDetails";
@@ -51,6 +52,7 @@ const routes = [
   { path: "/privacy-policy", component: PrivacyPolicy },
   { path: "/terms-condition", component: TermsCondition },
   { path: "/projects", component: Projects },
+  { path: "/blog/project", component: BlogDetails },
   { path: "/DealsAuctions", component: DealsAuctions },
   { path: "/profile/:id/details", name: 'profile', component: Profile,props: true,},
   { path: '/project/:projectId/details', name: 'details', component: ProjectDetails,props: true,},

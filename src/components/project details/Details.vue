@@ -607,12 +607,12 @@
                                                 style="color:#37D337;      padding-right: 15px;  font-size: 15px;"></i>
                                             {{ ads.time }}</span>
                                         <div style="text-align:center ;">
-                                            <a v-if="ads.type == 1" href="javascript:void(0);" class="btn btn-logo"
+                                            <router-link v-if="ads.type == 1" to="/SubmitQuotes" class="btn btn-logo"
                                                 style="border-radius:16px;background-color:#039ca4; width:85%;color:white;margin-top:25px;padding:7px 30px 7px 30px;">تقديم
-                                                عرض سعر للمشروع </a>
-                                            <a v-else href="javascript:void(0);" class="btn btn-logo"
+                                                عرض سعر للمشروع </router-link>
+                                            <router-link v-else  to="/SubmitQuotes" class="btn btn-logo"
                                                 style="border-radius:16px;background-color:#039ca4; width:85%;color:white;margin-top:25px;padding:7px 30px 7px 30px;">تقديم
-                                                عرض سعر لل{{ ads.infoArray.dealsOrAuction }} </a>
+                                                عرض سعر لل{{ ads.infoArray.dealsOrAuction }} </router-link>
                                         </div>
                                         <div class="text-center mt-5">
                                             <span v-if="ads.type == 1" class="text-end "
