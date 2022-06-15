@@ -1,63 +1,103 @@
 <template>
     <div class="privacy-policy-area ptb-100">
         <div class="container">
-            <div class="section-title">
-                <h2>Vibion Privacy Policy</h2>
+            <div class="section-title ">
+                <h2> سياسة الخصوصية في منصة تعميد</h2>
                 <div class="bar"></div>
-                <p>This policy was last updated November 25, 2022.</p>
+                <p>تم آخر تحديث لهذه السياسة في 2022/06/01 .</p>
             </div>
             <div class="privacy-policy-content">
-                <h3>Information collection</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                <h3>خصوصية وبيان سريّة المعلومات:</h3>
+                <p>نقدر مخاوفكم واهتمامكم بشأن خصوصية بياناتكم على شبكة الإنترنت.</p>
+                <p>لقد تم إعداد هذه السياسة لمساعدتكم في تفهم طبيعة البيانات التي نقوم بتجميعها منكم عند زيارتكم منصة او
+                    تطبيق تعميد على شبكة الانترنت وكيفية تعاملنا مع هذه البيانات الشخصية.</p>
+                <br>
             </div>
 
             <div class="privacy-policy-content">
-                <h3>1. General information</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
+                <h3>التصفح:</h3>
+                <p>لم نقم بتصميم هذا الموقع من أجل تجميع بياناتك الشخصية من جهاز الكمبيوتر الخاص بك أثناء تصفحك لهذا
+                    الموقع, وإنما سيتم فقط استخدام البيانات المقدمة من قبلك بمعرفتك ومحض إرادتك.</p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                <p>عنوان بروتوكول شبكة الإنترنت (IP)
+                    في أي وقت تزور فيه اي موقع الكتروني بما فيها هذا الموقع , سيقوم السيرفر المستضيف بتسجيل عنوان
+                    بروتوكول شبكة الإنترنت (IP) الخاص بك , تاريخ ووقت الزيارة ونوع متصفح الإنترنت الذي تستخدمه والعنوان
+                    URL الخاص بأي موقع من مواقع الإنترنت التي تقوم بإحالتك الى هذا الموقع على الشبكة.
+                </p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
+                <br>
+            </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+            <div class="privacy-policy-content">
+                <h3>عمليات المسح على الشبكة:</h3>
+                <p>إن عمليات المسح التي نقوم بها مباشرة على الشبكة تمكننا من تجميع بيانات محددة مثل البيانات المطلوبة
+                    منك بخصوص نظرتك وشعورك تجاه المنصة . تعتبر ردودك ذات أهمية قصوى، ومحل تقديرنا حيث أنها تمكننا من
+                    تحسين مستوى موقعنا, ولك كامل الحرية و الاختيار في تقديم البيانات المتعلقة باسمك والبيانات الأخرى.
+                </p>
+                <br>
+            </div>
+
+            <div class="privacy-policy-content">
+                <h3>الروابط بالمواقع الأخرى على شبكة الإنترنت:</h3>
+                <p>قد يشتمل موقعنا على روابط بالمواقع الأخرى على شبكة الإنترنت. او إعلانات من مواقع اخرى مثل Google
+                    AdSense ولا نعتبر مسئولين عن أساليب تجميع البيانات من قبل تلك المواقع، يمكنك الاطلاع على سياسات
+                    السرية والمحتويات الخاصة بتلك المواقع التي يتم الدخول إليها من خلال أي رابط ضمن .</p>
+                <p>نحن قد نستعين بشركات إعلان لأطراف ثالثة لعرض الإعلانات عندما تزور موقعنا على الويب. يحق لهذه الشركات
+                    أن تستخدم معلومات حول زياراتك لهذا الموقع ولمواقع الويب الأخرى (باستثناء الاسم أو العنوان أو عنوان
+                    البريد الإلكتروني أو رقم الهاتف)، وذلك من أجل تقديم إعلانات حول البضائع والخدمات التي تهمك.</p>
+                <br>
+            </div>
+
+            <div class="privacy-policy-content">
+                <h3 style="text-decoration: underline;">حماية المعلومات الشخصية:</h3>
+                <p>تلتزم منصة تعميد بعدم الإفصاح عن معلومات الزائر الشخصية التي يقدمها طواعية من دون موافقته الشخصية إلا
+                    في حالات معيّنة يتطلب فيها القانون الإفصاح عن هذه المعلومات. كما قد يتم تقاسم البيانات الضرورية
+                    لإتمام معالجة طلب الزائر مع الجهات المرتبطة في المنصة ، وذلك لخدمته بصورة أكثر فعالية. ولضمان مساعدة
+                    الزائر في حماية معلوماته الشخصية فإننا نوصي بالآتي:</p>
 
                 <ul>
-                    <li>It has survived not only five centuries, but also the leap into electronic typesetting.</li>
-                    <li>Contrary to popular belief, Lorem Ipsum is not simply random text.</li>
-                    <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</li>
-                    <li>Various versions have evolved over the years, sometimes by accident sometimes on purpose.</li>
+                    <li>التواصل مع منصة تعميد الدعم الفني عندما تظن أن شخصاً ما استطاع الوصول إلى معلوماتك الشخصية، أو
+                        أي معلومات سرية قد قدمتها أو حصلت عليها من المنصة</li>
+                    <li>لا تفصح مطلقاً عن أي معلومات سرية عبر الهاتف أو شبكة الإنترنت ما لم تتأكد من هوية الشخص أو الطرف
+                        المستقبل للمعلومة وأن تكون هناك اتفاقية مسبقة تحدد قنوات التواصل.</li>
+                    <li>للحفاظ على بياناتك الشخصية، تقوم منصة تعميد باتباع سياسة أمنية شاملة وصارمة، كما تخضع الخوادم
+                        التي تستضيف منصة تعميد لأعلى درجات الحماية، ويتم تخزين ومعالجة ومشاركة البيانات الشخصية باستخدام
+                        التقنيات الأمنية المناسبة</li>
                 </ul>
             </div>
 
             <div class="privacy-policy-content">
-                <h3>2. Personal data collected</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
+                <h3>عند الاتصال بنا:</h3>
+                <p>سيتم التعامل مع كافة البيانات المقدمة من قبلك على أساس أنها سرية. تتطلب النماذج التي يتم تقديمها
+                    مباشرة على الشبكة تقديم البيانات التي ستساعدنا في تحسين موقعنا. سيتم استخدام البيانات التي يتم
+                    تقديمها من قبلك في الرد على كافة استفساراتك , ملاحظاتك , أو طلباتك من قبل هذا الموقع أو أيا من
+                    المواقع التابعة له .</p>
+            <br>
             </div>
-
             <div class="privacy-policy-content">
-                <h3>3. Personal data directly provided by a user</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
+                <h3>إفشاء المعلومات لأي طرف ثالث:</h3>
+                <p>لن نقوم ببيع, المتاجرة , تأجير , أو إفشاء أية معلومات لمصلحة أي طرف ثالث خارج هذا الموقع, أو المواقع
+                    التابعة له. وسيتم الكشف عن المعلومات فقط في حالة صدور أمر بذلك من قبل أي سلطة قضائية أو تنظيمية.</p>
+         <br>
             </div>
-
             <div class="privacy-policy-content">
-                <h3>4.  Protecting the personal data</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
-                
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                <h3>التعديلات على سياسة سرية وخصوصية المعلومات:</h3>
+                <p>نحتفظ بالحق في تعديل بنود وشروط سياسة سرية وخصوصية المعلومات إن لزم الأمر ومتى كان ذلك ملائماً. سيتم
+                    تنفيذ التعديلات هنا وسيتم بصفة مستمرة إخطارك بالبيانات التي حصلنا عليها , وكيف سنستخدمها والجهة التي
+                    سنقوم بتزويدها بهذه البيانات.</p>
+                    <br>
             </div>
-
-            <div class="privacy-policy-content">
-                <h3>5.  Who has access to personal data</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut abore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
-            </div>
+             <div class="privacy-policy-content">
+                <h3 style="text-decoration: underline;">إخلاء المسؤولية:</h3>
+                <p>يتم توفير المعلومات والخدمات والصفحات على هذا الموقع "كما هي" وفق لأفضل الممارسات والمعايير التقنية والأمنية دون أي ضمانات أو إقرار. حيث تخلي الهيئة السعودية للمقاولين صراحةً مسؤوليتها من تقديم أي ضمانات أو إقرارات قانونية أو ضمنية، بما في ذلك على سبيل المثال لا الحصر؛ تقديم أي ضمانات بأن هذا الموقع سوف يكون متوفر دون انقطاع، أو أن تصل إليه في الوقت المناسب لك، أو أن يكون آمن، أو خالي من الأخطاء. كما لا تتحمل الهيئة في أي حال من الأحوال المسؤولية عن أي أضرار مباشرة، أو غير مباشرة، أو عرضية، أو تبعية، أو خاصة من أي نوع كانت متعلقة أو ناشئة عن استخدام هذا الموقع، أو أي من المواقع أو المواد أو الوصلات والتي يمكن الوصول إليها من خلاله.</p>
+                <br>
+             </div>
         </div>
     </div>
 </template>
 
 <script>
-    export default {
-        name: 'PrivacyPolicyArea'
-    }
+export default {
+    name: 'PrivacyPolicyArea'
+}
 </script>

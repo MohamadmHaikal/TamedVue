@@ -7,7 +7,7 @@
                         <h2>نظام متكامل للعقود / والفواتير الالكترونية</h2>
                         <div class="bar"></div>
                         <p>ظام متكامل يتيح للمنشآة إنشاء العقود الالكترونية والفواتير الالكترونية منمنشآة الى منشآة او من منشأة الى فرد مطابق لشروط هيئة الزكاه والدخل</p>
-                        <router-link to="/contact" class="btn btn-warning">
+                        <router-link :to="{ name: 'blog', params: { type: 'contracts' } }" class="btn btn-warning">
                            التفاصيل
                         </router-link>
                     </div>

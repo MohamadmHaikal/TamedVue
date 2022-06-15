@@ -28,29 +28,32 @@
             </div>
 
             <div class="feedback-slides">
-                <carousel :autoplay="3500" :settings="settings" :wrap-around="true" :breakpoints="breakpoints">
+                <carousel :autoplay="carouselItems.length > 3 ? 3500 : 90000" :settings="settings" :wrap-around="true"
+                    :breakpoints="breakpoints">
                     <slide v-for="slide in carouselItems" :key="slide.id">
 
                         <div class="single-deals-post">
 
                             <div class="deals-post-content">
                                 <div class="row section-title">
-                                    <span>شركة فرسان</span>
-                                    <h5 class="titleDEals">
+                                    <span style="padding-right: 0;">{{ slide.authorName }}</span>
+                                    <h5 class="titleDEals" style="padding-right: 0;">
                                         <router-link to="/deals-auctions-details">{{ slide.title }}</router-link>
                                         <i class="fas fa-angle-left	"></i>
                                     </h5>
 
-                                    <p class="desc">{{ slide.description }}</p>
+                                    <p class="desc" style="padding-right: 0;">{{ slide.description }}</p>
 
 
                                 </div>
                                 <div class="row">
 
-                                    <span>تنتهي الصفقة في</span>
+                                    <span v-if="slide.dealsOrAuction == 'مزاد'">ينتهي المزاد في</span>
+                                    <span v-else>تنتهي الصفقة في</span>
                                     <div>
-                                        <Countdown deadline="2023-12-25 00:00:00" :showLabels="false"
-                                            mainFlipBackgroundColor="#d7a358" secondFlipBackgroundColor="#d7a358"
+                                        <Countdown :deadline="slide.startdate" :showLabels="false"
+                                            :mainFlipBackgroundColor="slide.dealsOrAuction == 'مزاد' ? '#d7a358' : '#019aa2'"
+                                            :secondFlipBackgroundColor="slide.dealsOrAuction == 'مزاد' ? '#d7a358' : '#019aa2'"
                                             countdownSize="1.1rem" mainColor="#ffff" />
 
                                     </div>
@@ -60,13 +63,15 @@
                                     <div class="col-md-6 col-sm-6  price-deals " style="width: 50%;">
 
 
-                                        <router-link to="/deals-auctions-details" class="btn link"
-                                            style="margin-top: 5px; padding: 5px 1px 5px 1px;">{{ slide.button }}
+                                        <router-link :to="{ name: 'details', params: { projectId: slide.id } }" class="btn link"
+                                            style="margin-top: 5px; padding: 5px 1px 5px 1px;">  {{ 'شارك بال' + slide.dealsOrAuction }}
                                         </router-link>
                                     </div>
                                     <div class="col-md-6 col-sm-6 pt-2 price-deals" style="width: 50%;">
-                                        <h6 class="typeDeals">{{ slide.typeDeals }}</h6>
-                                        <span>{{ slide.price }}</span>
+                                        <h6 v-if="slide.dealsOrAuction == 'مزاد'" class="typeDeals">سعر المشاركة بالمزاد</h6>
+                                         <h6 v-else class="typeDeals">صفقة بقيمة</h6>
+                                        <span v-if="slide.pricestatus == 'on'" style="color: #f4a032;"> الأفضل سعر</span>
+                                         <span v-else style="color: #f4a032;">{{ slide.price }}</span>
                                     </div>
 
                                 </div>
@@ -78,7 +83,9 @@
 
                     <template #addons>
                         <!-- <Navigation /> -->
-                        <Pagination />
+                        <div v-if="carouselItems.length > 3">
+                            <Pagination />
+                        </div>
                     </template>
                 </carousel>
             </div>
@@ -102,7 +109,7 @@ import {
 } from 'vue3-flip-countdown'
 
 import 'vue3-carousel/dist/carousel.css';
-
+import axios from 'axios';
 export default defineComponent({
     name: 'Sectiondeals',
     components: {
@@ -121,36 +128,7 @@ export default defineComponent({
             color: '#ebde46',
             description: 'تتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكوميةتتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكوميةتتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكوميةتتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكومية',
         },
-        {
-            id: 2,
-            title: 'شراء مواد حديد',
-            typeDeals: 'سعر المشاركة بالمزاد',
-            price: '500 ريال تأمين',
-            button: 'مشاركة بالمزاد',
-            description: 'تتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكوميةتتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكوميةتتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكوميةتتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكومية',
-        },
-        {
-            id: 3,
-            title: 'توليد الأفكار و إدارتها',
-            typeDeals: 'صفقة بقيمة',
-            price: '500000 ريال',
-            button: 'شراء',
-            description: 'تتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكوميةتتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكوميةتتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكوميةتتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكومية',
-        },
-        {
-            id: 4,
-             title: 'شراء مواد حديد',
-            typeDeals: 'مزاد',
-            button: 'مشاركة بالمزاد',
-            description: 'تتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكوميةتتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكوميةتتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكوميةتتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكومية',
-        },
-        {
-            id: 5,
-            typeDeals: 'صفقة بقيمة',
-            price: '500000 ريال',
-            button: 'شراء',
-            description: 'تتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكوميةتتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكوميةتتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكوميةتتيح خدمة تحديد و تعريف التحديات لمنسوبي الجهات الحكومية',
-        },
+
         ],
         settings: {
 
@@ -169,6 +147,17 @@ export default defineComponent({
             },
         },
     }),
+    async mounted() {
+
+        const { data } = await axios.get(
+            'https://login.tamedksa.com/api/ads/5/all'
+        );
+        data.forEach(element => {
+            element.price = new Intl.NumberFormat('ar', { style: 'currency', currency: 'SAR' }).format(element.price);
+        });
+        this.carouselItems = data;
+
+    }
 })
 
 </script>

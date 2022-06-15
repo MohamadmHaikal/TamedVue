@@ -90,7 +90,7 @@ html {
             &.left-content {
                 margin-right: auto;
                 margin-left: 0;
-                padding-left: 50px;
+                // padding-left: 50px;
                 padding-right: 0;
                 text-align: right;
             }
@@ -368,8 +368,8 @@ html {
 }
 .btn-primary {
     &::before {
-        background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
-        background: linear-gradient(-90deg, #ee0979 0%, #ff6a00 100%);
+        // background: -webkit-gradient(linear, left top, right top, from(#ee0979), to(#ff6a00));
+        // background: linear-gradient(-90deg, #ee0979 0%, #ff6a00 100%);
     }
 }
 

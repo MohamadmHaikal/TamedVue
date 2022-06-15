@@ -4,10 +4,10 @@
         <PageTitle />
         <About />
         <Team />
-        <ReadyToTalk />
-        <Partner />
-        <AppDownload />
-        <AccountCreate />
+        <!-- <ReadyToTalk /> -->
+        <!-- <Partner /> -->
+        <!-- <AppDownload />
+        <AccountCreate /> -->
         <Footer />
     </div>
 </template>
@@ -17,10 +17,10 @@ import Navbar from '../layout/Navbar'
 import PageTitle from '../about-us/PageTitle'
 import About from '../about-us/About'
 import Team from '../about-us/Team'
-import ReadyToTalk from '../common/ReadyToTalk'
-import Partner from '../common/Partner'
-import AppDownload from '../common/AppDownload'
-import AccountCreate from '../common/AccountCreate'
+// import ReadyToTalk from '../common/ReadyToTalk'
+// import Partner from '../common/Partner'
+// import AppDownload from '../common/AppDownload'
+// import AccountCreate from '../common/AccountCreate'
 import Footer from '../layout/Footer'
 
 export default {
@@ -30,10 +30,10 @@ export default {
         PageTitle,
         About,
         Team,
-        ReadyToTalk,
-        Partner,
-        AppDownload,
-        AccountCreate,
+        // ReadyToTalk,
+        // Partner,
+        // AppDownload,
+        // AccountCreate,
         Footer,
     }
 }

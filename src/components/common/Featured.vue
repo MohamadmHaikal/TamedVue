@@ -6,39 +6,40 @@
                     <div class="col-lg-3 col-sm-6 col-md-6 p-0">
                         <div class="single-featured-box">
                             <div class="icon color-fb7756">
-                                <i class="flaticon-piggy-bank"></i>
+                               <img src="../../assets/images/projectMain.png" alt="">
                             </div>
 
                             <h3>مشاريع المقاولات</h3>
                             <p>تقدم تعميد خدمة نشر مشاريع المقاولات الخاصة للمنشآت ومنخلال نشر المشروع سيتم ارساله الى جميع منشآت التشيد والبناء في المملكة وخلال ساعات سيتم ارسال عرو ض الأسعار وبعدها يمكنك اختيارالعرض المناسب</p>
 
-                            <router-link to="/blog/project" class="read-more-btn">اقرأ أكثر</router-link>
+                            <router-link :to="{ name: 'blog', params: { type: 'projects' } }" class="read-more-btn">اقرأ أكثر</router-link>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-sm-6 col-md-6 p-0">
                         <div class="single-featured-box">
                             <div class="icon color-facd60">
-                                <i class="flaticon-data-encryption"></i>
+                           <img src="../../assets/images/dealsMain.png" alt="">
+
                             </div>
 
                             <h3>الصفقات / المزادات</h3>
                             <p>تقدم تعميد خدمة نشر مشاريع المقاولات الخاصة للمنشآت ومنخلال نشر المشروع سيتم ارساله الى جميع منشآت التشيد والبناء في المملكة وخلال ساعات سيتم ارسال عرو ض الأسعار وبعدها يمكنك اختيارالعرض المناسب</p>
 
-                            <router-link to="/blog/project" class="read-more-btn">اقرأ أكثر</router-link>
+                            <router-link :to="{ name: 'blog', params: { type: 'auction-deals' } }" class="read-more-btn">اقرأ أكثر</router-link>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-sm-6 col-md-6 p-0">
                         <div class="single-featured-box">
                             <div class="icon color-1ac0c6">
-                                <i class="flaticon-wallet"></i>
+                               <img src="../../assets/images/materialMain.png" alt="">
                             </div>
 
                             <h3>الحصول على المواد</h3>
                             <p>تقدم تعميد خدمة نشر مشاريع المقاولات الخاصة للمنشآت ومنخلال نشر المشروع سيتم ارساله الى جميع منشآت التشيد والبناء في المملكة وخلال ساعات سيتم ارسال عرو ض الأسعار وبعدها يمكنك اختيارالعرض المناسب</p>
 
-                            <router-link to="/blog/project" class="read-more-btn">اقرأ أكثر</router-link>
+                            <router-link :to="{ name: 'blog', params: { type: 'materials' } }" class="read-more-btn">اقرأ أكثر</router-link>
                         </div>
                     </div>
 
@@ -51,7 +52,7 @@
                             <h3>الآمان لعمليات التعاقدات</h3>
                             <p>تقدم تعميد خدمة نشر مشاريع المقاولات الخاصة للمنشآت ومنخلال نشر المشروع سيتم ارساله الى جميع منشآت التشيد والبناء في المملكة وخلال ساعات سيتم ارسال عرو ض الأسعار وبعدها يمكنك اختيارالعرض المناسب</p>
 
-                            <router-link to="/blog/project" class="read-more-btn">اقرأ أكثر</router-link>
+                            <router-link :to="{ name: 'blog', params: { type: 'contracts' } }" class="read-more-btn">اقرأ أكثر</router-link>
                         </div>
                     </div>
                 </div>

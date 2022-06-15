@@ -7,8 +7,8 @@
         <SectionProject />
         <Sectiondeals />
         <Invoicing />
-        <ReadyToTalk />
-        <Partner />
+        <!-- <ReadyToTalk /> -->
+        <!-- <Partner /> -->
         <AppDownload />
         <!-- <Subscribe /> -->
         <Footer />
@@ -21,8 +21,8 @@ import MainBanner from '../home-demo-four/MainBanner'
 import Featured from '../common/Featured'
 import Services from '../common/Services'
 import Invoicing from '../common/Invoicing'
-import ReadyToTalk from '../common/ReadyToTalk'
-import Partner from '../common/Partner'
+// import ReadyToTalk from '../common/ReadyToTalk'
+// import Partner from '../common/Partner'
 import AppDownload from '../common/AppDownload'
 // import Subscribe from '../home-demo-six/Subscribe'
 import Footer from '../layout/Footer'
@@ -38,8 +38,8 @@ export default {
         SectionProject,
         Sectiondeals,
         Invoicing,
-        ReadyToTalk,
-        Partner,
+        // ReadyToTalk,
+        // Partner,
         AppDownload,
         // Subscribe,
         Footer,

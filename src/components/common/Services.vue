@@ -9,12 +9,12 @@
                         <p>تقدم منصة تعميد العديد من الميزات لعضويات الأعمال لتسهل عليهم ادارة مشاريعهم وعقودهم من خلال المنصة بميزيات متقدمة وسلسه</p>
 
                         <ul class="services-list">
-                            <li><span><i class="flaticon-check-mark"></i> Free plan available</span></li>
-                            <li><span><i class="flaticon-check-mark"></i> Full data privacy compliance</span></li>
-                            <li><span><i class="flaticon-check-mark"></i> 100% transparent costs</span></li>
-                            <li><span><i class="flaticon-check-mark"></i> Commitment-free</span></li>
-                            <li><span><i class="flaticon-check-mark"></i> Real-time spending overview</span></li>
-                            <li><span><i class="flaticon-check-mark"></i> Debit Mastercard included</span></li>
+                            <li><span><i class="flaticon-check-mark"></i> نشر واستقبال الاعلانات</span></li>
+                            <li><span><i class="flaticon-check-mark"></i> تصدير واستقبال الفواتير</span></li>
+                            <li><span><i class="flaticon-check-mark"></i> تصدير وانشاء العقود الالكترونية</span></li>
+                            <li><span><i class="flaticon-check-mark"></i> ارسال واستقبال عروض الاسعار</span></li>
+                            <li><span><i class="flaticon-check-mark"></i> فتح اكثر من ملف لمنشآة بنشاط مختلف</span></li>
+                            <li><span><i class="flaticon-check-mark"></i> تحليل مالي لجميع العمليات داخل المنصة</span></li>
                         </ul>
                     </div>
                 </div>

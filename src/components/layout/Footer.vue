@@ -25,33 +25,33 @@
 
                             <ul class="list">
                                 <li>
-                                    <router-link to="/about-us">إنشاء عقد الكتروني</router-link>
+                                    <a href="javascript:void(0);">إنشاء عقد الكتروني</a>
                                 </li>
                                 <li>
-                                    <router-link to="/#">إنشاء الفواتير</router-link>
+                                    <a href="javascript:void(0);">إنشاء الفواتير</a>
                                 </li>
                                 <li>
-                                    <router-link to="/features-2">طلب تمويل عقد <span>قريباً</span></router-link>
+                                    <a href="javascript:void(0);">طلب تمويل عقد <span>قريباً</span></a>
                                 </li>
 
                             </ul>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-sm-6 col-md-6 col-6 footer-area-services text-center" >
+                    <div class="col-lg-3 col-sm-6 col-md-6 col-6 footer-area-services text-center">
                         <div class="single-footer-widget">
                             <h3>الاقسام</h3>
                             <div class="row">
                                 <div class="col-md-6">
                                     <ul class="list">
                                         <li>
-                                            <router-link to="/faq">المشاريع</router-link>
+                                            <router-link to="/projects">المشاريع</router-link>
                                         </li>
                                         <li>
-                                            <router-link to="/privacy-policy">المواد</router-link>
+                                            <a href="javascript:void(0);">المواد</a>
                                         </li>
                                         <li>
-                                            <router-link to="/terms-condition">الصفقات / المزادات</router-link>
+                                            <router-link to="/DealsAuctions">الصفقات / المزادات</router-link>
                                         </li>
 
                                     </ul>
@@ -59,14 +59,14 @@
                                 <div class="col-md-6">
                                     <ul class="list">
                                         <li>
-                                            <router-link to="/faq">الوظائف</router-link>
+                                            <a href="javascript:void(0);">الوظائف</a>
                                         </li>
                                         <li>
-                                            <router-link to="/privacy-policy">المعدات</router-link>
+                                            <a href="javascript:void(0);">المعدات</a>
                                         </li>
                                         <li>
-                                            <router-link to="/terms-condition">مكاتب هندسية <span>قريباً</span>
-                                            </router-link>
+                                            <a href="javascript:void(0);">مكاتب هندسية <span>قريباً</span>
+                                            </a>
                                         </li>
 
                                     </ul>
@@ -100,25 +100,33 @@
                         <div class="col-md-4 col-sm-7 footer-area-priv">
                             <p style="border-left: solid 1px #a3b1b2;" class="parColor">جميع الحقوق محفوظة
                                 ©2021 - منصة تعميد - المملكة العربية السعودية</p>
-                                                   <span style="color: #62bbc0;">يدعم المتصفحات</span><img src="../../assets/images/125.png"></div>
+                            <span style="color: #62bbc0;">يدعم المتصفحات</span><img src="../../assets/images/125.png">
+                        </div>
 
-                        
+
                         <div class="col-md-2 col-sm-3 col-1-5">
-                            <p style="border-left: solid 1px #a3b1b2;" class="parColor">سياسة الاستخدام</p>
+                            <p style="border-left: solid 1px #a3b1b2;" class="parColor">
+                                <router-link to="/usage-policy" style="font-weight: unset;color: #039ca5;">
+                                    سياسة الاستخدام
+                                </router-link>
+                            </p>
                         </div>
-                        <div class="col-md-2 col-sm-2 col-1-5" >
-                            <p class="parColor">سياسة الخصوصية</p>
+                        <div class="col-md-2 col-sm-2 col-1-5">
+                            <p class="parColor">
+                                <router-link to="/privacy-policy" style="font-weight: unset;color: #039ca5;">سياسة
+                                    الخصوصية</router-link>
+                            </p>
                         </div>
-                         
+
                         <div class="col align-self-center">
                             <img src="../../assets/images/stars-tech.png" class="stars-tech" alt="">
                         </div>
                         <div class="col align-self-center">
                             <img src="../../assets/images/628975da787bd.png" class="roya" alt="">
                         </div>
-                        </div>
                     </div>
-                   
+                </div>
+
             </div>
 
             <div class="map-image"><img src="../../assets/images/map.png" alt="map" style="width:50% ;"></div>

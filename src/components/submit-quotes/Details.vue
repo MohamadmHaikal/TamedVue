@@ -142,7 +142,7 @@
                                             <i class="far fa-calendar-alt"
                                                 style=" text-align:right;color:#37D337;padding-right:10%;font-size:15px;"></i><span
                                                 style=" text-align:right;color:rgb(87 83 77);font-size:12px;padding-right:2px;">
-                                                2022-05-22
+                                                {{ads.created}}
                                             </span><span
                                                 style=" text-align:right;color:rgb(87 83 77);font-size:12px;padding-right:5px;"><i
                                                     class="far fa-clock"
@@ -154,7 +154,7 @@
                                         <h5 style="padding-top: 8%; text-align: center;color: #62bbc0; ">قيمة الصفقة
                                         </h5>
                                         <h6 style="color: rgb(244, 162, 62); text-align: center; ">
-                                            26,000 ريال </h6>
+                                            {{ads.price}} ريال </h6>
                                         <div class=" mt-3 text-center" id="price-with-material-accept"
                                             style="display:none;">
                                             <small style="padding-top: 8%; text-align: center;color:#019aa2; ">قيمة
@@ -162,7 +162,7 @@
 
                                             </small>
                                             <h6 style="color: rgb(244, 162, 62); text-align: center; ">
-                                                2600 ريال </h6>
+                                               {{ads.price*10/100}} ريال </h6>
                                         </div>
                                         <div class=" mt-3 text-center" id="price-with-material" style="display:none;">
                                             <small style="color: #65a632; text-align: center; ">
@@ -177,22 +177,21 @@
                                         <div class="mt-3" style="text-align:center;padding-bottom:15px;"><span
                                                 class="text-end" style="color:#019aa2;font-size:14px;"> مقدم
                                                 الطلب:</span><span class="text-end"
-                                                style="color:rgb(87 83 77);font-size:14px;padding-right:5px;"> شركة
-                                                فرسان للمقاولات</span>
-                                            <div style="text-align:center;"><a href="javascript:void(0);"
+                                                style="color:rgb(87 83 77);font-size:14px;padding-right:5px;">{{ author.name}}</span>
+                                            <div style="text-align:center;"><router-link :to="'/profile/' + author.id + '/details'"
                                                     class="btn btn-logo"
                                                     style="border-radius:9px;background-color:rgb(3, 156, 164);width:69%;color:white;font-size:90%;margin-top:25px;padding:1px 23px;">
-                                                    الملف الشخصي للمنشآة </a></div>
-                                            <div class="mt-3"> 20/100 <span class="far fa-star checked" style="font-size:20px;"
-                                                    aria-hidden=""></span><span class="far fa-star checked"
-                                                    style="font-size:20px;"></span><span class="fa fa-star checked"
-                                                    style="font-size:20px;"></span><span class="fa fa-star checked"
-                                                    style="font-size:20px;"></span><span class="fa fa-star checked"
-                                                    style="font-size:20px;"></span></div>
+                                                    الملف الشخصي للمنشآة </router-link></div>
+                                            <div class="mt-3"> 20/100 <span class="far fa-star checked"
+                                                    style="font-size:20px;" aria-hidden=""></span><span
+                                                    class="far fa-star checked" style="font-size:20px;"></span><span
+                                                    class="fa fa-star checked" style="font-size:20px;"></span><span
+                                                    class="fa fa-star checked" style="font-size:20px;"></span><span
+                                                    class="fa fa-star checked" style="font-size:20px;"></span></div>
                                             <div class="row text-center mt-2">
                                                 <div class="col-md-5 col-sm-2"
                                                     style="text-align:center;margin-bottom:12px;"><a
-                                                        href="javascript:void(0);" style="color:#039ca4;">
+                                                       :href="'https://login.tamedksa.com/chat/' + author.id" style="color:#039ca4;">
                                                         <p style="position:relative;top:18px;">رسالة</p><i
                                                             class="far fa-comment-alt mb-2"
                                                             style="font-size:25px;color:#039ca4;"></i>
@@ -201,11 +200,17 @@
                                                         class="btn report"> تقديم بلاغ على الصفقة </a></div>
                                             </div>
                                         </div>
-                                        <div class="text-center"><span class="text-end"
-                                                style="color: rgb(1, 154, 162); font-size: 12px;"> الرقم المرجعي
-                                                للصفقة:</span><span class="text-end"
-                                                style="color: rgb(87, 83, 77); font-size: 12px; padding-right: 5px;">
-                                                25896374</span></div>
+                                        <div class="text-center">
+                                         <span v-if="ads.type == 1" class="text-end "
+                                                style="color: #019aa2;    font-size: 12px;"> الرقم
+                                                المرجعي للمشروع:</span>
+                                            <span v-else class="text-end " style="color: #019aa2;    font-size: 12px;">
+                                                الرقم
+                                                المرجعي لل{{ infoArray.dealsOrAuction }}:</span>
+                                            <span class="text-end"
+                                                style="color: rgb(87 83 77) ;font-size: 12px; padding-right: 5px;">
+                                                {{ ads.reference_number }}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -249,7 +254,7 @@
 </template>
 
 <script>
-
+import axios from 'axios';
 export default {
     methods: {
         send(type) {
@@ -300,7 +305,26 @@ export default {
 
 
         },
+       
+
+
     },
+    async mounted() {
+ var id = this.$route.params.id;
+        var  data = await axios.get(
+            'https://login.tamedksa.com/api/ads/'+id+'/details'
+        );
+      
+        this.ads = data['data'];
+        this.author=this.ads['author'];
+        this.infoArray=this.ads['infoArray'];
+        
+    },
+     data: () => ({
+            ads: [],
+            author: [],
+            infoArray:[],
+        }),
 
 }
 

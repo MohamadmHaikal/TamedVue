@@ -21,6 +21,7 @@ import BlogTwo from "../components/pages/BlogTwo";
 import BlogThree from "../components/pages/BlogThree";
 import Contact from "../components/pages/Contact";
 import PrivacyPolicy from "../components/pages/PrivacyPolicy";
+import UsagePolicy from "../components/pages/UsagePolicy";
 import TermsCondition from "../components/pages/TermsCondition";
 import Projects from "../components/pages/Projects";
 import BlogDetails from "../components/pages/BlogDetails";
@@ -50,14 +51,15 @@ const routes = [
   { path: "/blog-details", component: BlogThree },
   { path: "/contact", component: Contact },
   { path: "/privacy-policy", component: PrivacyPolicy },
+  { path: "/usage-policy", component: UsagePolicy},
   { path: "/terms-condition", component: TermsCondition },
   { path: "/projects", component: Projects },
-  { path: "/blog/project", component: BlogDetails },
+  { path: "/blog/:type",name: 'blog', component: BlogDetails,props: true, },
   { path: "/DealsAuctions", component: DealsAuctions },
   { path: "/profile/:id/details", name: 'profile', component: Profile,props: true,},
   { path: '/project/:projectId/details', name: 'details', component: ProjectDetails,props: true,},
   { path: "/deals-auctions/:id/details",  name:'deals-auctions-details',component: DealsAuctionsDetails,props: true, },
-  { path: "/SubmitQuotes", component: SubmitQuotes },
+  { path: "/SubmitQuotes/:id",name:'SubmitQuotes', component: SubmitQuotes,props: true, },
 ];
 
 const router = createRouter({

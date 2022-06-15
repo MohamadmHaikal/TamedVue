@@ -1,9 +1,13 @@
 <template>
-    <div class="page-title-area item-bg2">
-        <div class="container">
-            <div class="page-title-content">
-                <h2>Contact</h2>
-                <p>If you have an idea, we would love to hear about it.</p>
+    <div class=" " style="position: relative; 
+ 
+    background-color: #039ca4;
+    padding-top: 105px;
+    padding-bottom: 25px;">
+        <div class="containp  container">
+            <div class=" text-left">
+                <p style="color:white; margin-bottom: 30px;">الصفحة الرئيسية  /  الإتصال بنا </p>
+                <h5 style="color:white;     margin-bottom: 5px;"> الإتصال بنا</h5>
             </div>
         </div>
     </div>

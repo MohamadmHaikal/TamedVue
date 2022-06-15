@@ -607,10 +607,10 @@
                                                 style="color:#37D337;      padding-right: 15px;  font-size: 15px;"></i>
                                             {{ ads.time }}</span>
                                         <div style="text-align:center ;">
-                                            <router-link v-if="ads.type == 1" to="/SubmitQuotes" class="btn btn-logo"
+                                            <router-link v-if="ads.type == 1" :to="{ name: 'SubmitQuotes', params: { id: ads.id } }" class="btn btn-logo"
                                                 style="border-radius:16px;background-color:#039ca4; width:85%;color:white;margin-top:25px;padding:7px 30px 7px 30px;">تقديم
                                                 عرض سعر للمشروع </router-link>
-                                            <router-link v-else  to="/SubmitQuotes" class="btn btn-logo"
+                                            <router-link v-else  :to="{ name: 'SubmitQuotes', params: { id: ads.id } }" class="btn btn-logo"
                                                 style="border-radius:16px;background-color:#039ca4; width:85%;color:white;margin-top:25px;padding:7px 30px 7px 30px;">تقديم
                                                 عرض سعر لل{{ ads.infoArray.dealsOrAuction }} </router-link>
                                         </div>

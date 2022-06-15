@@ -6,9 +6,9 @@
                     <div class="banner-wrapper-content">
                         <h1>أهلا وسهلا بك في منصة تعميد</h1>
                         <p>أول منصة متكاملة في عالم التشييد والبناء في المملكة العربية السعودية تقدم حلول لجميع المنشآة و الحصول على المشاريع الخاصة بشكل سريع وسهل</p>
-                        <router-link to="/contact" class="btn btn-warning reg-now">
+                        <a href="https://login.tamedksa.com" class="btn btn-warning reg-now">
                           سجل الآن
-                        </router-link>
+                        </a>
                     </div>
                 </div>
 

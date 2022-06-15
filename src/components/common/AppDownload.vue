@@ -23,16 +23,16 @@
                     <div class="app-download-content">
                         <h2>حمل التطبيق الآن</h2>
                         <div class="bar"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                        <p>تطبيق منصة تعميد للاعمال والافراد سيكون متوفر خلال الايام القادمة عبر and ios  android</p>
 
                         <div class="btn-box">
-                            <a href="https://www.apple.com/app-store/" target="_blank" class="app-store-btn">
+                            <a  href="javascript:void(0);"  class="app-store-btn">
                                 <i class="flaticon-apple"></i>
                                 Download on
                                 <span>App Store</span>
                             </a>
 
-                            <a href="https://play.google.com/store/apps" target="_blank" class="play-store-btn">
+                            <a  href="javascript:void(0);"  class="play-store-btn">
                                 <i class="flaticon-play-store"></i>
                                 Download on
                                 <span>Google play</span>
